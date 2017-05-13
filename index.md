@@ -6,10 +6,8 @@ layout: default
 ## [](#header-2)Contact
 
 Matthew R. Brinson
-<br>
-email: <a href="mailto:mbrinson382@gmail.com" target="_top">mbrinson382@gmail.com</a>
-<br>
-linkedin: <a href="https://www.linkedin.com/in/matthew-brinson-357ab675">My LinkedIn Page</a>
+<br>email: <a href="mailto:mbrinson382@gmail.com" target="_top">mbrinson382@gmail.com</a>
+<br>linkedin: <a href="https://www.linkedin.com/in/matthew-brinson-357ab675">My LinkedIn Page</a>
 
 ## [](#header-2)About Me
 

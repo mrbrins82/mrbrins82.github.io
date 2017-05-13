@@ -6,9 +6,12 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to Projects page](projects).
 
-There should be whitespace between paragraphs.
+## [](#header-2)About Me
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+I'm a recent graduate (May 2017) from the University of Wisconsin-Milwaukee, where I obtained my MSc in physics. The research projects that I was involved with included both theoretical and computational methods in cosmology, gravitational wave detection, and simulations of white dwarf binary mergers. I have included some more information about these topics in my [Research](research) page.
+
+In addition to physics, I'm also interested in data science and machine learning. My [Kaggle](kaggle), and [Projects](projects) pages have more information on the various Kaggle competitions that I have participated in and projects that I done on my own time.
+
 
 # [](#header-1)Header 1
 

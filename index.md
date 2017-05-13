@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# [](#header-1)[Home](index)&ensp[Projects](projects)&ensp[Kaggle](kaggle)
+# [](#header-1)[Home     ](index) [Projects     ](projects) [Kaggle     ](kaggle)
 
 
 

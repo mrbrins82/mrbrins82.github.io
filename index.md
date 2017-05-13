@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-# [](#header-1)[Home](index) || [Projects](projects) || [Kaggle](kaggle)
+# [](#header-1)[Home](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
 
+## [](#header-2)Contact
 
+Matthew R. Brinson
+email: <a href="mailto:mbrinson382@gmail.com" target="_top">mbrinson382@gmail.com</a>
+linkedin: <a href="https://www.linkedin.com/in/matthew-brinson-357ab675">My LinkedIn Page</a>
 
 ## [](#header-2)About Me
 

@@ -2,8 +2,8 @@
 layout: default
 ---
 # [](#header-1)[Home](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
-</br>
-</br>
+<br/>
+<br/>
 <center>
 # [](#header-1)Research Page
 </center>

@@ -4,9 +4,8 @@ layout: default
 # [](#header-1)[Home](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
 <br/>
 <br/>
-<center>
-# [](#header-1)Research Page
-</center>
+# [](#header-1)<center>Research</center>
+<br/>
 ## [](#header-2) Smoothed particle hydrodynamics (SPH) simulations of white binary white dwarf mergers
 
 Research on progenitors of type Ia supernovae (SNe Ia) is an important area of astrophysics since the properties os SNe Ia are well understood, but the details of the mechanisms that produce them are not. SNe Ia data led to the discovery of the accelerated expansion of the universe, giving rise to theories of dark energy and dark matter, and has even suggested that Einstein's general relativistic model of gravity might need modification.
@@ -29,7 +28,8 @@ To demonstrate the effects of nuclear fusion in my models, look at the next two 
 <center><img src="./assets/images/burning.png" alt="burning" width="500" height="650" />
 </center>
 
-
+<br/>
+<br/>
 ## [](#header-2) Data analysis of NANOGrav 9yr data set
 
 <a href="http://nanograv.org">NANOGrav</a> is one of several scientific collaborations across the globe that uses pulsar timing arrays in order to detect gravitational waves (GWs). Pulsars are like interstellar lighthouses, each emitting signals at regular intervals, and we can predict when each pulse should arrive at the Earth. By taking the difference between the expected time-of-arrival (TOA) and the actual TOA, we obtain residuals for each measurement. These residuals can be used to detect GWs, since a passing GW will stretch and compress spacetime between the Earth and the pulsar. This varyation in spacetime contributes to earlier- or later-than-expected TOAs for the pulses. NANOGrav is most sensitive to GWs with frequencies in the nanohertz range. To put it another way, these GWs have periods of oscillation on the order of years to tens of years.

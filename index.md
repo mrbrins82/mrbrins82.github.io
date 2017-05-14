@@ -1,9 +1,7 @@
 ---
 layout: default
 ---
-# [](#header-1)[<font size="16" color="MediumSlateBlue">Home</font>](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
-<br/>
-# [](#header-1)<center><font size="16" color="MediumSlateBlue">Home</font></center>
+# [](#header-1)[<font size="13" color="MediumSlateBlue">Home</font>](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
 <br/>
 ## [](#header-2)Contact
 

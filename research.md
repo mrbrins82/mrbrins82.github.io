@@ -5,7 +5,7 @@ layout: default
 <br/>
 # [](#header-1)<center><font color="MediumSlateBlue">Research</font></center>
 <br/>
-## [](#header-2) Smoothed particle hydrodynamics (SPH) simulations of white binary white dwarf mergers
+## [](#header-2) Smoothed particle hydrodynamics (SPH) simulations of binary white dwarf mergers
 
 Research on progenitors of type Ia supernovae (SNe Ia) is an important area of astrophysics since the properties os SNe Ia are well understood, but the details of the mechanisms that produce them are not. SNe Ia data led to the discovery of the accelerated expansion of the universe, giving rise to theories of dark energy and dark matter, and has even suggested that Einstein's general relativistic model of gravity might need modification.
 

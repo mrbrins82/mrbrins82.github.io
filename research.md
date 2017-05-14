@@ -39,6 +39,9 @@ Using a Markov Chain Monte Carlo algorithm on the 9yr data set, we placed a 95% 
 
 The current calculation of the upper limit on the strain is an improvement by a factor of about 2 or 3 compared to our previous result of less than or equal to 4e-14 at a frequency of 10nHz. Our limit on luminosity distance is improved by about the same factor of 3 from the previous result, which was greater than or equal to about 425Mpc at a frequency of 10nHz and chirp mass of 10 billion solar masses.
 
+<center><img src="./assets/images/gw_strain.png" alt="gw strain" width="500" height="400" />
+</center>
+
 The skymap below shows the sensitivity of NANOGrav to continuous GW sources. The parameter "sigma" is just a smoothing factor for the skymap. Using the points with maximum and minimum sensitivity from the skymap, we were able to compute both the maximum and minimum strain as a function of frequency, shown in the final plot below. This plot also shows sources of continuous GWs as purple dots and the purple diamond located at the frequency and amplitude at which it should emit.
 
 <center><img src="./assets/images/skymap.png" alt="skymap" width="500" height="400" />

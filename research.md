@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# [](#header-1)[Home](index) || [<font size="13" color="MediumSlateBlue">Research</font>](research) || [Projects](projects) || [Kaggle](kaggle)
+# [](#header-1)[Home](index) || [<font size="12" color="MediumSlateBlue">Research</font>](research) || [Projects](projects) || [Kaggle](kaggle)
 <br/>
 ## [](#header-2) Smoothed particle hydrodynamics (SPH) simulations of binary white dwarf mergers
 

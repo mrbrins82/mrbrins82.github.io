@@ -16,8 +16,8 @@ This data set is 144MB in size, and contains 284,807 samples and 31 features. Th
 
 The scatter plot in Fig.1 below shows the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
 <br/>
-<img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" align="left" width="300" height="200" />
-<img src="./assets/images/kdeplot_Time_Amount.png" alt="time vs amount kde" align="left" width="300" height="200" />
+<img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" align="left" width="420" height="280" />
+<img src="./assets/images/kdeplot_Time_Amount.png" alt="time vs amount kde" align="right" width="420" height="280" />
 <br/>
 <center><img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" width="600" height="400" />
 </center>

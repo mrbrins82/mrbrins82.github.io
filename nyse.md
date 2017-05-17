@@ -6,7 +6,13 @@ layout: default
 
 * * * 
 
-## [](#header-2)NYSE
+## [](#header-2)Current Projects
+[Credit Card Fraud](creditcardfraud)
+<font color="MediumSlateBlue">NYSE</font><br/>
+
+* * * 
+
+# [](#header-1)NYSE
 
 
 

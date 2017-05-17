@@ -15,7 +15,10 @@ The data used in this analysis was obtained from Kaggle and can be found <a href
 This data set is 144MB in size, and contains 284,807 samples and 31 features. The features are: <i>Time</i>, <i>Amount</i>, <i>V1</i>, <i>V2</i>, ..., <i>V28</i>, and <i>Class</i>. The dimensionality of the original data set has been reduced using principal component analysis to obtain the <i>Vi</i> 's, and we aren't given any information about what these features represent. This is also a highly imbalanced data set. There are only 492 fraud cases out of 284,807, which accounts for 0.173% of all samples. In this analysis, I have scaled all of the <i>Vi</i> features to zero mean and unit variance using the StandardScaler from sklearn.preprocessing.
 
 The scatter plot in Fig.1 below shows the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
+<figure>
 <img src="./assets/images/scatter_Time_Amount.png" alt="t vs amnt sctr" align="left" width="420" height="280" hspace="25" vspace="25"/>
+<figcaption>Fig.1</figcaption>
+</figure>
 We can see that there is periodic variation in the data with a period of approximately 80,000 seconds, <i>i.e.</i> one day. So, we're looking at a two-day data set here. The legitimate transactions follow this periodicity fairly well, but we can't really glean any information about the periodic behavior of fraudulent cases since there are so few of them. Fig.2 shows the histogram of transactions binned by time. Fraudulent cases still look to be somewhat evenly distributed in time except for a couple peaks at the beginning and end of the first day's transactions.
 <img src="./assets/images/kdeplot_Time_Amount.png" alt="t v amnt kde" align="right" width="420" height="280" hspace="25" vspace="25" />
 <br/>

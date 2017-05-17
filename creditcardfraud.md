@@ -19,21 +19,15 @@ The data used in this analysis was obtained from Kaggle and can be found <a href
 ## [](#header-2)Analysis
 This data set is 144MB in size, and contains 284,807 samples and 31 features. The features are: <i>Time</i>, <i>Amount</i>, <i>V1</i>, <i>V2</i>, ..., <i>V28</i>, and <i>Class</i>. The dimensionality of the original data set has been reduced using principal component analysis to obtain the <i>Vi</i> 's, and we aren't given any information about what these features represent. This is also a highly imbalanced data set. There are only 492 fraud cases out of 284,807, which accounts for 0.173% of all samples. In this analysis, I have scaled all of the <i>Vi</i> features to zero mean and unit variance using the StandardScaler from sklearn.preprocessing.
 
-The scatter plot in Fig.1 below shows the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
+The first plot below is a scatter plot for the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
 <img src="./assets/images/scatter_Time_Amount.png" alt="t vs amnt sctr" align="left" width="420" height="280" hspace="25" vspace="25"/>
 We can see that there is periodic variation in the data with a period of approximately 80,000 seconds, <i>i.e.</i> one day. So, we're looking at a two-day data set here. The legitimate transactions follow this periodicity fairly well, but we can't really glean any information about the periodic behavior of fraudulent cases since there are so few of them. Fig.2 shows the histogram of transactions binned by time. Fraudulent cases still look to be somewhat evenly distributed in time except for a couple peaks at the beginning and end of the first day's transactions.
-<img src="./assets/images/kdeplot_Time_Amount.png" alt="t v amnt kde" align="right" width="420" height="280" hspace="25" vspace="25" />
-<br/>
-<center><img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" width="600" height="400" />
-</center>
-<center><strong>Fig.1</strong></center>
-<br/>
+<img src="./assets/images/histogram_Time.png" alt="time histogram" align="right" width="420" height="560" hspace="25" vspace="25"/>
+
 We can see that there is periodic variation in the data with a period of approximately 80,000 seconds, <i>i.e.</i> one day. So, we're looking at a two-day data set here. The legitimate transactions follow this periodicity fairly well, but we can't really glean any information about the periodic behavior of fraudulent cases since there are so few of them. Fig.2 shows the histogram of transactions binned by time. Fraudulent cases still look to be somewhat evenly distributed in time except for a couple peaks at the beginning and end of the first day's transactions.
 <br/>
-<center><img src="./assets/images/histogram_Time.png" alt="time histogram" width="450" height="600" />
+<center><img src="./assets/images/kdeplot_Time_Amount.png" alt="t v amnt kde" align="right" width="420" height="280" hspace="25" vspace="25" />
 </center>
-<center><strong>Fig.2</strong></center>
-<br/>
 Fig.3 shows the kernel density estimate for time and amount for both cases. We can see that fraudulent cases (red) are likely to be for low dollar amounts. Legitimate transactions are also more likely to be low dollar amounts, but the blue regions extend further up in the plot. 
 <br/>
 <center><img src="./assets/images/kdeplot_Time_Amount.png" alt="time vs amount kde" width="600" height="400" />

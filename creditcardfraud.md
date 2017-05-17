@@ -22,7 +22,7 @@ The scatter plot in Fig.1 below shows the relationship between the amount of eac
 <br/>
 We can see that there is periodic variation in the data with a period of approximately 80,000 seconds, <i>i.e.</i> one day. So, we're looking at a two-day data set here. The legitimate transactions follow this periodicity fairly well, but we can't really tell any information about the periodic behavior of fraudulent cases since there are so few of them. Fig.2 shows the histogram of transactions binned by time. Fraudulent cases look to be somewhat evenly distributed in time except for a couple peaks at the beginning and end of the first day's transactions.
 <br/>
-<center><img src="./assets/images/histogram_Time.png" alt="time histogram" width="600" height="600" />
+<center><img src="./assets/images/histogram_Time.png" alt="time histogram" width="600" height="800" />
 </center>
 <center><strong>Fig.2</strong></center>
 <br/>

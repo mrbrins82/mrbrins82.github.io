@@ -39,3 +39,9 @@ In terms of dollar amounts, some periodic behavior is starting to appear in the 
 <center><strong>Fig.4</strong></center>
 <br/>
 
+<br/>
+<center><img src="./assets/images/kdeplot_Time_V1.png" alt="time vs V1 kdeplot" width="600" height="400" />
+</center>
+<center><strong>Fig.5</strong></center>
+<br/>
+

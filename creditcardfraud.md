@@ -12,7 +12,7 @@ The data used in this analysis was obtained from Kaggle and can be found <a href
 
 
 ## [](#header-2)Analysis
-This data set is 144MB in size, and contains 284,807 samples and 31 features. The features are: <i>Time</i>, <i>Amount</i>, <i>V1</i>, <i>V2</i>, ..., <i>V28</i>, and <i>Class</i>. The dimensionality of the original data set has been reduced using principal component analysis to obtain the <i>Vi</i>'s, and we aren't given any information about what these features represent. This is also a highly imbalanced data set. There are only 492 fraud cases out of 284,807, which accounts for 0.173% of all samples. In this analysis, all of the <i>Vi</i> features have been scaled to zero mean and unit variance using the StandardScaler from sklearn.preprocessing.
+This data set is 144MB in size, and contains 284,807 samples and 31 features. The features are: <i>Time</i>, <i>Amount</i>, <i>V1</i>, <i>V2</i>, ..., <i>V28</i>, and <i>Class</i>. The dimensionality of the original data set has been reduced using principal component analysis to obtain the <i>Vi</i> 's, and we aren't given any information about what these features represent. This is also a highly imbalanced data set. There are only 492 fraud cases out of 284,807, which accounts for 0.173% of all samples. In this analysis, all of the <i>Vi</i> features have been scaled to zero mean and unit variance using the StandardScaler from sklearn.preprocessing.
 
 The scatter plot in Fig.1 below shows the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
 <br/>

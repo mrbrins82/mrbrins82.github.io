@@ -3,6 +3,9 @@ layout: default
 ---
 # [](#header-1)[<font color="MediumSlateBlue">Home</font>](index) || [Research](research) || [Projects](projects) || [Kaggle](kaggle)
 <br/>
+
+* * * 
+
 ## [](#header-2)Contact
 
 Matthew R. Brinson

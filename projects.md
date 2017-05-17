@@ -5,6 +5,7 @@ layout: default
 <br/>
 
 ## [](#header-2)Current Projects
+
 [Credit Card Fraud](creditcardfraud)<br/>[NYSE](nyse)<br/>
 
 

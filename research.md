@@ -29,6 +29,9 @@ To demonstrate the effects of nuclear fusion in my models, look at the next two 
 </center>
 
 <br/>
+
+* * * 
+
 <br/>
 ## [](#header-2) Data analysis of NANOGrav 9yr data set
 

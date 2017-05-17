@@ -10,5 +10,7 @@ layout: default
 
 [Credit Card Fraud](creditcardfraud)<br/>[NYSE](nyse)<br/>
 
+* * * 
 
+The links above will take you to my individual projects. I'm currently working to get more projects uploaded to this site.
 

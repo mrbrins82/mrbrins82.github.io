@@ -16,6 +16,9 @@ This data set is 144MB in size, and contains 284,807 samples and 31 features. Th
 
 The scatter plot in Fig.1 below shows the relationship between the amount of each credit card transaction, the time in seconds after the first transaction, and whether or not the transaction was fraudulent.
 <br/>
+<img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" align="left" width="300" height="200" />
+<img src="./assets/images/kdeplot_Time_Amount.png" alt="time vs amount kde" align="left" width="300" height="200" />
+<br/>
 <center><img src="./assets/images/scatter_Time_Amount.png" alt="time vs amount scatter" width="600" height="400" />
 </center>
 <center><strong>Fig.1</strong></center>
@@ -32,7 +35,7 @@ Fig.3 shows the kernel density estimate for time and amount for both cases. We c
 </center>
 <center><strong>Fig.3</strong></center>
 <br/>
-In terms of dollar amounts, some periodic behavior is starting to appear in the kernel density plot and it looks as though the fraudulent cases follow the same trends as the non-fraudulent cases. However, if we take a look at some of the other features we can see that fraudulent cases are more likely to occur at typical "down times." In Fig.4, we have a scatter plot of V1 vs. time.
+In terms of dollar amounts, some periodic behavior is starting to appear in the kernel density plot and it looks as though the fraudulent cases follow the same trends as the non-fraudulent cases. However, if we take a look at some of the other features we can see that fraudulent cases are more likely to occur at typical "down times." In Fig.4, we have a scatter plot of V1 vs. time. There are a few red streaks that extend further into negative values, and this can be seen in the kernel density plot in Fig.5 as well.
 <br/>
 <center><img src="./assets/images/scatter_Time_V1.png" alt="time vs V1 scatter" width="600" height="400" />
 </center>

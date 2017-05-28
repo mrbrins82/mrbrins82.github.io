@@ -8,7 +8,7 @@ layout: default
 
 ## [](#header-2)Current Projects
 
-[Credit Card Fraud](creditcardfraud)<br/>[NYSE](nyse)<br/>
+[Game 7 Eastern Conference Finals<br/>Penguins vs. Senators](hockeytweets)<br/>[Credit Card Fraud](creditcardfraud)<br/>[NYSE](nyse)<br/>
 
 * * * 
 

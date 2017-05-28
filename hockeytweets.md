@@ -7,7 +7,10 @@ layout: default
 * * * 
 
 ## [](#header-2)Current Projects
-<font color="MediumSlateBlue">Game 7 Eastern Conference Finals<br/>Penguins vs. Senators</font><br/>[Credit Card Fraud](creditcardfraud)<br/>[NYSE](nyse)<br/>
+
+*   <font color="MediumSlateBlue">Twitter Streaming During Game 7 Eastern<br/>Conference Finals: Penguins vs. Senators</font>
+*   [Credit Card Fraud](creditcardfraud)
+*   [NYSE](nyse)<br/>
 
 * * * 
 

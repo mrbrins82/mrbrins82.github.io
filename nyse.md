@@ -10,7 +10,7 @@ layout: default
 
 *   [Twitter Streaming During Game 7 Eastern<br/>Conference Finals: Penguins vs. Senators](hockeytweets)
 *   [Credit Card Fraud](creditcardfraud)
-*   <font color="MediumSlateBlue">NYSE</font><br/>
+*   <font color="MediumSlateBlue">NYSE</font>
 
 * * * 
 

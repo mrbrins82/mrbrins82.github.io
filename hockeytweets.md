@@ -20,4 +20,4 @@ Game 7 of the Eastern Conference Finals was one of the most stressful games I've
 
 I live streamed tweets in the moments leading up to the game and for the duration of the game, amassing a total of 15,208 tweets (64MB) with keywords: 'sidney crosby', 'pittsburgh penguins', 'ottawa senators', 'nhl playoffs', and 'stanley cup.'
 
-<img src="./assets/images/ECF_game7_stream_hist.png" alt="tweet histogram" align="right" width="400" height="400" hspace="25" vspace="25"/>
+<img src="./assets/images/ECF_game7_stream_hist.png" alt="tweet histogram" align="right" width="600" height="400" hspace="25" vspace="25"/>

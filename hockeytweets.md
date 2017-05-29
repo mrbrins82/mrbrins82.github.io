@@ -32,29 +32,29 @@ I also looked at the sentiments of tweets using the python textblob package that
 
 ## [](#header-2)Negative Tweets
 
-*   RT @ArdaOcalTV: The Ottawa Senators would make the worst pro wrestler: they no sell everything, kick out of every finish.... #StanleyCup
-*   NHL playoffs is so insane!
-*   @RealMikeWilbon NBA playoffs have been boring. NHL is where the excitement always is.
-*   RT @SeanPooley: Anyone watching yet another BORING 30 point blowout in the NBA Playoffs need to switch and watch #game7 OT in the @NHL Play…
-*   NBA playoffs are absolutely boring compared to the NHL playoffs
-*   OT in Game 7 to go to the Stanley Cup Championship. I'm going to have a heart attack.... #LETSGOPENS!!!!!
-*   @TAFFA_44 You know what else we hate? The penguins, and Sidney Crosby
-*   Screw politics, game 7 NHL playoffs!!! https://t.co/72VwRYWTUg
-*   Haters gonna hate https://t.co/CHLpxnanZn
-*   @domluszczyszyn crazy how the stanley cup finals will turn out, the team your model hated on vs the team that could… https://t.co/sAKQp2NrnI
+*   "RT @ArdaOcalTV: The Ottawa Senators would make the worst pro wrestler: they no sell everything, kick out of every finish.... #StanleyCup"
+*   "NHL playoffs is so insane!"
+*   "@RealMikeWilbon NBA playoffs have been boring. NHL is where the excitement always is."
+*   "RT @SeanPooley: Anyone watching yet another BORING 30 point blowout in the NBA Playoffs need to switch and watch #game7 OT in the @NHL Play…"
+*   "NBA playoffs are absolutely boring compared to the NHL playoffs"
+*   "OT in Game 7 to go to the Stanley Cup Championship. I'm going to have a heart attack.... #LETSGOPENS!!!!!"
+*   "@TAFFA_44 You know what else we hate? The penguins, and Sidney Crosby"
+*   "Screw politics, game 7 NHL playoffs!!! https://t.co/72VwRYWTUg"
+*   "Haters gonna hate https://t.co/CHLpxnanZn"
+*   "@domluszczyszyn crazy how the stanley cup finals will turn out, the team your model hated on vs the team that could… https://t.co/sAKQp2NrnI"
 
 So much angst towards the NBA.
 
 ## [](#header-2)Positive Tweets
 
-*   The NHL playoffs are the best.  The best part of them? Games 7. The best of them? OT!  @NBCSN @Senators vs @penguins #StanleyCup
-*   The best moment in sports: Gm 7 Stanley Cup playoffs. Let's go Pens!!!!
-*   @Buccigross THE GREATEST PLAYER IN THE WORLD SIDNEY CROSBY #bucciovertimechallenge
-*   The Taylor Swift Stanley Cup promo is the best of all time.
-*   NHL playoffs used to have the best commercials.  Now they use Taylor Swift.
-*   @helenenothelen @penguins @Senators Another example why Stanley Cup Playoff hockey is just the best!
-*   @Notorious_RJG I've always said the NHL is the best playoffs. Problem is they're shitty at marketing their players… https://t.co/QlyiSQG6ly
-*   @HeydtScott this NHL Playoffs has been excellent viewing #GoSmashville
-*   Games like this are why the @NHL playoffs are the best thing in sports. #Game7
-*   Oh #Ottawa we stay awake for you! Win it in overtime! Go @Senators
-*   Magnificent series between @Senators and @penguins, no matter the end! \nBut Ottawa, let's bring this thing home!\n@NHL #StanleyCup #OTTvsPIT
+*   "The NHL playoffs are the best.  The best part of them? Games 7. The best of them? OT!  @NBCSN @Senators vs @penguins #StanleyCup"
+*   "The best moment in sports: Gm 7 Stanley Cup playoffs. Let's go Pens!!!!"
+*   "@Buccigross THE GREATEST PLAYER IN THE WORLD SIDNEY CROSBY #bucciovertimechallenge"
+*   "The Taylor Swift Stanley Cup promo is the best of all time."
+*   "NHL playoffs used to have the best commercials.  Now they use Taylor Swift."
+*   "@helenenothelen @penguins @Senators Another example why Stanley Cup Playoff hockey is just the best!"
+*   "@Notorious_RJG I've always said the NHL is the best playoffs. Problem is they're shitty at marketing their players… https://t.co/QlyiSQG6ly"
+*   "@HeydtScott this NHL Playoffs has been excellent viewing #GoSmashville"
+*   "Games like this are why the @NHL playoffs are the best thing in sports. #Game7"
+*   "Oh #Ottawa we stay awake for you! Win it in overtime! Go @Senators"
+*   "Magnificent series between @Senators and @penguins, no matter the end! \nBut Ottawa, let's bring this thing home!\n@NHL #StanleyCup #OTTvsPIT"

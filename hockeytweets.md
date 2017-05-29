@@ -26,4 +26,6 @@ The streaming began about an hour before the first faceoff and from the histogra
 
 <img src="./assets/images/ECF_game7_stream_poisson_stats.png" alt="tweet histogram" align="right" width="600" height="600" hspace="25" vspace="25"/>
 
-I've taken the most likely values of each of these parameters to plot in the first figure. Each of the frequencies is plotted in green, and the break takes place at the most probable value of <a href="https://www.codecogs.com/eqnedit.php?latex=\tau" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tau" title="\tau" /></a>.
+I've taken the most likely values of each of these parameters to plot in the first figure. Each of the $$ \lambda_i $$ frequencies is plotted in green, and the break takes place at the most probable value of $$ \tau $$. The MCMC simulation looks to be confident that the frequency of tweeting changed at $$ t = 196 $$ minutes. This is right when the Penguins scored in the third period to make it 2-1. Ottawa came back a few minutes later to tie the game and send it into overtime. We can see the spikes in tweets that occurred right after each of these goals. There was a huge spike in tweets right after the third period ended and lasted until the first OT period started. Tweeting settled down a little bit during that period, until again they spiked after the first overtime. There was a final spike in tweeting right after the Pens scored the game winner in 2OT.
+
+

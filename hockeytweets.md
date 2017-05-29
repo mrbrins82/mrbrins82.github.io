@@ -55,4 +55,4 @@ I also looked at the sentiments of tweets using the python textblob package that
 *   "@HeydtScott this NHL Playoffs has been excellent viewing #GoSmashville"
 *   "Games like this are why the @NHL playoffs are the best thing in sports. #Game7"
 *   "Oh #Ottawa we stay awake for you! Win it in overtime! Go @Senators"
-*   "Magnificent series between @Senators and @penguins, no matter the end! But Ottawa, let's bring this thing home!\n@NHL #StanleyCup #OTTvsPIT"
+*   "Magnificent series between @Senators and @penguins, no matter the end! But Ottawa, let's bring this thing home! @NHL #StanleyCup #OTTvsPIT"

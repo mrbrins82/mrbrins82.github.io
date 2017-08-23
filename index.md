@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# [](#header-1)[<font color="MediumSlateBlue">Home</font>](index) || [Research](research) || [Projects](projects)
+# [](#header-1)[<font color="MediumSlateBlue">Home</font>](index) || [Research](research)
 <br/>
 
 * * * 
@@ -18,5 +18,9 @@ I'm a recent graduate (May 2017) from the University of Wisconsin-Milwaukee, whe
 
 Before graduate school, I received my BS in physics (minor in mathematics) from the University of Pittsburgh. While an undergraduate there, I analyzed spectral images of galaxies for the DEEP3 survey in order to determine their redshifts and I also worked as a laboratory assistant in condensed matter research.
 
-In addition to physics, I'm also interested in data science and machine learning. My [Projects](projects) page has more information on the various data science projects that I have done in my own time as well as the various Kaggle competitions that I have participated in.
+In addition to physics, I'm also interested in data science and machine learning. The links in the Projects section below have more information on the various data science projects that I have done in my own time as well as the various Kaggle competitions that I have participated in.
 
+## [](#header-2)Projects
+
+*   [Twitter Streaming \& Sentiment Analysis<br/>for Game 7 of the NHL Eastern Conference Finals: Penguins vs. Senators](hockeytweets)
+*   [Kaggle Projects](kaggle)

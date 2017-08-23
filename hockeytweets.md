@@ -1,16 +1,15 @@
 ---
 layout: default
 ---
-# [](#header-1)[Home](index) || [Research](research) || [<font color="MediumSlateBlue">Projects</font>](projects)
+# [](#header-1)[Home](index) || [Research](research)
 <br/>
 
 * * * 
 
-## [](#header-2)Current Projects
+## [](#header-2)Projects
 
 *   <font color="MediumSlateBlue">Twitter Streaming During Game 7 Eastern<br/>Conference Finals: Penguins vs. Senators</font>
-*   [Credit Card Fraud](creditcardfraud)
-*   [NYSE](nyse)<br/>
+*   [Kaggle](kaggle)<br/>
 
 * * * 
 

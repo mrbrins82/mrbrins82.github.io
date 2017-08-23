@@ -8,12 +8,12 @@ layout: default
 
 ## [](#header-2)Projects
 
-*   <font color="MediumSlateBlue">Twitter Streaming During Game 7 Eastern<br/>Conference Finals: Penguins vs. Senators</font>
+*   <font color="MediumSlateBlue">Twitter Streaming & Sentiment Analysis for<br/>Game 7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators</font>
 *   [Kaggle](kaggle)<br/>
 
 * * * 
 
-# [](#header-1)Twitter Streaming of Eastern Conference Finals Game 7 between the Pittsburgh Penguins and Ottawa Senators
+# [](#header-1)Twitter Streaming & Sentiment Analysis for<br/>Game7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators
 
 Game 7 of the Eastern Conference Finals was one of the most stressful games I've ever watched as a Penguins fan. It took the Penguins two heart-palpitation-inducing overtime periods to score a goal by Chris Kunitz earning them a trip to the Stanley Cup Finals for the second year in a row. No team has won back to back Stanley Cups in the salary cap era, and the Penguins stand a chance to be the first when they faceoff against the Nashville Predators. The last team to do it was the Detroit Red Wings in 97-98. Before that, the Pittsburgh Penguins in 91-92. 
 

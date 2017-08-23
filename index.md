@@ -22,5 +22,5 @@ In addition to physics, I'm also interested in data science and machine learning
 
 ## [](#header-2)Projects
 
-*   [Twitter Streaming \& Sentiment Analysis<br/>for Game 7 of the NHL Eastern Conference Finals: Penguins vs. Senators](hockeytweets)
+*   [Twitter Streaming & Sentiment Analysis for<br/>Game 7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators](hockeytweets)
 *   [Kaggle Projects](kaggle)

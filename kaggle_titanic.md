@@ -80,7 +80,7 @@ The features contained in the data sets are:
   <tr>
     <td>Embarked</td>
     <td>Port of embarkation</td>
-    <td>Cherbourg = C,</br>Queenstown = Q,</br>Southampton = S</td>
+    <td>Cherbourg = C,<br/>Queenstown = Q,<br/>Southampton = S</td>
   </tr>
 </table>
 

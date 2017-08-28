@@ -23,9 +23,9 @@ The sinking of the Titanic resulted in the loss of many lives. There were over 1
 The features contained in the data sets are:
 <table>
   <tr>
-    <th>Feature</th>
-    <th>Description</th>
-    <th>Key</th>
+    <th>**Feature**</th>
+    <th>**Description**</th>
+    <th>**Key**</th>
   </tr>
   <tr>
     <td>Survived</td>

@@ -30,12 +30,12 @@ The features contained in the data sets are:
   <tr>
     <td>Survived</td>
     <td>Passenger deceased/survived</td>
-    <td>deceased = 0, survived = 1</td>
+    <td>deceased = 0,<br/>survived = 1</td>
   </tr>
   <tr>
     <td>Pclass</td>
     <td>Social class of passenger</td>
-    <td>1st = 1, 2nd = 2, 3rd = 3</td>
+    <td>1st = 1,<br/>2nd = 2,<br/>3rd = 3</td>
   </tr>
   <tr>
     <td>Name</td>

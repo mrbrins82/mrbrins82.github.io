@@ -10,7 +10,7 @@ layout: default
 
 *   [Twitter Streaming & Sentiment Analysis for<br/>Game 7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators](hockeytweets)<br/>
 *   [(Kaggle) Titanic: Machine Learning from Disaster](kaggle_titanic)<br/>
-*   <font color="MediumSlateBlue">(Kaggle) House Prices: Advanced Regression Techniques</font><br/>
+*   <font color="MediumSlateBlue">(Kaggle) House Prices: Advanced Regression Techniques</font>
 *   [(Kaggle) Personalized Medicine: Redefining Cancer Treatment](kaggle_cancer)<br/>
 
 

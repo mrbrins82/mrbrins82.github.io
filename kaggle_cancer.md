@@ -6,15 +6,14 @@ layout: default
 
 * * * 
 
-## [](#header-2)List of Projects
+## [](#header-2)Projects
 
-*   [Twitter Streaming During Game 7 Eastern <br/>Conference Finals: Penguins vs. Senators](hockeytweets)
+*   [Twitter Streaming & Sentiment Analysis for<br/>Game 7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators](hockeytweets)<br/>
 *   [(Kaggle) Titanic: Machine Learning from Disaster](kaggle_titanic)<br/>
 *   [(Kaggle) House Prices: Advanced Regression Techniques](kaggle_houseprices)<br/>
-*   [(Kaggle) Personalized Medicine: Redefining Cancer Treatment](kaggle_cancer)<br/>
+*   <font color="MediumSlateBlue">(Kaggle) Personalized Medicine: Redefining Cancer Treatment</font><br/>
 
 
 * * * 
 
-The links above will take you to my individual projects. 
 

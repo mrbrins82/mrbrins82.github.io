@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# [](#header-1)[Home](index) || [<font color="MediumSlateBlue">Research</font>](research)
+# [](#header-1)[Home](index) || [<font color="MediumSlateBlue">Research</font>](research) || [Projects](projects)
 <br/>
 
 * * * 

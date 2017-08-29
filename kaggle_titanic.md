@@ -28,10 +28,10 @@ import pandas as pd
 
 # train.csv contains entries for 891 passengers total
 train_df = pd.read_csv('train.csv')
+train_df = train_df.drop(['PassengerId'], axis=1) # Ids only important for labelling
 print train_df.count() # this will tell us how many non-NA values for each feature
 ```
 ```ipython
-PassengerId    891
 Survived       891
 Pclass         891
 Name           891

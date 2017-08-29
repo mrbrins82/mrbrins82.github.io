@@ -20,6 +20,7 @@ layout: default
 
 The sinking of the Titanic resulted in the loss of many lives. There were over 1500 deaths, accounting for approximately 2 out of every 3 people on the ship (passengers and crew combined). In this competition, Kaggle provides two data sets (a training set and a testing set) which contain numerical and categorical features for each of the passengers. The two sets contain the same numerical and categorical features, except that the training set also tells us if the passengers survived. The objective is to use the data to predict whether or not passengers in the testing data set survived or not. This is a binary classification problem, since we wish to classify each passenger as belonging to one of two classes: deceased, survived
 
+# [](#header-2)Examining the data
 Let's load the training set and see what kinds of features we have, and determine which ones are helpful for classification.
 ```python
 import pandas as pd
@@ -83,7 +84,7 @@ SibSp         -0.035322
 Parch          0.081629
 Fare           0.257307
 ```
-
+The above shows how each of the numerical features correlates with survival specifically. The strongest correlation is with passenger class, with fare being the next strongest. One of the weaker correlations is with age, which is a bit surprising given the pivot table with mean ages. Finally, there is some correlation between the number of accompanying parents and children (Parch), and siblings and spouses (SibSp) and is comparable to the age correlation.
 
 
 

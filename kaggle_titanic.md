@@ -42,11 +42,11 @@ Cabin          204
 Embarked       889
 dtype: int64
 ```
-We can see that there are some missing values for _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as does class which could depend on port of embarkation so we will fill these missing values. There are a lot of missing cabin values, and we will just drop this column.
+We can see that there are some missing values for _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as did class which could be tied to port of embarkation, so it will be important to fill the missing values.
 
-Women and children were the first to go into lifeboats, so let's look at a couple pivot tables that show some statistics about gender, age, and survival as well as passenger class.
+Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python
-train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
+print train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
 ```
 ```ipython
 Pclass         1         2         3
@@ -54,7 +54,9 @@ Sex
 female  0.968085  0.921053  0.500000
 male    0.368852  0.157407  0.135447
 ```
-From the looks of this, it's quite obvious that gender and class have importance to survival. For example, 97% of 1st-class women survived, whereas only 13% of 3rd-class men survived. The survival rate of women beats out that of men in every class, and for males and females both a higher class meant a higher probability of survival.
+From the looks of this, it's quite obvious that gender and class had importance for survival. For example, 97% of 1st-class women survived, whereas only 13% of 3rd-class men survived. The survival rate of women beat out that of men in every class, and for males and females individually, a higher class meant a higher probability of survival.
+
+In the next pivot table, we'll take a look at the average ages of passengers broken down by gender, class, and survival.
 ```python
 print train_df.pivot_table(values='Age', index=['Pclass'], columns=['Sex', 'Survived'])
 ```
@@ -66,7 +68,7 @@ Pclass
 2         36.000000  28.080882  33.369048  16.022000
 3         23.818182  19.329787  27.255814  22.274211
 ```
-
+In all but one case, survivors tended to be younger on average. This was not the case for 1st-class women, where the average age of survivors was about 35, and 26 for the deceased.
 
 
 

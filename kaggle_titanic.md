@@ -44,7 +44,7 @@ Fare           891
 Cabin          204
 Embarked       889
 ```
-We can see that there are some missing values for _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as did class which could be tied to port of embarkation, so it will be important to fill the missing values.
+We can see that there are some missing values for the _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as did class which could be tied to port of embarkation, so it will be important to fill the missing values.
 
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python

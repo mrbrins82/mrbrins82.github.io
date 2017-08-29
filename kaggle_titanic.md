@@ -26,8 +26,6 @@ import pandas as pd
 
 train_df = pd.read_csv('train.csv')
 print train_df.count()
-print ''
-print train_df.pivot_table(values='Age', index=['Pclass'], columns=['Sex', 'Survived'])
 ```
 ```ipython
 PassengerId    891
@@ -44,6 +42,22 @@ Cabin          204
 Embarked       889
 dtype: int64
 ```
+We can see that there are some missing values for _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as does class which could depend on port of embarkation so we will fill these missing values. There are a lot of missing cabin values, and we will just drop this column.
+
+Women and children were the first to go into lifeboats, so let's look at a couple pivot tables that show some statistics about gender, age, and survival as well as passenger class.
+```python
+train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
+```
+```ipython
+Pclass         1         2         3
+Sex                                 
+female  0.968085  0.921053  0.500000
+male    0.368852  0.157407  0.135447
+```
+From the looks of this, it's quite obvious that gender and class have importance to survival. For example, 97% of 1st-class women survived, whereas only 13% of 3rd-class men survived. The survival rate of women beats out that of men in every class, and for males and females both a higher class meant a higher probability of survival.
+```python
+print train_df.pivot_table(values='Age', index=['Pclass'], columns=['Sex', 'Survived'])
+```
 ```ipython
 Sex          female                  male           
 Survived          0          1          0          1
@@ -51,14 +65,6 @@ Pclass
 1         25.666667  34.939024  44.581967  36.248000
 2         36.000000  28.080882  33.369048  16.022000
 3         23.818182  19.329787  27.255814  22.274211
-```
-```ipython
-In [88]: train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
-Out[88]: 
-Pclass         1         2         3
-Sex                                 
-female  0.968085  0.921053  0.500000
-male    0.368852  0.157407  0.135447
 ```
 
 

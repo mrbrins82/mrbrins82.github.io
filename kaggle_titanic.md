@@ -24,8 +24,9 @@ Let's load the training set and see what kinds of features we have, and determin
 ```python
 import pandas as pd
 
+# train.csv contains entries for 891 passengers total
 train_df = pd.read_csv('train.csv')
-print train_df.count() # 891 total passengers in train.csv
+print train_df.count() # this will tell us how many non-NA values for each feature
 ```
 ```ipython
 PassengerId    891

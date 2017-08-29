@@ -25,7 +25,7 @@ Let's load the training set and see what kinds of features we have, and determin
 import pandas as pd
 
 train_df = pd.read_csv('train.csv')
-print train_df.count()
+print train_df.count() # 891 total passengers in train.csv
 ```
 ```ipython
 PassengerId    891
@@ -40,7 +40,6 @@ Ticket         891
 Fare           891
 Cabin          204
 Embarked       889
-dtype: int64
 ```
 We can see that there are some missing values for _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as did class which could be tied to port of embarkation, so it will be important to fill the missing values.
 
@@ -70,7 +69,19 @@ Pclass
 ```
 In all but one case, survivors tended to be younger on average. This was not the case for 1st-class women, where the average age of survivors was about 35, and 26 for the deceased.
 
-
+Age, gender, and class are clearly important features to incorporate into our machine learning model. How do the other features correlate to survival? We can look at the correlation between all of the numerical features in our training data frame.
+```python
+print train_df.corr()['Survived']
+```
+```ipython
+PassengerId   -0.005007
+Survived       1.000000
+Pclass        -0.338481
+Age           -0.077221
+SibSp         -0.035322
+Parch          0.081629
+Fare           0.257307
+```
 
 
 

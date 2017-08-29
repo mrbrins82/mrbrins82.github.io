@@ -52,8 +52,14 @@ Pclass
 2         36.000000  28.080882  33.369048  16.022000
 3         23.818182  19.329787  27.255814  22.274211
 ```
-
-
+```ipython
+In [88]: train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
+Out[88]: 
+Pclass         1         2         3
+Sex                                 
+female  0.968085  0.921053  0.500000
+male    0.368852  0.157407  0.135447
+```
 
 
 

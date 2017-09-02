@@ -17,21 +17,35 @@ layout: default
 * * *
 
 # [](#header-1)Titanic: Machine Learning from Disaster
-
+<br/>
+<br/>
+# [](#header-2)Introduction
 The sinking of the Titanic resulted in the loss of many lives. There were over 1500 deaths, accounting for approximately 2 out of every 3 people on the ship (passengers and crew combined). In this competition, Kaggle provides two data sets (a training set and a testing set) which contain numerical and categorical features for each of the passengers. The two sets contain the same numerical and categorical features, except that the training set also tells us if the passengers survived. The objective is to use the data to predict whether or not passengers in the testing data set survived or not. This is a binary classification problem, since we wish to classify each passenger as belonging to one of two classes: deceased, survived
 <br/>
 <br/>
-# [](#header-2)Examining the data
-Let's load the training set and see what kinds of features we have, and determine which ones are helpful for classification.
+# [](#header-2)EXPLORING THE DATA
+Let's load the train and test files and see which features will be useful for classification and what kinds of new features that we can engineer.
 ```python
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# train.csv contains entries for 891 passengers total
+from sklearn.preprocessing import LabelEncoder
+
+# load the training and testing data files
 train_df = pd.read_csv('train.csv')
-train_df = train_df.drop(['PassengerId'], axis=1) # Ids only important for labelling
+test_df = pd.read_csv('test.csv')
+
+# check to see if the data files have any missing values
+print train_df.shape # gives dimension of training set
+print ''
 print train_df.count() # this will tell us how many non-NA values for each feature
+print ''
+print train_df.dtypes # this will tell us what type of data each feature contains
 ```
 ```ipython
+(891, 12)
+
 Survived       891
 Pclass         891
 Name           891
@@ -43,8 +57,124 @@ Ticket         891
 Fare           891
 Cabin          204
 Embarked       889
+
+PassengerId      int64
+Survived         int64
+Pclass           int64
+Name            object
+Sex             object
+Age            float64
+SibSp            int64
+Parch            int64
+Ticket          object
+Fare           float64
+Cabin           object
+Embarked        object
+
 ```
-We can see that there are some missing values for the _Age_, _Cabin_, and _Embarked_ features. We can fill in the missing values or drop the columns all together. Age likely played a significant role in survival, as did class which could be tied to port of embarkation, so it will be important to fill the missing values.
+```python
+print test_df.shape
+print ''
+print test_df.count()
+```
+```ipython
+(418, 11)
+
+PassengerId    418
+Pclass         418
+Name           418
+Sex            418
+Age            332
+SibSp          418
+Parch          418
+Ticket         418
+Fare           417
+Cabin           91
+Embarked       418
+```
+
+We can see that there are some missing values for the _Age_, _Cabin_, and _Embarked_ features in the training set and one missing _Fare_ value in the testing set as well. We will need to look at the importance of these features in terms of survival to decide whether or not we should fill in the missing values or if we can just drop any of them.
+
+In order to build a classifier, all of the data must be in numerical form. If there are any categorial features, we will need to encode them. A quick check of the data types gives us
+```python
+print train_df.dtypes
+```
+```ipython
+PassengerId      int64
+Survived         int64
+Pclass           int64
+Name            object
+Sex             object
+Age            float64
+SibSp            int64
+Parch            int64
+Ticket          object
+Fare           float64
+Cabin           object
+Embarked        object
+```
+
+_Name_, _Sex_, _Ticket_, _Cabin_, and _Embarked_ are all categorical features. At this point, it's only useful to encode _Sex_ and _Embarked_ into numerical values since there are too many possible values for _Name_, _Ticket_, and _Cabin_. Before we can encode the _Sex_ and _Embarked_ features, we'll need to fill the two missing values for _Embarked_. Taking a quick look at the two passengers that don't have values for _Embarked_, we have
+```python
+print train_df[train_df.Embarked.isnull()]
+```
+```ipython
+     PassengerId  Survived  Pclass                                       Name  \
+61            62         1       1                        Icard, Miss. Amelie   
+829          830         1       1  Stone, Mrs. George Nelson (Martha Evelyn)   
+
+        Sex   Age  SibSp  Parch  Ticket  Fare Cabin Embarked  
+61   female  38.0      0      0  113572  80.0   B28      NaN  
+829  female  62.0      0      0  113572  80.0   B28      NaN 
+```
+
+These are two 1st-class women that are on the same ticket and in the same cabin, so they probably boarded at the same location.
+
+```python
+train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], columns=['Embarked'], aggfunc='count')
+```
+```ipytyon
+Embarked        C   Q    S
+Sex    Pclass             
+female 1       43   1   48
+       2        7   2   67
+       3       23  33   88
+male   1       42   1   79
+       2       10   1   97
+       3       43  39  265
+```
+```python
+train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], columns=['Embarked'], aggfunc='mean')
+```
+```ipython
+Embarked              C         Q         S
+Sex    Pclass                              
+female 1       0.976744  1.000000  0.958333
+       2       1.000000  1.000000  0.910448
+       3       0.652174  0.727273  0.375000
+male   1       0.404762  0.000000  0.354430
+       2       0.200000  0.000000  0.154639
+       3       0.232558  0.076923  0.128302
+```
+
+The above two pivot tables show us that 1st-class women were equally likely to board at either Cherbourg or Southampton. There is a slightly higher probability for 1st-class women that boarded at Cherbourg to survive, and since the two women missing _Embarked_ values survived, I'll choose to fill the missing values as Cherbourg.
+
+```python
+train_df.Embarked.iloc[61] = 'C'
+train_df.Embarked.iloc[829] = 'C'
+```
+
+We are now ready to map the _Sex_ and _Embarked_ features to numerical values. For this, we can use sklearn's LabelEncoder.
+```python
+le_Sex = LabelEncoder()
+train_df.Sex = le_Sex.fit_transform(train_df.Sex)
+test_df.Sex = le_Sex.transform(test_df.Sex)
+
+le_Embarked = LabelEncoder()
+train_df.Embarked = le_Embarked.fit_transform(train_df.Embarked)
+test_df.Embarked = le_Embarked.transform(test_df.Embarked)
+
+```
 
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python

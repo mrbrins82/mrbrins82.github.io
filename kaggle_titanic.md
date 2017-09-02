@@ -15,8 +15,8 @@ layout: default
 
 
 * * *
-
-# [](#header-1)<center>Titanic: Machine Learning from Disaster<center/>
+<br/>
+# [](#header-1)<center>_TITANIC: MACHINE LEARNING FROM DISASTER_<center/>
 <br/>
 <br/>
 # [](#header-2)I. INTRODUCTION
@@ -24,9 +24,9 @@ The sinking of the Titanic resulted in the loss of many lives. There were over 1
 <br/>
 <br/>
 # [](#header-2)II. EXPLORING THE DATA
-
+<br/>
 # [](#header-2)<center>Part 1.<center/>
-Let's load the train and test files and see which features will be useful for classification and what kinds of new features that we can engineer.
+The first thing we need to do is load the data and take a quick look at it to see what, if anything, we need to do with it.
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -177,8 +177,61 @@ train_df.Embarked = le_Embarked.fit_transform(train_df.Embarked)
 test_df.Embarked = le_Embarked.transform(test_df.Embarked)
 
 ```
-
+<br/>
 # [](#header-3)<center>Part 2.<center/>
+At this point we've filled in a couple missing _Embarked_ values, and converted the cagetorical _Sex_, and _Embarked_ features into numerical values. We would like to now examine the strength of correlation that the data have with the target variable, _Survived_.
+```python
+print train_df.corr()
+```
+```ipython
+             PassengerId  Survived    Pclass       Sex       Age     SibSp  \
+PassengerId     1.000000 -0.005007 -0.035144  0.042939  0.036847 -0.057527   
+Survived       -0.005007  1.000000 -0.338481 -0.543351 -0.077221 -0.035322   
+Pclass         -0.035144 -0.338481  1.000000  0.131900 -0.369226  0.083081   
+Sex             0.042939 -0.543351  0.131900  1.000000  0.093254 -0.114631   
+Age             0.036847 -0.077221 -0.369226  0.093254  1.000000 -0.308247   
+SibSp          -0.057527 -0.035322  0.083081 -0.114631 -0.308247  1.000000   
+Parch          -0.001652  0.081629  0.018443 -0.245489 -0.189119  0.414838   
+Fare            0.012658  0.257307 -0.549500 -0.182333  0.096067  0.159651   
+Embarked        0.013078 -0.174199  0.170334  0.115513 -0.040248  0.070653   
+
+                Parch      Fare  Embarked  
+PassengerId -0.001652  0.012658  0.013078  
+Survived     0.081629  0.257307 -0.174199  
+Pclass       0.018443 -0.549500  0.170334  
+Sex         -0.245489 -0.182333  0.115513  
+Age         -0.189119  0.096067 -0.040248  
+SibSp        0.414838  0.159651  0.070653  
+Parch        1.000000  0.216225  0.042325  
+Fare         0.216225  1.000000 -0.229304  
+Embarked     0.042325 -0.229304  1.000000 
+```
+
+At first sight, the strongest correlations seem to be with _Pclass_, _Sex_, _Fare_, and _Embarked_. We can't write off the features with weaker correlations just yet as they may still contain some useful information.
+
+In the next few subsections, we will examine each of the features individually and determine its usefulness for classification and if there are any new features that we can engineer from them.
+
+<br/>
+# [](#header-3)_Pclass_
+
+<br/>
+# [](#header-3)_Sex_
+
+<br/>
+# [](#header-3)_Age_
+
+<br/>
+# [](#header-3)_SibSp_
+
+<br/>
+# [](#header-3)_Parch_
+
+<br/>
+# [](#header-3)_Fare_
+
+<br/>
+# [](#header-3)_Embarked_
+
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python
 print train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])

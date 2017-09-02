@@ -133,7 +133,8 @@ print train_df[train_df.Embarked.isnull()]
 These are two 1st-class women that are on the same ticket and in the same cabin, so they probably boarded at the same location. How do we determine what to set as their port of embarkation? Let's look at a couple pivot tables and see if we can find any helpful information. The first pivot table shows a breakdown by _Sex_, _Pclass_, _Embarked_, and shows the number of people in each subset that embarked at a specific port. The second pivot table shows the same breakdown, except that instead of the number of people in each subset, it shows the survival probability.
 
 ```python
-train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], columns=['Embarked'], aggfunc='count')
+train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
+                     columns=['Embarked'], aggfunc='count')
 ```
 ```ipytyon
 Embarked        C   Q    S
@@ -146,7 +147,8 @@ male   1       42   1   79
        3       43  39  265
 ```
 ```python
-train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], columns=['Embarked'], aggfunc='mean')
+train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
+                     columns=['Embarked'], aggfunc='mean')
 ```
 ```ipython
 Embarked              C         Q         S
@@ -216,7 +218,7 @@ In the next few subsections, we will examine each of the features individually a
 ```python
 sns.set_style(style="darkgrid")
 
-g = sns.factorplot(x="Pclass", y="Survived", data=train_df, size=6
+g = sns.factorplot(x="Pclass", y="Survived", data=train_df, size=6,
                    kind="bar", palette="muted")
 g.despine(left=True)
 g.set_xticklabels(["1st", "2nd", "3rd"])
@@ -249,7 +251,8 @@ plt.show()
 <br/>
 # [](#header-3)_SibSp_
 ```python
-g = sns.factorplot(x="SibSp", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
+g = sns.factorplot(x="SibSp", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
 g.despine(left=True)
 g.set_ylabels("survival probability")
 plt.show()

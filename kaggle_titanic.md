@@ -214,42 +214,42 @@ In the next few subsections, we will examine each of the features individually a
 <br/>
 # [](#header-3)_Pclass_
 
-<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+<center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="350" />
 </center>
 
 <br/>
 # [](#header-3)_Sex_
-<center><img src="./assets/images/sex_survival_prob.png.png" alt="sex_survival" width="500" height="350" />
+<center><img src="./assets/images/sex_survival_prob.png" alt="sex_survival" width="500" height="350" />
 </center>
 
 
 <br/>
 # [](#header-3)_Age_
-<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+<center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="350" />
 </center>
 
 
 <br/>
 # [](#header-3)_SibSp_
-<center><img src="./assets/images/sibsp_survival_prob.png.png" alt="sibsp_survival" width="500" height="350" />
+<center><img src="./assets/images/sibsp_survival_prob.png" alt="sibsp_survival" width="500" height="350" />
 </center>
 
 
 <br/>
 # [](#header-3)_Parch_
-<center><img src="./assets/images/parch_survival_prob.png.png" alt="parch_survival" width="500" height="350" />
+<center><img src="./assets/images/parch_survival_prob.png" alt="parch_survival" width="500" height="350" />
 </center>
 
 
 <br/>
 # [](#header-3)_Fare_
-<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+<center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="350" />
 </center>
 
 
 <br/>
 # [](#header-3)_Embarked_
-<center><img src="./assets/images/embarked_survival_prob.png.png" alt="embarked_survival" width="500" height="350" />
+<center><img src="./assets/images/embarked_survival_prob.png" alt="embarked_survival" width="500" height="350" />
 </center>
 
 

@@ -226,6 +226,8 @@ plt.show()
 ```
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
+_Pclass_ was one of the strong correlations with _Survived_, and the bar plot for survival probability by class supports the strong correlation. The standard deviations for each of the classes indicates that there is a definite statistical separation between each class. _Pclass_ is a pretty straighforward feature with not much else for us to do with it.
+<br/>
 
 # [](#header-3)_Sex_
 ```python
@@ -238,13 +240,14 @@ plt.show()
 ```
 <center><img src="./assets/images/sex_survival_prob.png" alt="sex_survival" width="500" height="500" />
 </center>
-
+Women and children were the first into the lifeboats, so it's not surprising to see that women had a much higher probability for survival. As with _Pclass_, _Sex_ is another straightforward feature with not much else for us to do.
+<br/>
 
 # [](#header-3)_Age_
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
 
-
+<br/>
 # [](#header-3)_SibSp_
 ```python
 g = sns.factorplot(x="SibSp", y="Survived", data=train_df, size=6, 

@@ -297,8 +297,18 @@ plt.show()
 ```
 <center><img src="./assets/images/fare_dist_plot.png" alt="fare_dist" width="500" height="500" />
 </center>
+```python
+sns.distplot(survivors_df.Fare, bins=161, norm_hist=False, color='blue', label='Survived')
+sns.distplot(deceased_df.Fare, bins=161, norm_hist=False, color='red', label='Deceased')
+plt.xlabel('Fare (pounds)', size=18)
+plt.xlim(xmin=-10, xmax=150)
+plt.legend(loc='upper right')
+plt.show()
+```
+<center><img src="./assets/images/fare_dist_plot_zoom.png" alt="fare_dist_zoom" width="500" height="500" />
+</center>
 
-
+<br/>
 # [](#header-3)_Embarked_
 ```python
 g = sns.factorplot(x="Embarked", y="Survived", data=train_df, size=6, 

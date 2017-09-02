@@ -245,8 +245,13 @@ Women and children were the first into the lifeboats, so it's not surprising to 
 
 # [](#header-3)_Age_
 ```python
-sns.distplot()
+survivors_df = train_df[train_df.Survived == 1]
+deceased_df = train_df[train_df.Survived == 0]
 
+sns.distplot(survivors_df.Age.dropna(), bins=41, norm_hist=False, color='blue', label='Survived')
+sns.distplot(deceased_df.Age.dropna(), bins=41, norm_hist=False, color='red', label='Deceased')
+plt.xlabel('Age (yrs)', size=18)
+plt.legend(loc='upper right')
 plt.show()
 ```
 <center><img src="./assets/images/age_dist_plot.png" alt="age_dist" width="500" height="500" />
@@ -278,7 +283,15 @@ plt.show()
 
 
 # [](#header-3)_Fare_
-<center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
+```python
+sns.distplot(survivors_df.Fare, bins=101, norm_hist=False, color='blue', label='Survived')
+sns.distplot(deceased_df.Fare, bins=101, norm_hist=False, color='red', label='Deceased')
+plt.xlabel('Fare (pounds)', size=18)
+plt.legend(loc='upper right')
+plt.show()
+
+```
+<center><img src="./assets/images/fare_dist_plot.png" alt="fare_dist" width="500" height="500" />
 </center>
 
 

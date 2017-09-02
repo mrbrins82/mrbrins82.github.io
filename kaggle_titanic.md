@@ -244,7 +244,12 @@ Women and children were the first into the lifeboats, so it's not surprising to 
 <br/>
 
 # [](#header-3)_Age_
-<center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
+```python
+sns.distplot()
+
+plt.show()
+```
+<center><img src="./assets/images/age_dist_plot.png" alt="age_dist" width="500" height="500" />
 </center>
 
 <br/>

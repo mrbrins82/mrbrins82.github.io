@@ -213,12 +213,29 @@ In the next few subsections, we will examine each of the features individually a
 
 <br/>
 # [](#header-3)_Pclass_
+```python
+sns.set_style(style="darkgrid")
 
+g = sns.factorplot(x="Pclass", y="Survived", data=train_df, size=6
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(["1st", "2nd", "3rd"])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
 
 <br/>
 # [](#header-3)_Sex_
+```python
+g = sns.factorplot(x="Sex", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(["Female", "Male"])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/sex_survival_prob.png" alt="sex_survival" width="500" height="500" />
 </center>
 
@@ -231,12 +248,25 @@ In the next few subsections, we will examine each of the features individually a
 
 <br/>
 # [](#header-3)_SibSp_
+```python
+g = sns.factorplot(x="SibSp", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
+g.despine(left=True)
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/sibsp_survival_prob.png" alt="sibsp_survival" width="500" height="500" />
 </center>
 
 
 <br/>
 # [](#header-3)_Parch_
+```python
+g = sns.factorplot(x="Parch", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/parch_survival_prob.png" alt="parch_survival" width="500" height="500" />
 </center>
 
@@ -249,6 +279,14 @@ In the next few subsections, we will examine each of the features individually a
 
 <br/>
 # [](#header-3)_Embarked_
+```python
+g = sns.factorplot(x="Embarked", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['Cherbourg', 'Queensland', 'Southampton'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/embarked_survival_prob.png" alt="embarked_survival" width="500" height="500" />
 </center>
 

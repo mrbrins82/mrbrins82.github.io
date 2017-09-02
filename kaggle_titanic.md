@@ -16,16 +16,16 @@ layout: default
 
 * * *
 
-# [](#header-1)Titanic: Machine Learning from Disaster
+# [](#header-1)<center>Titanic: Machine Learning from Disaster<center/>
 <br/>
 <br/>
-# [](#header-2)Introduction
+# [](#header-2)I. INTRODUCTION
 The sinking of the Titanic resulted in the loss of many lives. There were over 1500 deaths, accounting for approximately 2 out of every 3 people on the ship (passengers and crew combined). In this competition, Kaggle provides two data sets (a training set and a testing set) which contain numerical and categorical features for each of the passengers. The two sets contain the same numerical and categorical features, except that the training set also tells us if the passengers survived. The objective is to use the data to predict whether or not passengers in the testing data set survived or not. This is a binary classification problem, since we wish to classify each passenger as belonging to one of two classes: deceased, survived
 <br/>
 <br/>
-# [](#header-2)EXPLORING THE DATA
+# [](#header-2)II. EXPLORING THE DATA
 
-# [](#header-3)Part 1.
+# [](#header-2)<center>Part 1.<center/>
 Let's load the train and test files and see which features will be useful for classification and what kinds of new features that we can engineer.
 ```python
 import pandas as pd
@@ -178,7 +178,7 @@ test_df.Embarked = le_Embarked.transform(test_df.Embarked)
 
 ```
 
-# [](#header-3)Part 2.
+# [](#header-3)<center>Part 2.<center/>
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python
 print train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])

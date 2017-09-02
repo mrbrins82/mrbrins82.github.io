@@ -25,7 +25,7 @@ The sinking of the Titanic resulted in the loss of many lives. There were over 1
 <br/>
 # [](#header-2)II. EXPLORING THE DATA
 <br/>
-# [](#header-2)<center>Part 1.<center/>
+# [](#header-2)<center>Part 1. Loading the Data<center/>
 The first thing we need to do is load the data and take a quick look at it to see what, if anything, we need to do with it.
 ```python
 import pandas as pd
@@ -180,7 +180,7 @@ test_df.Embarked = le_Embarked.transform(test_df.Embarked)
 
 ```
 <br/>
-# [](#header-3)<center>Part 2.<center/>
+# [](#header-3)<center>Part 2. Survival Probability by Feature<center/>
 At this point we've filled in a couple missing _Embarked_ values, and converted the cagetorical _Sex_, and _Embarked_ features into numerical values. We would like to now examine the strength of correlation that the data have with the target variable, _Survived_.
 ```python
 print train_df.corr()
@@ -213,7 +213,6 @@ At first sight, the strongest correlations seem to be with _Pclass_, _Sex_, _Far
 
 In the next few subsections, we will examine each of the features individually and determine its usefulness for classification and if there are any new features that we can engineer from them.
 
-<br/>
 # [](#header-3)_Pclass_
 ```python
 sns.set_style(style="darkgrid")
@@ -228,7 +227,6 @@ plt.show()
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
 
-<br/>
 # [](#header-3)_Sex_
 ```python
 g = sns.factorplot(x="Sex", y="Survived", data=train_df, size=6, 
@@ -242,13 +240,11 @@ plt.show()
 </center>
 
 
-<br/>
 # [](#header-3)_Age_
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
 
 
-<br/>
 # [](#header-3)_SibSp_
 ```python
 g = sns.factorplot(x="SibSp", y="Survived", data=train_df, size=6, 
@@ -261,7 +257,6 @@ plt.show()
 </center>
 
 
-<br/>
 # [](#header-3)_Parch_
 ```python
 g = sns.factorplot(x="Parch", y="Survived", data=train_df, size=6, 
@@ -274,13 +269,11 @@ plt.show()
 </center>
 
 
-<br/>
 # [](#header-3)_Fare_
 <center><img src="./assets/images/class_survival_prob.png" alt="class_survival" width="500" height="500" />
 </center>
 
 
-<br/>
 # [](#header-3)_Embarked_
 ```python
 g = sns.factorplot(x="Embarked", y="Survived", data=train_df, size=6, 
@@ -293,49 +286,5 @@ plt.show()
 <center><img src="./assets/images/embarked_survival_prob.png" alt="embarked_survival" width="500" height="500" />
 </center>
 
-
-Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
-```python
-print train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])
-```
-```ipython
-Pclass         1         2         3
-Sex                                 
-female  0.968085  0.921053  0.500000
-male    0.368852  0.157407  0.135447
-```
-From the looks of this, it's quite obvious that gender and class had importance for survival. For example, 97% of 1st-class women survived, whereas only 13% of 3rd-class men survived. The survival rate of women beat out that of men in every class, and for males and females individually, a higher class meant a higher probability of survival.
-
-In the next pivot table, we'll take a look at the average ages of passengers broken down by gender, class, and survival.
-```python
-print train_df.pivot_table(values='Age', index=['Pclass'], columns=['Sex', 'Survived'])
-```
-```ipython
-Sex          female                  male           
-Survived          0          1          0          1
-Pclass                                              
-1         25.666667  34.939024  44.581967  36.248000
-2         36.000000  28.080882  33.369048  16.022000
-3         23.818182  19.329787  27.255814  22.274211
-```
-In all but one case, survivors tended to be younger on average. This was not the case for 1st-class women, where the average age of survivors was about 35, and 26 for the deceased.
-
-Age, gender, and class are clearly important features to incorporate into our machine learning model. How do the other features correlate to survival? We can look at the correlation between all of the numerical features in our training data frame.
-```python
-print train_df.corr()['Survived']
-```
-```ipython
-PassengerId   -0.005007
-Survived       1.000000
-Pclass        -0.338481
-Age           -0.077221
-SibSp         -0.035322
-Parch          0.081629
-Fare           0.257307
-```
-The above shows how each of the numerical features correlates with survival specifically. The strongest correlation is with passenger class, with fare being the next strongest. One of the weaker correlations is with age, which is a bit surprising given the pivot table with mean ages. Finally, there is some correlation between the number of accompanying parents and children (Parch), and siblings and spouses (SibSp) and is comparable to the age correlation.
-<br/>
-<br/>
-# [](#header-2)Cleaning the data
 
 

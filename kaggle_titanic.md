@@ -16,7 +16,7 @@ layout: default
 
 * * *
 <br/>
-# [](#header-1)<center>_TITANIC: MACHINE LEARNING FROM DISASTER_<center/>
+# [](#header-1)<center><i>TITANIC: MACHINE LEARNING FROM DISASTER<i/><center/>
 <br/>
 <br/>
 # [](#header-2)I. INTRODUCTION
@@ -214,23 +214,44 @@ In the next few subsections, we will examine each of the features individually a
 <br/>
 # [](#header-3)_Pclass_
 
+<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+</center>
+
 <br/>
 # [](#header-3)_Sex_
+<center><img src="./assets/images/sex_survival_prob.png.png" alt="sex_survival" width="500" height="350" />
+</center>
+
 
 <br/>
 # [](#header-3)_Age_
+<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+</center>
+
 
 <br/>
 # [](#header-3)_SibSp_
+<center><img src="./assets/images/sibsp_survival_prob.png.png" alt="sibsp_survival" width="500" height="350" />
+</center>
+
 
 <br/>
 # [](#header-3)_Parch_
+<center><img src="./assets/images/parch_survival_prob.png.png" alt="parch_survival" width="500" height="350" />
+</center>
+
 
 <br/>
 # [](#header-3)_Fare_
+<center><img src="./assets/images/class_survival_prob.png.png" alt="class_survival" width="500" height="350" />
+</center>
+
 
 <br/>
 # [](#header-3)_Embarked_
+<center><img src="./assets/images/embarked_survival_prob.png.png" alt="embarked_survival" width="500" height="350" />
+</center>
+
 
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python

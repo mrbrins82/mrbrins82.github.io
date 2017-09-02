@@ -24,6 +24,8 @@ The sinking of the Titanic resulted in the loss of many lives. There were over 1
 <br/>
 <br/>
 # [](#header-2)EXPLORING THE DATA
+
+# [](#header-3)Part 1.
 Let's load the train and test files and see which features will be useful for classification and what kinds of new features that we can engineer.
 ```python
 import pandas as pd
@@ -128,7 +130,7 @@ print train_df[train_df.Embarked.isnull()]
 829  female  62.0      0      0  113572  80.0   B28      NaN 
 ```
 
-These are two 1st-class women that are on the same ticket and in the same cabin, so they probably boarded at the same location.
+These are two 1st-class women that are on the same ticket and in the same cabin, so they probably boarded at the same location. How do we determine what to set as their port of embarkation? Let's look at a couple pivot tables and see if we can find any helpful information. The first pivot table shows a breakdown by _Sex_, _Pclass_, _Embarked_, and shows the number of people in each subset that embarked at a specific port. The second pivot table shows the same breakdown, except that instead of the number of people in each subset, it shows the survival probability.
 
 ```python
 train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], columns=['Embarked'], aggfunc='count')
@@ -157,7 +159,7 @@ male   1       0.404762  0.000000  0.354430
        3       0.232558  0.076923  0.128302
 ```
 
-The above two pivot tables show us that 1st-class women were equally likely to board at either Cherbourg or Southampton. There is a slightly higher probability for 1st-class women that boarded at Cherbourg to survive, and since the two women missing _Embarked_ values survived, I'll choose to fill the missing values as Cherbourg.
+The above two pivot tables show us that 1st-class women were approximately equally likely to board at either Cherbourg or Southampton. There is a slightly higher probability for 1st-class women that boarded at Cherbourg to survive, and since the two women missing _Embarked_ values survived, I'll choose to fill the missing values as Cherbourg.
 
 ```python
 train_df.Embarked.iloc[61] = 'C'
@@ -176,6 +178,7 @@ test_df.Embarked = le_Embarked.transform(test_df.Embarked)
 
 ```
 
+# [](#header-3)Part 2.
 Just how much do age, gender, and social class effect survival? Let's look at a couple pivot tables and see what information we can glean from them.
 ```python
 print train_df.pivot_table(values='Survived', index=['Sex'], columns=['Pclass'])

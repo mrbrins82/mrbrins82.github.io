@@ -831,9 +831,15 @@ dtype: int64
 <br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL
-
 <br/>
 # [](#header-3)<center>Part 1. Choosing a Classifier<center/>
+We have a training set with 891 rows and 19 columns, and a testing set with 418 rows and 18 columns. The goal is to train a machine learning model on the training set and predict the survival of each of the passengers of the testing set. Since survival is either a 0 or a 1 (deceased, survived respectively), this is a binary classification problem.
+
+This is not a large data set, however with 18 features to train on, we have to eliminate some kinds of classifiers. K-neighbors classifiers do not perform very well in higher dimensions. This is due to the fact that distances between any two points begins to get very large as the number of dimensions increases. We could always perform dimension reduction by using principal component analysis (PCA), but we will look for a simpler, more straight forward method.
+
+An important property to note is that some of the features in the data are nonlinear. _E_._g_. survival probability does not increase or decrease linearly as the _NumTitle_ increases. Encoding categorical features into numerical values can introduce nonlinearity. 
+
+Random forests are good classifiers in these cases. They are good at handling nonlinear data, and perform well in higher dimensional data sets. I will use a boosted trees classifier using gradient boosting from the _xgboost_ package. I have found that it works quickly and produces good results.
 
 <br/>
 # [](#header-3)<center>Part 2. Building the Model<center/>

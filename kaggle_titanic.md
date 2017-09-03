@@ -258,6 +258,7 @@ plt.show()
 ```
 <center><img src="./assets/images/age_dist_plot.png" alt="age_dist" width="500" height="500" />
 </center>
+After looking at the age distribution plot for each survival class, we can see why _Age_ didn't have such a high correlation to survival. The distribution is roughly the same for the survivors and for the deceased, except for a distinct difference for passengers under the age of about 10 years old. It looks like there's a sharp increase in survival probability for that age range. We will use this information to engineer a new feature later on.
 
 <br/>
 # [](#header-3)_SibSp_
@@ -270,7 +271,7 @@ plt.show()
 ```
 <center><img src="./assets/images/sibsp_survival_prob.png" alt="sibsp_survival" width="500" height="500" />
 </center>
-
+The _SibSp_ feature tells us the number of siblings or spouses that accompanied each passenger. The bar plot doesn't provided much useful information other than that passengers with _SibSp_ values of 0 and 1 have lower and higher probabilities of survival respectively. We will hold off on doing anything with this feature until we have looked at the _Parch_ feature.
 
 # [](#header-3)_Parch_
 ```python
@@ -282,7 +283,9 @@ plt.show()
 ```
 <center><img src="./assets/images/parch_survival_prob.png" alt="parch_survival" width="500" height="500" />
 </center>
+The _Parch_ feature tells us the number of parents or children that accompanied each passenger. From the looks of this plot, passengers with 0 parents or children have a lower probability of survival, and passengers with 1 or 2 parents or children with them have a higher probability of survival. The other values have high deviations and so they don't provide much information.
 
+It appears that both the _SibSp_ and _Parch_ features contain some information that can help classification. We can sum these features together to tell us how many total people are accompanying each passenger. We will do this later in the feature engineering section.
 
 # [](#header-3)_Fare_
 ```python

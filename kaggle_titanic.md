@@ -333,6 +333,25 @@ Port of embarkation information is only statistically significant for passengers
 # [](#header-2)III. CLEANING THE DATA
 <br/>
 # [](#header-2)<center>Part 1. Filling in Missing Values<center/>
+We already filled in the two missing _Embarked_ values in the training data set, but we still need to fill in the missing ages and cabins. In the testing data set, we need to fill in missing ages, cabins, and one missing fare. We will start with the missing ages.
+<br/>
+# [](#header-3)_Age_
 
+<br/>
+# [](#header-3)_Cabin_
 
+<br/>
+# [](#header-3)_Fare_
+
+<br/>
+# [](#header-2)<center>Part 2. Converting Categorical Data<center/>
+
+<br/>
+# [](#header-3)_Cabin_
+
+<br/>
+# [](#header-3)_Name_
+
+<br/>
+# [](#header-2)IV. FEATURE ENGINEERING
 

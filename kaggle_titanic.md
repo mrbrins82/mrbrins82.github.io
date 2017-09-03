@@ -713,17 +713,18 @@ plt.show()
 ```
 <center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
 </center>
+We can see that cabins beginning with _B_, _C_, _D_, _E_, or _F_ have significant chances of survival. The other cabin letters either have low survival probability or a lower probability with higher variance. For these reasons, we will create a new feature called _GoodCabin_ separating these two cases.
 ```python
 def is_good_cabin(x):
-    if int(x) == 2:
+    if int(x) == 2: # B
         return 1
-    elif int(x) == 3:
+    elif int(x) == 3: # C
         return 1
-    elif int(x) == 4:
+    elif int(x) == 4: # D
         return 1
-    elif int(x) == 5:
+    elif int(x) == 5: # E
         return 1
-    elif int(x) == 6:
+    elif int(x) == 6: # F
         return 1
     else:
         return 0
@@ -741,7 +742,7 @@ plt.show()
 ```
 <center><img src="./assets/images/goodcabin_survival_prob.png" alt="goodcabin_survival" width="500" height="500" />
 </center>
-
+Survival probability is more than twice as high for passengers in either a _B_, _C_, _D_, _E_, or _F_ cabin.
 <br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL

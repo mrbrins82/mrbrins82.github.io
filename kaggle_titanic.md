@@ -895,7 +895,7 @@ grid_search = GridSearchCV(xgb, test_params, n_jobs=-1, verbose=1,
                            scoring='accuracy', cv=3)
 grid_search.fit(x_train, y_train)
 ```
-At this point, we have built a classification model and have trained it on 75% of our original training set, using a variety of parameters using a 3-fold cross validation. We are now ready to make predictions and evaluate our model.
+At this point, we have built a classification model and have trained it on 75% of our original training set, using a variety of parameters with 3-fold cross validation. We are now ready to make predictions and evaluate our model.
 
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>

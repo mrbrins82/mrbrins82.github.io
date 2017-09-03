@@ -661,7 +661,7 @@ plt.show()
 ```
 <center><img src="./assets/images/lowfare_survival_prob.png" alt="lowfare_survival" width="500" height="500" />
 </center>
-
+The _LowFare_ survival probability plot indicates that those who paid a fare higher than 10 pounds were more than twice as likely to have survived, indicating that this is a good feature for our classifier.
 <br/>
 # [](#header-3)_Title_
 ```python

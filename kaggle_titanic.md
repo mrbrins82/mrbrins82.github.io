@@ -848,7 +848,7 @@ Random forests are good classifiers in these cases. They are good at handling no
 from xgboost import XGBClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.cross_validation import train_test_split
-from sklearn.metrics import accuracy_score, precision_score, f1_score, roc_auc_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 # we don't need the PassengerIds anymore and we don't want them to influence the
 # classifier, we will need the PassengerIds for the training set later on when 
@@ -920,15 +920,17 @@ predictions_test = grid_search.predict(x_test)
 print 'Scores for final validation set:'
 print '\taccuracy score: %f'%accuracy_score(y_test, predictions_test)
 print '\tprecision score: %f'%precision_score(y_test, predictions_test)
+print '\trecall score: %f'%recall_score(y_test, predictions_test)
 print '\tf1 score: %f'%f1_score(y_test, predictions_test)
 print '\troc_auc score: %f'%roc_auc_score(y_test, predictions_test)
 ```
 ```ipython
 Scores for final validation set:
-    accuracy score: 0.843049
-    precision score: 0.822917
-    f1 score: 0.818653
-    roc_auc score: 0.839756
+    accuracy score: 0.819005
+    precision score: 0.744681
+    recall score: 0.813953
+    f1 score: 0.777778
+    roc_auc score: 0.818088
 ```
 <br/>
 <br/>

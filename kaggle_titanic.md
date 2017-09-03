@@ -596,9 +596,6 @@ def is_large_fam(x):
 train_df['LargeFam'] = train_df.FamSize.apply(is_large_fam)
 test_df['LargeFam'] = test_df.FamSize.apply(is_large_fam)
 ```
-
-<center><img src="./assets/images/famsize_survival_prob.png" alt="famsize_survival" width="500" height="500" />
-</center>
 <center><img src="./assets/images/alone_survival_prob.png" alt="alone_survival" width="500" height="500" />
 </center>
 <center><img src="./assets/images/smallfam_survival_prob.png" alt="smallfam_survival" width="500" height="500" />

@@ -753,7 +753,7 @@ Now that we have cleaned our data sets and engineered some new features, let's t
 ```python
 print train_df.shape
 print ''
-print train_df.corr()
+print train_df.corr()['Survived']
 print ''
 print train_df.count()
 ```

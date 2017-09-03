@@ -472,7 +472,7 @@ The features that are most strongly correlated with _Age_ are: _Pclass_, _SibSp_
 train_without_ages = train_df[train_df.Age.isnull()]
 test_without_ages = test_df[test_df.Age.isnull()]
 
-train_with_ages = train_df[train_df.Age.notnull()]
+train_with_ages = train_df[train_df.Age.notnull()] # only use training data to fill ages
 
 def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
 

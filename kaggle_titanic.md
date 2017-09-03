@@ -637,9 +637,10 @@ plt.show()
 ```
 <center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
 </center>
-
+From the above survival probability plots for _Alone_, _SmallFam_, and _LargeFam_, it appears as though these features will help our classifier. In each case, there is definite correlation between survival and family size.
 <br/>
 # [](#header-3)_Fare_
+_Fare_ had one of the strongest correlations to survival when we first looked. If a passenger spends more on a ticket, then they are more likely to be wealthy and of a higher class, being correlated with higher survival chances. So the correlation with _Fare_ makes sense. We would expect passengers that paid a lower fare to have a lower chance of surviving, but the _Fare_ distribution plot that we showed earlier indicates that not only did passengers that paid a lower fare have a smaller chance of surviving, but that chance was much much lower than we might expect. The spike occurs roughly around the 10 pound mark, and so we will create a new binary feature called _LowFare_ that captures whether ticket fare is below or above this mark.
 ```python
 def is_low_fare(x):
     if float(x) <= 10:

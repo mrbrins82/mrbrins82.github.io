@@ -300,6 +300,7 @@ plt.show()
 ```
 <center><img src="./assets/images/fare_dist_plot.png" alt="fare_dist" width="500" height="500" />
 </center>
+Fares for the Titanic range from a few pounds to over 500 pounds. Passengers that paid a lower fare definitely have a lower probability of surviving as we can tell from this plot. Only a few people paid large amounts so let's zoom in on the _Fare_ distibution and only look at values below 150 pounds.
 ```python
 sns.distplot(survivors_df.Fare, bins=161, norm_hist=False, color='blue', 
              label='Survived')
@@ -312,6 +313,7 @@ plt.show()
 ```
 <center><img src="./assets/images/fare_dist_plot_zoom.png" alt="fare_dist_zoom" width="500" height="500" />
 </center>
+Judging from this plot, the distribution spike occurs for fares below approximately 10 pounds. We can use this to engineer a new feature later on as well.
 
 <br/>
 # [](#header-3)_Embarked_
@@ -325,6 +327,12 @@ plt.show()
 ```
 <center><img src="./assets/images/embarked_survival_prob.png" alt="embarked_survival" width="500" height="500" />
 </center>
+Port of embarkation information is only statistically significant for passengers that boarded at Cherbourgh and Southampton, which have higher and lower survival probabilities respectively. Not as many passengers boarded at Queensland, which is why there is much more deviation in survival probability. There isn't much else that we can do with this feature, nevertheless it offers some useful information abouta passenger's chance of surviving.
+
+<br/>
+# [](#header-2)III. CLEANING THE DATA
+<br/>
+# [](#header-2)<center>Part 1. Filling in Missing Values<center/>
 
 
 

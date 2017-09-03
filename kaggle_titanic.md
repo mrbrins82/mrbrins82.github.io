@@ -169,7 +169,7 @@ test_df.Embarked = le_Embarked.transform(test_df.Embarked)
 
 ```
 <br/>
-# [](#header-3)<center>Part 2. Survival Probability by Feature<center/>
+# [](#header-3)<center>Part 2. Feature Importance<center/>
 At this point we've filled in a couple missing _Embarked_ values, and converted the cagetorical _Sex_, and _Embarked_ features into numerical values. We would like to now examine the strength of correlation that the data have with the target variable, _Survived_.
 ```python
 print train_df.corr()

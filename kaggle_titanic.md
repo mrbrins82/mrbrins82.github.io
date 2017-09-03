@@ -455,8 +455,18 @@ We'll need to look at what features have strong correlations with passenger age 
 print train_df.corr()['Age']
 ```
 ```ipython
-
+Survived      -0.077221
+Pclass        -0.369226
+Sex            0.093254
+Age            1.000000
+SibSp         -0.308247
+Parch         -0.189119
+Fare           0.096067
+Embarked      -0.030394
+CabinLetter   -0.267270
+NumTitle       0.307794
 ```
+
 <br/>
 # [](#header-3)_Fare_
 

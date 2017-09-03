@@ -675,7 +675,7 @@ plt.show()
 ```
 <center><img src="./assets/images/title_survival_prob.png" alt="title_survival" width="500" height="500" />
 </center>
-Let's make a new feature called _GoodTitle_ that separates high survivability titles from the others.
+Let's make a new feature called _GoodTitle_ that separates high survivability titles from the others, and then drop the _Title_ feature.
 ```python
 def is_good_title(x):
     if str(x) == 'Mrs.':
@@ -689,6 +689,9 @@ def is_good_title(x):
 
 train_df['GoodTitle'] = train_df.Title.apply(is_good_title)
 test_df['GoodTitle'] = test_df.Title.apply(is_good_title)
+
+train_df = train_df.drop(['Title'], axis=1)
+test_df = test_df.drop(['Title'], axis=1)
 ```
 ```python
 g = sns.factorplot(x="GoodTitle", y="Survived", data=train_df, size=6, 
@@ -746,6 +749,36 @@ Survival probability is more than twice as high for passengers in either a _B_, 
 <br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL
+Now that we have cleaned our data sets and engineered some new features, let's take one last look at our data to make sure that we haven't missed anything. We also want to know the dimensions of our final data set as this could influence our decision for a classifier. The Titanic data set is not very high dimensional so it probably won't be an issue for this problem.
+```python
+print train_df.shape
+print ''
+print train_df.corr()['Survived']
+```
+```ipython
+(891, 19)
+
+PassengerId   -0.005007
+Survived       1.000000
+Pclass        -0.338481
+Sex           -0.543351
+Age           -0.064621
+SibSp         -0.035322
+Parch          0.081629
+Fare           0.257307
+Embarked      -0.174199
+CabinLetter   -0.301116
+NumTitle      -0.193635
+Child          0.089465
+FamSize        0.016639
+Alone         -0.203367
+SmallFam       0.279855
+LargeFam      -0.125147
+LowFare       -0.295081
+GoodTitle      0.548092
+GoodCabin      0.321393
+Name: Survived, dtype: float64
+```
 <br/>
 # [](#header-3)<center>Part 1. Choosing a Classifier<center/>
 

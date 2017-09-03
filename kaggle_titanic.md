@@ -746,14 +746,16 @@ plt.show()
 <center><img src="./assets/images/goodcabin_survival_prob.png" alt="goodcabin_survival" width="500" height="500" />
 </center>
 Survival probability is more than twice as high for passengers in either a _B_, _C_, _D_, _E_, or _F_ cabin.
+
 <br/>
-<br/>
-# [](#header-2)V. CLASSIFICATION MODEL
-Now that we have cleaned our data sets and engineered some new features, let's take one last look at our data to make sure that we haven't missed anything. We also want to know the dimensions of our final data set as this could influence our decision for a classifier. The Titanic data set is not very high dimensional so it probably won't be an issue for this problem.
+# [](#header-3)Data Summary
+Now that we have cleaned our data sets and engineered some new features, let's take one last look at our data to make sure that we haven't missed anything and see if our new features have good correlations with survival probability.
 ```python
 print train_df.shape
 print ''
-print train_df.corr()['Survived']
+print train_df.corr()
+print ''
+print train_df.count()
 ```
 ```ipython
 (891, 19)
@@ -778,7 +780,58 @@ LowFare       -0.295081
 GoodTitle      0.548092
 GoodCabin      0.321393
 Name: Survived, dtype: float64
+
+PassengerId    891
+Survived       891
+Pclass         891
+Sex            891
+Age            891
+SibSp          891
+Parch          891
+Fare           891
+Embarked       891
+CabinLetter    891
+NumTitle       891
+Child          891
+FamSize        891
+Alone          891
+SmallFam       891
+LargeFam       891
+LowFare        891
+GoodTitle      891
+GoodCabin      891
+dtype: int64
 ```
+We also need to make sure that there are no missing values in the testing data set.
+```python
+print test_df.count()
+```
+```ipython
+PassengerId    418
+Pclass         418
+Sex            418
+Age            418
+SibSp          418
+Parch          418
+Fare           418
+Embarked       418
+CabinLetter    418
+NumTitle       418
+Child          418
+FamSize        418
+Alone          418
+SmallFam       418
+LargeFam       418
+LowFare        418
+GoodTitle      418
+GoodCabin      418
+dtype: int64
+```
+
+<br/>
+<br/>
+# [](#header-2)V. CLASSIFICATION MODEL
+
 <br/>
 # [](#header-3)<center>Part 1. Choosing a Classifier<center/>
 

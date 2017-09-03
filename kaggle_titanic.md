@@ -637,3 +637,19 @@ plt.show()
 <center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
 </center>
 
+<br/>
+# [](#header-3)_Fare_
+
+<br/>
+# [](#header-3)_Title_
+
+<br/>
+# [](#header-3)_Cabin_
+
+<br/>
+# [](#header-2)V. CLASSIFICATION MODEL
+<br/>
+
+<br/>
+# [](#header-2)VI. RESULTS
+<br/>

@@ -584,7 +584,7 @@ def is_alone(x):
         return 0
 
 train_df['Alone'] = train_df.FamSize.apply(is_alone)
-test_df['Alon'] = test_df.FamSize.apply(is_alone)
+test_df['Alone'] = test_df.FamSize.apply(is_alone)
 
 def is_small_fam(x):
     if int(x) == 0:

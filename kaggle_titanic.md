@@ -557,11 +557,52 @@ test_df['FamSize'] = test_df.SibSp + test_df.Parch
 ```
 Let's take a look and see what the survival probabilities of _FamSize_ are.
 ```python
-g = sns.factorplot(x="FamSize", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
+g = sns.factorplot(x="FamSize", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
 g.despine(left=True)
 g.set_ylabels("survival probability")
 plt.show()
 ```
 <center><img src="./assets/images/famsize_survival_prob.png" alt="famsize_survival" width="500" height="500" />
+</center>
+Looking at the survival probabilities for different family sizes, it's clear that people who travelled alone had a significantly lower chance of surviving. People with family sizes of 1, 2, or 3 had a significantly higher chance of surviving. For passengers with families larger than that, it's a little less clear due to the variance in the data. We can create new binary features called _Alone_, _SmallFam_, and _LargeFam_ to cover these subsets.
+```python
+def is_alone(x):
+    if int(x) == 0:
+        return 1
+    else:
+        return 0
+
+train_df['Alone'] = train_df.FamSize.apply(is_alone)
+test_df['Alon'] = test_df.FamSize.apply(is_alone)
+
+def is_small_fam(x):
+    if int(x) == 0:
+        return 0
+    elif int(x) >= 4:
+        return 0
+    else:
+        return 1
+
+train_df['SmallFam'] = train_df.FamSize.apply(is_small_fam)
+test_df['SmallFam'] = test_df.FamSize.apply(is_small_fam)
+
+def is_large_fam(x):
+    if int(x) >= 4:
+        return 1
+    else:
+        return 0
+
+train_df['LargeFam'] = train_df.FamSize.apply(is_large_fam)
+test_df['LargeFam'] = test_df.FamSize.apply(is_large_fam)
+```
+
+<center><img src="./assets/images/famsize_survival_prob.png" alt="famsize_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/alone_survival_prob.png" alt="alone_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/smallfam_survival_prob.png" alt="smallfam_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
 </center>
 

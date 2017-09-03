@@ -639,20 +639,102 @@ plt.show()
 
 <br/>
 # [](#header-3)_Fare_
+```python
+def is_low_fare(x):
+    if float(x) <= 10:
+        return 1
+    else:
+        return 0
+
+train_df['LowFare'] = train_df.Fare.apply(is_low_fare)
+test_df['LowFare'] = test_df.Fare.apply(is_low_fare)
+```
+```python
+g = sns.factorplot(x="LowFare", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['Over 10 pounds', 'Under 10 pounds'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/lowfare_survival_prob.png" alt="lowfare_survival" width="500" height="500" />
 </center>
 
 <br/>
 # [](#header-3)_Title_
+```python
+g = sns.factorplot(x="Title", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(rotation=45)
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/title_survival_prob.png" alt="title_survival" width="500" height="500" />
 </center>
+```python
+def is_good_title(x):
+    if str(x) == 'Mrs.':
+        return 1
+    elif str(x) == 'Miss.':
+        return 1
+    elif str(x) == 'Master.':
+        return 1
+    else:
+        return 0
+
+train_df['GoodTitle'] = train_df.Title.apply(is_good_title)
+test_df['GoodTitle'] = test_df.Title.apply(is_good_title)
+```
+```python
+g = sns.factorplot(x="GoodTitle", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['No', 'Yes'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/goodtitle_survival_prob.png" alt="goodtitle_survival" width="500" height="500" />
 </center>
 
 <br/>
 # [](#header-3)_Cabin_
+```python
+g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['A' ,'B', 'C', 'D', 'E', 'F', 'G', 'T', 'NA'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
 </center>
+```python
+def is_good_cabin(x):
+    if int(x) == 2:
+        return 1
+    elif int(x) == 3:
+        return 1
+    elif int(x) == 4:
+        return 1
+    elif int(x) == 5:
+        return 1
+    elif int(x) == 6:
+        return 1
+    else:
+        return 0
+
+train_df['GoodCabin'] = train_df.CabinLetter.apply(is_good_cabin)
+test_df['GoodCabin'] = test_df.CabinLetter.apply(is_good_cabin)
+```
+```python
+g = sns.factorplot(x="GoodCabin", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['No', 'Yes'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/goodcabin_survival_prob.png" alt="goodcabin_survival" width="500" height="500" />
 </center>
 

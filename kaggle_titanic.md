@@ -850,8 +850,6 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, f1_score, roc_auc_score
 
-random_state = 1234 # need to set this so that results are reproducible
-
 # we don't need the PassengerIds anymore and we don't want them to influence the
 # classifier, we will need the PassengerIds for the training set later on when 
 # we write the output file with all the the predictions
@@ -872,8 +870,7 @@ The _XGBClassifier_ has a lot of parameters, and we can use _GridSearchCV_ to te
 
 It is not necessary to vary all of the classifier's parameters. We know what some of them should be set to given the type of problem.
 ```python
-fixed_params = {'seed':random_state,
-                'objective':'binary:logistic',
+fixed_params = {'objective':'binary:logistic',
                 'scale_pos_weight':1.605
                 }
 
@@ -891,16 +888,28 @@ test_params = {'n_estimators':np.array([10, 25, 50]),
 ```
 With _GridSearchCV_, not only can we search for the optimal parameter set, but we can perform k-fold cross validation (another reason that checking too many parameters can take a long time). In cross validation, the training set is broken into k-parts and one is set aside as a validation set. The classifier then trains on the other (k-1)-parts. This process is performed k-times with each part being set aside as the validation set exactly once. This is helpful in preventing overfitting so that the classifier is better generalized.
 ```python
+my_score = 'accuracy'
 grid_search = GridSearchCV(xgb, test_params, n_jobs=-1, verbose=1,
-                           scoring='accuracy', cv=3)
+                           scoring=my_score, cv=3)
 grid_search.fit(x_train, y_train)
 ```
 At this point, we have built a classification model and have trained it on 75% of our original training set, using a variety of parameters with 3-fold cross validation. We are now ready to make predictions and evaluate our model.
 
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>
-
+```python 
+print 'Best %s score: %0.3f'%(my_score, grid_search.best_score_)
+print 'Best Parameters:'
+best_parameters = grid_search.best_estimator_.get_params()
+for param_name in sorted(test_params.keys()):
+    print '\t%s: %r'%(param_name, best_parameters[param_name])
+```
+```python
+predictions_test = grid_search.predict(x_test)
+```
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS
-
+```python
+predictions = grid_search.predict(test_df)
+```

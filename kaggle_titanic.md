@@ -904,6 +904,16 @@ best_parameters = grid_search.best_estimator_.get_params()
 for param_name in sorted(test_params.keys()):
     print '\t%s: %r'%(param_name, best_parameters[param_name])
 ```
+```ipython
+Best accuracy score: 0.832
+Best Parameters:
+    gamma: 0.10000000000000001
+    learning_rate: 0.10000000000000001
+    max_delta_step: 0.0
+    max_depth: 4
+    n_estimators: 50
+    reg_lambda: 0.10000000000000001
+```
 ```python
 predictions_test = grid_search.predict(x_test)
 ```

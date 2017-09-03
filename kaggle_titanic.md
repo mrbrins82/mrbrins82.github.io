@@ -455,6 +455,7 @@ We'll need to look at what features have strong correlations with passenger age 
 print train_df.corr()['Age']
 ```
 ```ipython
+PassengerId    0.036847
 Survived      -0.077221
 Pclass        -0.369226
 Sex            0.093254
@@ -466,7 +467,46 @@ Embarked      -0.030394
 CabinLetter   -0.267270
 NumTitle       0.307794
 ```
+The features that are most strongly correlated with _Age_ are: _Pclass_, _SibSp_, _Parch_, _CabinLetter_, and _NumTitle_. For each passenger that is missing an _Age_ value, we will find the other passengers that have the same strongly correlated features and compute the mean age and replace the missing value with this mean age.
+```python
+train_without_ages = train_df[train_df.Age.isnull()]
+test_without_ages = test_df[test_df.Age.isnull()]
 
+train_with_ages = train_df[train_df.Age.notnull()]
+
+def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
+
+    temp_df = train_with_ages[train_with_ages.Pclass == pclass]
+    temp_df = temp_df[temp_df.SibSp == sibsp]
+    temp_df = temp_df[temp_df.Parch == parch]
+    temp_df = temp_df[temp_df.CabinLetter == cabinletter]
+    temp_df = temp_df[temp_df.NumTitle == numtitle]
+
+    mean_age = temp_df.Age.mean()
+
+    return mean_age
+
+# fill in the train_df missing ages
+for Id in train_without_ages.PassengerId:
+    
+    pclass = train_df.Pclass.iloc[Id - 1]
+    sibsp = train_df.SibSp.iloc[Id - 1]
+    parch = train_df.Parch.iloc[Id - 1]
+    cabinletter = train_df.CabinLetter.iloc[Id - 1]
+    numtitle = train_df.NumTitle.iloc[Id - 1]
+
+    train_df.Age.iloc[Id - 1] = get_mean_age(pclass, sibsp, parch, cabinletter, numtitle)
+
+for Id in test_without_ages.PassengerId:
+    
+    pclass = test_df.Pclass.iloc[Id - 892]
+    sibsp = test_df.SibSp.iloc[Id - 892]
+    parch = test_df.Parch.iloc[Id - 892]
+    cabinletter = test_df.CabinLetter.iloc[Id - 892]
+    numtitle = test_df.NumTitle.iloc[Id - 892]
+
+    test_df.Age.iloc[Id - 892] = get_mean_age(pclass, sibsp, parch, cabinletter, numtitle)
+```
 <br/>
 # [](#header-3)_Fare_
 

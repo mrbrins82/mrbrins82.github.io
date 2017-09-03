@@ -653,11 +653,9 @@ plt.show()
 
 <br/>
 # [](#header-3)_Cabin_
-<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
+<center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
 </center>
-<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
-</center>
-<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
+<center><img src="./assets/images/goodcabin_survival_prob.png" alt="goodcabin_survival" width="500" height="500" />
 </center>
 
 <br/>

@@ -843,6 +843,28 @@ Random forests are good classifiers in these cases. They are good at handling no
 
 <br/>
 # [](#header-3)<center>Part 2. Building the Model<center/>
+```python
+from xgboost import XGBClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import accuracy_score, precision_score, f1_score, roc_auc_score
+
+# we don't need the PassengerIds anymore and we don't want them to influence the
+# classifier, we will need the PassengerIds for the training set later on when 
+# we write the output file with all the the predictions
+train_df = train_df.drop(['PassengerId'], axis=1)
+
+test_Ids = test_df.PassengerId
+test_df = test_df.drop(['PassengerId'], axis=1)
+```
+We'll need a way to evaluate how our model is performing. We don't know the correct predictions for the testing set, so we have to set aside some portion of the training data and check our predictions against the reserved portion. Sklearn has a nice function called <i>train_test_split</i> that does this for us.
+```python
+X = train_df.drop(['Survived'], axis=1)
+Y = train_df.Survived
+
+x_train, x_test, y_train, y_test = train_test_split(X, Y)
+```
+
 
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>

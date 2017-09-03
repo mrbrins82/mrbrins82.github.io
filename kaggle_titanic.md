@@ -603,15 +603,20 @@ g.despine(left=True)
 g.set_xticklabels(['No', 'Yes'])
 g.set_ylabels("survival probability")
 plt.show()
-
+```
+<center><img src="./assets/images/alone_survival_prob.png" alt="alone_survival" width="500" height="500" />
+</center>
+```python
 g = sns.factorplot(x="SmallFam", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")
 g.despine(left=True)
 g.set_xticklabels(['No', 'Yes'])
 g.set_ylabels("survival probability")
 plt.show()
-
-
+```
+<center><img src="./assets/images/smallfam_survival_prob.png" alt="smallfam_survival" width="500" height="500" />
+</center>
+```python
 g = sns.factorplot(x="LargeFam", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")
 g.despine(left=True)
@@ -619,10 +624,6 @@ g.set_xticklabels(['No', 'Yes'])
 g.set_ylabels("survival probability")
 plt.show()
 ```
-<center><img src="./assets/images/alone_survival_prob.png" alt="alone_survival" width="500" height="500" />
-</center>
-<center><img src="./assets/images/smallfam_survival_prob.png" alt="smallfam_survival" width="500" height="500" />
-</center>
 <center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
 </center>
 

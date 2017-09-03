@@ -547,6 +547,14 @@ def is_child(x):
 train_df['Child'] = train_df.Age.apply(is_child)
 test_df['Child'] = test_df.Age.apply(is_child)
 ```
+```python
+g = sns.factorplot(x="Child", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['Over 10yrs', 'Under 10yrs'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/child_survival_prob.png" alt="child_survival" width="500" height="500" />
 </center>
 

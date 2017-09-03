@@ -639,12 +639,27 @@ plt.show()
 
 <br/>
 # [](#header-3)_Fare_
+<center><img src="./assets/images/lowfare_survival_prob.png" alt="lowfare_survival" width="500" height="500" />
+</center>
 
 <br/>
 # [](#header-3)_Title_
+<center><img src="./assets/images/title_survival_prob.png" alt="title_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/goodtitle_survival_prob.png" alt="goodtitle_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/badtitle_survival_prob.png" alt="badtitle_survival" width="500" height="500" />
+</center>
 
 <br/>
 # [](#header-3)_Cabin_
+<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
+</center>
+<center><img src="./assets/images/largefam_survival_prob.png" alt="largefam_survival" width="500" height="500" />
+</center>
+
 <br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL

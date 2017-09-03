@@ -420,6 +420,18 @@ test_df = test_df.drop(['Cabin'], axis=1)
 
 <br/>
 # [](#header-3)_Name_
+It goes without saying that there are as many names in the _Name_ feature as there are passengers, but if we look at a few of the values we can see that each passenger has a title in their name, _i_._e_. Mr., Mrs., Miss., etc. As we did with the _Cabin_ feature, we will write our own function that extracts the title from each passenger's name and then drop the original _Name_ feature once we have done that.
+```python
+def get_title(x):
+    title = str(x).split(',')[1].lstrip().split(' ')[0]
+    return title
+
+train_df['Title'] = train_df.Name.apply(get_title)
+test_df['Title'] = train_df.Name.apply(get_title)
+
+train_df = train_df.drop(['Name'], axis=1)
+test_df = test_df.drop(['Name'], axis=1)
+```
 
 <br/>
 # [](#header-2)<center>Part 2. Filling in Missing Values<center/>

@@ -490,8 +490,6 @@ def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
 
     return mean_age
 
-
-
 # fill in the train_df missing ages
 for Id in train_without_ages.PassengerId:
     
@@ -532,5 +530,38 @@ This is a 3rd-class male, and looking at the features that correlate the stronge
 test_df.Fare.iloc[152] = train_df[train_df.Pclass == 3].Fare.mean() # only use training data to fill missing fare
 ```
 
+<br/>
 # [](#header-2)IV. FEATURE ENGINEERING
+There were a few interesting features in the data that we can use to engineer some new features that will correlate well with survival probability. We will use the features that we saw in the _Age_, _SibSp_, _Parch_, _Fare_, and finally in the new _Title_ feature that we haven't examined yet.
+
+<br/>
+# [](#header-3)_Age_
+In the age distribution plot, we saw that there was a definite spike in survival probability for passengers that were younger than about 10 years old. The new feature that we will create will be a binary feature called _Child_.
+```python
+def is_child(x):
+    if int(x) <= 10:
+        return 1
+    else:
+        return 0
+
+train_df['Child'] = train_df.Age.apply(is_child)
+test_df['Child'] = test_df.Age.apply(is_child)
+```
+
+<br/>
+# [](#header-3)_SibSp_, and _Parch_
+These features had a few values with some statistical significance and it's reasonable to assume that a passenger with more or fewer people accompanying them could play a role in their survival. We will create a new feature called _FamSize_ that will just be the sum of _SibSp_ and _Parch_.
+```python
+train_df['FamSize'] = train_df.SibSp + train_df.Parch
+test_df['FamSize'] = test_df.SibSp + test_df.Parch
+```
+Let's take a look and see what the survival probabilities of _FamSize_ are.
+```python
+g = sns.factorplot(x="FamSize", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
+g.despine(left=True)
+g.set_ylabels("survival probability")
+plt.show()
+```
+<center><img src="./assets/images/famsize_survival_prob.png" alt="famsize_survival" width="500" height="500" />
+</center>
 

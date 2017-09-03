@@ -547,6 +547,8 @@ def is_child(x):
 train_df['Child'] = train_df.Age.apply(is_child)
 test_df['Child'] = test_df.Age.apply(is_child)
 ```
+<center><img src="./assets/images/child_survival_prob.png" alt="child_survival" width="500" height="500" />
+</center>
 
 <br/>
 # [](#header-3)_SibSp_, and _Parch_

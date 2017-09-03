@@ -746,6 +746,14 @@ Survival probability is more than twice as high for passengers in either a _B_, 
 <br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL
+<br/>
+# [](#header-3)<center>Part 1. Choosing a Classifier<center/>
+
+<br/>
+# [](#header-3)<center>Part 2. Building the Model<center/>
+
+<br/>
+# [](#header-3)<center>Part 3. Model Evaluation<center/>
 
 <br/>
 <br/>

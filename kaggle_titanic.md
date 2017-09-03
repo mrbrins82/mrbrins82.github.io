@@ -463,15 +463,34 @@ train_with_ages = train_df[train_df.Age.notnull()] # only use training data to f
 
 def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
 
+    # we need to make sure that the passenger with missing age
+    # info is not a completely unique passenger, otherwise there
+    # there will be no other passengers from which to calculate
+    # a mean age, so we will update the mean age as we reduce
+    # the temp_df
     temp_df = train_with_ages[train_with_ages.Pclass == pclass]
-    temp_df = temp_df[temp_df.SibSp == sibsp]
-    temp_df = temp_df[temp_df.Parch == parch]
-    temp_df = temp_df[temp_df.CabinLetter == cabinletter]
-    temp_df = temp_df[temp_df.NumTitle == numtitle]
+    if temp_df.shape[0] != 0:
+        mean_age = temp_df.Age.mean()
 
-    mean_age = temp_df.Age.mean()
+    temp_df = temp_df[temp_df.CabinLetter == cabinletter]
+    if temp_df.shape[0] != 0:
+        mean_age = temp_df.Age.mean()
+
+    temp_df = temp_df[temp_df.Parch == parch]
+    if temp_df.shape[0] != 0:
+        mean_age = temp_df.Age.mean()
+
+    temp_df = temp_df[temp_df.NumTitle == numtitle]
+    if temp_df.shape[0] != 0:
+        mean_age = temp_df.Age.mean()
+
+    temp_df = temp_df[temp_df.SibSp == sibsp]
+    if temp_df.shape[0] != 0:
+        mean_age = temp_df.Age.mean()
 
     return mean_age
+
+
 
 # fill in the train_df missing ages
 for Id in train_without_ages.PassengerId:
@@ -502,8 +521,16 @@ There is one passenger in the testing data set that is missing a value for _Fare
 print test_df[test_df.Fare.isnull()]
 ```
 ```ipython
+     PassengerId  Pclass  Sex   Age  SibSp  Parch  Fare  Embarked  \
+152         1044       3    1  60.5      0      0   NaN         2   
 
+     CabinLetter Title  NumTitle  
+152            9   Mr.        11
 ```
-<br/>
+This is a 3rd-class male, and looking at the features that correlate the strongest with _Fare_, we can see that class plays the biggest role in determining the _Fare_ value. We will just set this passenger's fare to the mean fare value for 3rd-class passengers.
+```python
+test_df.Fare.iloc[152] = train_df[train_df.Pclass == 3].Fare.mean() # only use training data to fill missing fare
+```
+
 # [](#header-2)IV. FEATURE ENGINEERING
 

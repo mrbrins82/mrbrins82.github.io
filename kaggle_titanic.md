@@ -664,6 +664,7 @@ plt.show()
 The _LowFare_ survival probability plot indicates that those who paid a fare higher than 10 pounds were more than twice as likely to have survived, indicating that this is a good feature for our classifier.
 <br/>
 # [](#header-3)_Title_
+_Title_ likely contains information regarding passenger sex, age, and possibly class which are all good indicators for survival. We can see that there are a few titles that have higher survival probablility. Namely, 'Mrs.', 'Miss.', and 'Master.'. This fact really captures the notion of women and children first. Passengers with the title 'Mr.' did not have a good chance of surviving. All of the other titles have a lot of variance in the probabilities since these titles appear much less frequently in the data.
 ```python
 g = sns.factorplot(x="Title", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")

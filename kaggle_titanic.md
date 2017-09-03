@@ -332,7 +332,94 @@ Port of embarkation information is only statistically significant for passengers
 <br/>
 # [](#header-2)III. CLEANING THE DATA
 <br/>
-# [](#header-2)<center>Part 1. Filling in Missing Values<center/>
+# [](#header-2)<center>Part 1. Converting Categorical Data<center/>
+The original data contained categorical features for _Name_, _Sex_, _Ticket_, _Cabin_, and _Embarked_. We have already converted the _Sex_ and _Embarked_ features, leaving us with _Name_, _Cabin_, and _Ticket_. Looking at the _Ticket_ data in the training set, there are almost as many different ticket numbers as there are passengers.
+```python
+print train_df.Ticket.nunique()
+```
+```ipython
+681
+```
+Not only that, but there doesn't seem to be much of a pattern in the ticket numbers. Some are numeric and some are alpha-numeric.
+```python
+print train_df.Ticket.unique()[:20]
+```
+```ipython
+array(['A/5 21171', 'PC 17599', 'STON/O2. 3101282', '113803', '373450',
+       '330877', '17463', '349909', '347742', '237736', 'PP 9549',
+       '113783', 'A/5. 2151', '347082', '350406', '248706', '382652',
+       '244373', '345763', '2649'], dtype=object)
+```
+For these reasons, I'll just drop the _Ticket_ feature all together.
+```python
+train_df = train_df.drop(['Ticket'], axis=1)
+test_df = test_df.drop(['Ticket'], axis=1)
+```
+
+This leaves us with _Cabin_ and _Name_. We'll start with encoding the _Cabin_ values first.
+
+<br/>
+# [](#header-3)_Cabin_
+There are 147 unique cabin numbers in the training set.
+```python
+print train_df.Cabin.nunique()
+print ''
+print train_df.Cabin.unique()
+```
+```ipython
+147
+
+array([nan, 'C85', 'C123', 'E46', 'G6', 'C103', 'D56', 'A6', 'C23 C25 C27',
+       'B78', 'D33', 'B30', 'C52', 'B28', 'C83', 'F33', 'F G73', 'E31',
+       'A5', 'D10 D12', 'D26', 'C110', 'B58 B60', 'E101', 'F E69', 'D47',
+       'B86', 'F2', 'C2', 'E33', 'B19', 'A7', 'C49', 'F4', 'A32', 'B4',
+       'B80', 'A31', 'D36', 'D15', 'C93', 'C78', 'D35', 'C87', 'B77',
+       'E67', 'B94', 'C125', 'C99', 'C118', 'D7', 'A19', 'B49', 'D',
+       'C22 C26', 'C106', 'C65', 'E36', 'C54', 'B57 B59 B63 B66', 'C7',
+       'E34', 'C32', 'B18', 'C124', 'C91', 'E40', 'T', 'C128', 'D37',
+       'B35', 'E50', 'C82', 'B96 B98', 'E10', 'E44', 'A34', 'C104', 'C111',
+       'C92', 'E38', 'D21', 'E12', 'E63', 'A14', 'B37', 'C30', 'D20',
+       'B79', 'E25', 'D46', 'B73', 'C95', 'B38', 'B39', 'B22', 'C86',
+       'C70', 'A16', 'C101', 'C68', 'A10', 'E68', 'B41', 'A20', 'D19',
+       'D50', 'D9', 'A23', 'B50', 'A26', 'D48', 'E58', 'C126', 'B71',
+       'B51 B53 B55', 'D49', 'B5', 'B20', 'F G63', 'C62 C64', 'E24', 'C90',
+       'C45', 'E8', 'B101', 'D45', 'C46', 'D30', 'E121', 'D11', 'E77',
+       'F38', 'B3', 'D6', 'B82 B84', 'D17', 'A36', 'B102', 'B69', 'E49',
+       'C47', 'D28', 'E17', 'A24', 'C50', 'B42', 'C148'], dtype=object)
+```
+We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features.
+```python
+def cabin_letter(x):
+    if str(x)[0] == 'A':
+        return 1
+    elif str(x)[0] == 'B':
+        return 2
+    elif str(x)[0] == 'C':
+        return 3
+    elif str(x)[0] == 'D':
+        return 4
+    elif str(x)[0] == 'E':
+        return 5
+    elif str(x)[0] == 'F':
+        return 6
+    elif str(x)[0] == 'G':
+        return 7
+    elif str(x)[0] == 'T':
+        return 8
+    else:
+        return 9
+
+train_df['CabinLetter'] = train_df.Cabin.apply(cabin_letter)
+test_df['CabinLetter'] = test_df.Cabin.apply(cabin_letter)
+```
+We can just drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
+
+
+<br/>
+# [](#header-3)_Name_
+
+<br/>
+# [](#header-2)<center>Part 2. Filling in Missing Values<center/>
 We already filled in the two missing _Embarked_ values in the training data set, but we still need to fill in the missing ages and cabins. In the testing data set, we need to fill in missing ages, cabins, and one missing fare. We will start with the missing ages.
 <br/>
 # [](#header-3)_Age_
@@ -342,15 +429,6 @@ We already filled in the two missing _Embarked_ values in the training data set,
 
 <br/>
 # [](#header-3)_Fare_
-
-<br/>
-# [](#header-2)<center>Part 2. Converting Categorical Data<center/>
-
-<br/>
-# [](#header-3)_Cabin_
-
-<br/>
-# [](#header-3)_Name_
 
 <br/>
 # [](#header-2)IV. FEATURE ENGINEERING

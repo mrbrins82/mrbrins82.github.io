@@ -333,7 +333,10 @@ Port of embarkation information is only statistically significant for passengers
 # [](#header-2)III. CLEANING THE DATA
 <br/>
 # [](#header-2)<center>Part 1. Converting Categorical Data<center/>
-The original data contained categorical features for _Name_, _Sex_, _Ticket_, _Cabin_, and _Embarked_. We have already converted the _Sex_ and _Embarked_ features, leaving us with _Name_, _Cabin_, and _Ticket_. Looking at the _Ticket_ data in the training set, there are almost as many different ticket numbers as there are passengers.
+The original data contained categorical features for _Name_, _Sex_, _Ticket_, _Cabin_, and _Embarked_. We have already converted the _Sex_ and _Embarked_ features, leaving us with _Name_, _Cabin_, and _Ticket_.
+<br/>
+# [](#header-3)_Ticket_
+Looking at the _Ticket_ data in the training set, there are almost as many different ticket numbers as there are passengers.
 ```python
 print train_df.Ticket.nunique()
 ```

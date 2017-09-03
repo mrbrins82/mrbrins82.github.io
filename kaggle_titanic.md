@@ -497,6 +497,7 @@ for Id in train_without_ages.PassengerId:
 
     train_df.Age.iloc[Id - 1] = get_mean_age(pclass, sibsp, parch, cabinletter, numtitle)
 
+# fill in the test_df missing ages
 for Id in test_without_ages.PassengerId:
     
     pclass = test_df.Pclass.iloc[Id - 892]

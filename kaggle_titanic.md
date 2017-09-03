@@ -432,13 +432,31 @@ test_df['Title'] = train_df.Name.apply(get_title)
 train_df = train_df.drop(['Name'], axis=1)
 test_df = test_df.drop(['Name'], axis=1)
 ```
+Now all that remains is to encode the _Titles_ to numerical information.
+```python
+le_Title = LabelEncoder()
 
+# need to make sure that we have all possible titles in both the training
+# and testing set so that we can encode them
+all_Titles = pd.concat((train_df.Title, test_df.Title))
+le_Title.fit(all_Titles)
+train_df['NumTitle'] = le_Title.transform(train_df.Title)
+test_df['NumTitle'] = le_Title.transform(test_df.Title)
+```
 <br/>
 # [](#header-2)<center>Part 2. Filling in Missing Values<center/>
-We already filled in the two missing _Embarked_ values in the training data set and the missing _Cabin_ values in the previous section, but we still need to fill in the missing ages. In the testing data set, we need to fill in one missing fare. We will start with the missing ages.
+We already filled in the two missing _Embarked_ values in the training data set and the missing _Cabin_ values in the previous sections, but we still need to fill in the missing ages. In the testing data set, we also need to fill in one missing fare. We will start with the missing ages.
 <br/>
 # [](#header-3)_Age_
+There are many ways that we could fill in the missing age values. We could write a machine learning algorithm that would predict the ages based on the other features in the data sets, or we could just use a quick and simple method like using the mean age for passengers that are similar to the passenger with the missing age. We will just use the quick and simple method here.
 
+We'll need to look at what features have strong correlations with passenger age in order to determine how to find similar passengers for calculating the mean age.
+```python
+print train_df.corr()['Age']
+```
+```ipython
+
+```
 <br/>
 # [](#header-3)_Fare_
 

@@ -122,7 +122,7 @@ print train_df[train_df.Embarked.isnull()]
 These are two 1st-class women that are on the same ticket and in the same cabin, so they probably boarded at the same location. How do we determine what to set as their port of embarkation? Let's look at a couple pivot tables and see if we can find any helpful information. The first pivot table shows a breakdown by _Sex_, _Pclass_, _Embarked_, and shows the number of people in each subset that embarked at a specific port. The second pivot table shows the same breakdown, except that instead of the number of people in each subset, it shows the survival probability.
 
 ```python
-train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
+print train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
                      columns=['Embarked'], aggfunc='count')
 ```
 ```ipytyon
@@ -136,7 +136,7 @@ male   1       42   1   79
        3       43  39  265
 ```
 ```python
-train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
+print train_df.pivot_table(values='Survived', index=['Sex', 'Pclass'], 
                      columns=['Embarked'], aggfunc='mean')
 ```
 ```ipython

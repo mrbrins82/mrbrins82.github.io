@@ -28,6 +28,7 @@ The sinking of the Titanic resulted in the loss of many lives. There were over 1
 # [](#header-2)<center>Part 1. Loading the Data<center/>
 The first thing we need to do is load the data and take a quick look at it to see what, if anything, we need to do with it.
 ```python
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -849,6 +850,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, f1_score, roc_auc_score
 
+random_state = 1234 # need to set this so that results are reproducible
+
 # we don't need the PassengerIds anymore and we don't want them to influence the
 # classifier, we will need the PassengerIds for the training set later on when 
 # we write the output file with all the the predictions
@@ -862,10 +865,28 @@ We'll need a way to evaluate how our model is performing. We don't know the corr
 X = train_df.drop(['Survived'], axis=1)
 Y = train_df.Survived
 
-x_train, x_test, y_train, y_test = train_test_split(X, Y)
+np.random.seed(random_state) # needs to be set so that the split is reproducible
+x_train, x_test, y_train, y_test = train_test_split(X, Y) # default split is 75% train and 25% test
 ```
+The _XGBClassifier_ has a lot of parameters, and we can use _GridSearchCV_ to test the classifier with different sets of these parameters and determine which set obtains the highest score determined by some scoring metric that we will provide. We'll use accuracy as our metric since that is how submissions are evaluated in this particular Kaggle competition.
 
+It is not necessary to vary all of the classifier's parameters. We know what some of them should be set to given the type of problem.
+```python
+fixed_params = {'seed':random_state,
+                'objective':'binary:logistic',
+                'scale_pos_weight':1.605
+                }
 
+xgb = XGBClassifier(**fixed_params)
+
+test_params = {'n_estimators':np.array([10, 25, 50]),
+               'learning_rate':np.logspace(-3, -1, 3),
+               'max_depth':np.array([3, 4, 5]),
+               'gamma':np.array([0.0, 0.1]),
+               'max_delta_step':np.array([0.0, 0.001, 0.01]),
+               'reg_lambda':np.array([0.01, 0.1])
+               }
+```
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>
 

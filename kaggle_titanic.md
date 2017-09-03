@@ -675,6 +675,7 @@ plt.show()
 ```
 <center><img src="./assets/images/title_survival_prob.png" alt="title_survival" width="500" height="500" />
 </center>
+Let's make a new feature called _GoodTitle_ that separates high survivability titles from the others.
 ```python
 def is_good_title(x):
     if str(x) == 'Mrs.':
@@ -699,9 +700,9 @@ plt.show()
 ```
 <center><img src="./assets/images/goodtitle_survival_prob.png" alt="goodtitle_survival" width="500" height="500" />
 </center>
-
 <br/>
 # [](#header-3)_Cabin_
+The Titanic sank in the middle of the night, so many passengers were probably sleeping in their cabins. Different parts of the ship may have had poor access to lifeboats and so _CabinLetter_ might be a good predictor of survival. The survival probabilities for each of the cabin letters is shown below.
 ```python
 g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")

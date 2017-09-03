@@ -878,7 +878,9 @@ fixed_params = {'seed':random_state,
                 }
 
 xgb = XGBClassifier(**fixed_params)
-
+```
+Now for the variable parameters. We could use as many of these as we like, but as the number of possibilities increases the computation time quickly becomes quite long.
+```python
 test_params = {'n_estimators':np.array([10, 25, 50]),
                'learning_rate':np.logspace(-3, -1, 3),
                'max_depth':np.array([3, 4, 5]),
@@ -887,6 +889,14 @@ test_params = {'n_estimators':np.array([10, 25, 50]),
                'reg_lambda':np.array([0.01, 0.1])
                }
 ```
+With _GridSearchCV_, not only can we search for the optimal parameter set, but we can perform k-fold cross validation (another reason that checking too many parameters can take a long time). In cross validation, the training set is broken into k-parts and one is set aside as a validation set. The classifier then trains on the other (k-1)-parts. This process is performed k-times with each part being set aside as the validation set exactly once. This is helpful in preventing overfitting so that the classifier is better generalized.
+```python
+grid_search = GridSearchCV(xgb, test_params, n_jobs=-1, verbose=1,
+                           scoring='accuracy', cv=3)
+grid_search.fit(x_train, y_train)
+```
+At this point, we have built a classification model and have trained it on 75% of our original training set, using a variety of parameters using a 3-fold cross validation. We are now ready to make predictions and evaluate our model.
+
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>
 

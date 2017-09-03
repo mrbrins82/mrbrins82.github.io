@@ -916,6 +916,19 @@ Best Parameters:
 ```
 ```python
 predictions_test = grid_search.predict(x_test)
+
+print 'Scores for final validation set:'
+print '\taccuracy score: %f'%accuracy_score(y_test, predictions_test)
+print '\tprecision score: %f'%precision_score(y_test, predictions_test)
+print '\tf1 score: %f'%f1_score(y_test, predictions_test)
+print '\troc_auc score: %f'%roc_auc_score(y_test, predictions_test)
+```
+```ipython
+Scores for final validation set:
+    accuracy score: 0.843049
+    precision score: 0.822917
+    f1 score: 0.818653
+    roc_auc score: 0.839756
 ```
 <br/>
 <br/>

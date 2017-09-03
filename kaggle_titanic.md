@@ -547,6 +547,7 @@ def is_child(x):
 train_df['Child'] = train_df.Age.apply(is_child)
 test_df['Child'] = test_df.Age.apply(is_child)
 ```
+Below we plot the survival probabilities for passengers over, and under the age of 10. The plot reflects the feature that we saw in the age distribution above by showing that there is a statistical importance to being either older or younger than 10 years old. The new _Child_ feature seems to be useful.
 ```python
 g = sns.factorplot(x="Child", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")

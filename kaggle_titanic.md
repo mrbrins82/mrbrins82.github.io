@@ -648,8 +648,6 @@ plt.show()
 </center>
 <center><img src="./assets/images/goodtitle_survival_prob.png" alt="goodtitle_survival" width="500" height="500" />
 </center>
-<center><img src="./assets/images/badtitle_survival_prob.png" alt="badtitle_survival" width="500" height="500" />
-</center>
 
 <br/>
 # [](#header-3)_Cabin_

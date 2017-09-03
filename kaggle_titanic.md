@@ -387,7 +387,7 @@ array([nan, 'C85', 'C123', 'E46', 'G6', 'C103', 'D56', 'A6', 'C23 C25 C27',
        'F38', 'B3', 'D6', 'B82 B84', 'D17', 'A36', 'B102', 'B69', 'E49',
        'C47', 'D28', 'E17', 'A24', 'C50', 'B42', 'C148'], dtype=object)
 ```
-We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features.
+We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features. Note that this function also handles the filling of missing values in the _Cabin_ feature.
 ```python
 def cabin_letter(x):
     if str(x)[0] == 'A':
@@ -435,12 +435,9 @@ test_df = test_df.drop(['Name'], axis=1)
 
 <br/>
 # [](#header-2)<center>Part 2. Filling in Missing Values<center/>
-We already filled in the two missing _Embarked_ values in the training data set, but we still need to fill in the missing ages and cabins. In the testing data set, we need to fill in missing ages, cabins, and one missing fare. We will start with the missing ages.
+We already filled in the two missing _Embarked_ values in the training data set and the missing _Cabin_ values in the previous section, but we still need to fill in the missing ages. In the testing data set, we need to fill in one missing fare. We will start with the missing ages.
 <br/>
 # [](#header-3)_Age_
-
-<br/>
-# [](#header-3)_Cabin_
 
 <br/>
 # [](#header-3)_Fare_

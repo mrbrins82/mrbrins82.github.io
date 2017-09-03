@@ -317,7 +317,7 @@ plt.show()
 <center><img src="./assets/images/embarked_survival_prob.png" alt="embarked_survival" width="500" height="500" />
 </center>
 Port of embarkation information is only statistically significant for passengers that boarded at Cherbourgh and Southampton, which have higher and lower survival probabilities respectively. Not as many passengers boarded at Queensland, which is why there is much more deviation in survival probability. There isn't much else that we can do with this feature, nevertheless it offers some useful information abouta passenger's chance of surviving.
-
+<br/>
 <br/>
 # [](#header-2)III. CLEANING THE DATA
 <br/>
@@ -529,7 +529,7 @@ This is a 3rd-class male, and looking at the features that correlate the stronge
 ```python
 test_df.Fare.iloc[152] = train_df[train_df.Pclass == 3].Fare.mean() # only use training data to fill missing fare
 ```
-
+<br/>
 <br/>
 # [](#header-2)IV. FEATURE ENGINEERING
 There were a few interesting features in the data that we can use to engineer some new features that will correlate well with survival probability. We will use the features that we saw in the _Age_, _SibSp_, _Parch_, _Fare_, and finally in the new _Title_ feature that we haven't examined yet.
@@ -645,11 +645,11 @@ plt.show()
 
 <br/>
 # [](#header-3)_Cabin_
-
+<br/>
 <br/>
 # [](#header-2)V. CLASSIFICATION MODEL
-<br/>
 
 <br/>
-# [](#header-2)VI. RESULTS
 <br/>
+# [](#header-2)VI. RESULTS
+

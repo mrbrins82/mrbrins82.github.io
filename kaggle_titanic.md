@@ -413,7 +413,10 @@ train_df['CabinLetter'] = train_df.Cabin.apply(cabin_letter)
 test_df['CabinLetter'] = test_df.Cabin.apply(cabin_letter)
 ```
 We can just drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
-
+```python
+train_df = train_df.drop(['Cabin'], axis=1)
+test_df = test_df.drop(['Cabin'], axis=1)
+```
 
 <br/>
 # [](#header-3)_Name_

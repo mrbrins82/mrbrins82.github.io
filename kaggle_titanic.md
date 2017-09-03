@@ -596,6 +596,29 @@ def is_large_fam(x):
 train_df['LargeFam'] = train_df.FamSize.apply(is_large_fam)
 test_df['LargeFam'] = test_df.FamSize.apply(is_large_fam)
 ```
+```python
+g = sns.factorplot(x="Alone", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['No', 'Yes'])
+g.set_ylabels("survival probability")
+plt.show()
+
+g = sns.factorplot(x="SmallFam", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['No', 'Yes'])
+g.set_ylabels("survival probability")
+plt.show()
+
+
+g = sns.factorplot(x="LargeFam", y="Survived", data=train_df, size=6, 
+                   kind="bar", palette="muted")
+g.despine(left=True)
+g.set_xticklabels(['No', 'Yes'])
+g.set_ylabels("survival probability")
+plt.show()
+```
 <center><img src="./assets/images/alone_survival_prob.png" alt="alone_survival" width="500" height="500" />
 </center>
 <center><img src="./assets/images/smallfam_survival_prob.png" alt="smallfam_survival" width="500" height="500" />

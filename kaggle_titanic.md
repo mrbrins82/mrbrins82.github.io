@@ -258,7 +258,7 @@ plt.show()
 ```
 <center><img src="./assets/images/age_dist_plot.png" alt="age_dist" width="500" height="500" />
 </center>
-After looking at the age distribution plot for each survival class, we can see why _Age_ didn't have such a high correlation to survival. The distribution is roughly the same for the survivors and for the deceased, except for a distinct difference for passengers under the age of about 10 years old. It looks like there's a sharp increase in survival probability for that age range. We will use this information to engineer a new feature later on.
+After looking at the above age distribution plot for the survivors and deceased, we can see why _Age_ didn't have such a high correlation to survival. The distribution is roughly the same for the survivors and for the deceased, except for a distinct difference for passengers under the age of about 10 years old. It looks like there's a sharp increase in survival probability for that age range. We will use this information to engineer a new feature later on.
 
 <br/>
 # [](#header-3)_SibSp_

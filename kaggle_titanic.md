@@ -897,6 +897,7 @@ At this point, we have built a classification model and have trained it on 75% o
 
 <br/>
 # [](#header-3)<center>Part 3. Model Evaluation<center/>
+Let's look at the highest accuracy score that our classifier got in the grid search and print out the optimal parameter set.
 ```python 
 print 'Best %s score: %0.3f'%(my_score, grid_search.best_score_)
 print 'Best Parameters:'
@@ -914,6 +915,7 @@ Best Parameters:
     n_estimators: 50
     reg_lambda: 0.10000000000000001
 ```
+The best classifier was over 83% correct. This is pretty good, compared to most scores on the Titanic submission leaderboard. It's possible that the classifier is a bit on the overfitted side though, so we can't assume that a high score on the training set automatically means a high score on any new data. Let's see if the classifier performs well on the portion of training data that we set aside earlier on.
 ```python
 predictions_test = grid_search.predict(x_test)
 
@@ -932,6 +934,10 @@ Scores for final validation set:
     f1 score: 0.777778
     roc_auc score: 0.818088
 ```
+This accuracy score is little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died?
+\begin{equation}
+\int_0^1 x dx = \frac{1}{2}
+\end{equation}
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS

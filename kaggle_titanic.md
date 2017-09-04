@@ -947,10 +947,9 @@ Note that the denominator has false negatives _FN_ instead of _FP_ like precisio
 Next, we have the F1 score. The F1 score is the harmonic mean of precision and recall. If we use precision as the only evaluation metric, it's entirely possible to do this at the expense of a bad recall score, and vice versa. As an example, imagine that we have a data set with 100 rows, and 10 of them belong to the positive class. We could build a classifier with 100% precision if all we do is correctly predict one member of the positive class. This would be a pretty conservative classifier, as it would predict the negative class almost all of the time unless it was absolutely certain that it could correctly predict the positive member. In this case, although we have 100% precision, the classifier would only have a 0.10 recall score since it only found one out of the total 10 positive class members. On the other hand, we could build a model that has 100% recall if we always predict the positive class. We would catch all of the positive cases this way. The downside to this classifier is that it only has a precision of 10%, since it is only right for the 10 positive cases and is wrong for the other 90 negative cases. The F1 score helps us make sure that we can get a good mix of precision and recall.  
 \begin{equation}
 F_1 = 2\frac{Precision \cdot Recall}{Precision + Recall}
-\end{equation}
+\end{equationi}
+The classifier is getting scores around the mid 70s to lower 80s and nothing seems glaringly detrimental. We are ready to make our final predictions and submit them to Kaggle for scoring.
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS
-```python
-predictions = grid_search.predict(test_df)
-```
+I have run this classifier using different numbers of k-fold cross validation, more grid search parameters, and using different scoring metrics in the grid search. The highest score that I've obtained as far as the Kaggle leaderboard goes is a little over 80% accuracy putting me in around the to 10% of submissions. On average, my submissions tend to score in the upper 70s for accuracy.

@@ -21,6 +21,8 @@ layout: default
 <br/>
 # [](#header-2)I. INTRODUCTION
 The sinking of the Titanic resulted in the loss of many lives. There were over 1500 deaths, accounting for approximately 2 out of every 3 people on the ship (passengers and crew combined). In this competition, Kaggle provides two data sets (a training set and a testing set) which contain numerical and categorical features for each of the passengers. The two sets contain the same numerical and categorical features, except that the training set also tells us if the passengers survived. The objective is to use the data to predict whether or not passengers in the testing data set survived or not. This is a binary classification problem, since we wish to classify each passenger as belonging to one of two classes: deceased, survived
+
+In the following sections, I explain how I've developed a machine learning model that has scored over 80% accuracy, putting my submission in roughly the top 10% of submissions to the Kaggle Titanic competition.
 <br/>
 <br/>
 # [](#header-2)II. EXPLORING THE DATA

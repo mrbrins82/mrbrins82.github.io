@@ -934,11 +934,17 @@ Scores for final validation set:
     f1 score: 0.777778
     roc_auc score: 0.818088
 ```
-This accuracy score is little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died? Mathematically, this is just
+This accuracy score is a little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died? Mathematically, this is just
 \begin{equation}
-P = \frac{TP}{TP + FP}
+Precision = \frac{TP}{TP + FP}
 \end{equation}
-where _P_ is precision, _TP_ is the number of true positives, and _FP_ is the number of false positives.
+where _TP_ is the number of true positives, and _FP_ is the number of false positives.
+
+The next score is the recall score. Recall is a measure of how many of the positive cases that our classifier catches, or, of all of the deceased passengers, how many did we get right? The expression for recall is
+\begin{equation}
+Recall = \frac{TP}{TP + FN}
+\end{equation}
+Note that the denominator has false negatives _FN_ instead of _FP_ like precision has.
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS

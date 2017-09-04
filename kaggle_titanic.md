@@ -934,10 +934,11 @@ Scores for final validation set:
     f1 score: 0.777778
     roc_auc score: 0.818088
 ```
-This accuracy score is little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died?
+This accuracy score is little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died? Mathematically, this is just
 \begin{equation}
-\int_0^1 x dx = \frac{1}{2}
+P = \frac{TP}{TP + FP}
 \end{equation}
+where _P_ is precision, _TP_ is the number of true positives, and _FP_ is the number of false positives.
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS

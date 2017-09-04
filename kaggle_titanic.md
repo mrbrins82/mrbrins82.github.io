@@ -945,6 +945,11 @@ The next score is the recall score. Recall is a measure of how many of the posit
 Recall = \frac{TP}{TP + FN}
 \end{equation}
 Note that the denominator has false negatives _FN_ instead of _FP_ like precision has.
+
+Next, we have the F1 score. The F1 score is the harmonic mean of precision and recall. If we use precision as the only evaluation metric, it's entirely possible to do this at the expense of a bad recall score, and vice versa. The F1 score helps us make sure that we can get a good mix of precision and recall. 
+\begin{equation}
+F_1 = 2\frac{Precision \cdot Recall}{Precision + Recall}
+\end{equation}
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS

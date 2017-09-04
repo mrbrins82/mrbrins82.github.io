@@ -848,7 +848,7 @@ Random forests are good classifiers in these cases. They are good at handling no
 from xgboost import XGBClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.cross_validation import train_test_split
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # we don't need the PassengerIds anymore and we don't want them to influence the
 # classifier, we will need the PassengerIds for the training set later on when 
@@ -924,7 +924,6 @@ print '\taccuracy score: %f'%accuracy_score(y_test, predictions_test)
 print '\tprecision score: %f'%precision_score(y_test, predictions_test)
 print '\trecall score: %f'%recall_score(y_test, predictions_test)
 print '\tf1 score: %f'%f1_score(y_test, predictions_test)
-print '\troc_auc score: %f'%roc_auc_score(y_test, predictions_test)
 ```
 ```ipython
 Scores for final validation set:
@@ -932,7 +931,6 @@ Scores for final validation set:
     precision score: 0.744681
     recall score: 0.813953
     f1 score: 0.777778
-    roc_auc score: 0.818088
 ```
 This accuracy score is a little lower than the accuracy of the grid search. In addition to accuracy, we also have a few other classification scores. Precision is the next score, and a good way of thinking about precision is to say that for every positive class prediction, what are the odds that it is correct. In other words, of all of the times the classifier predicts that a passenger died, what is the probability that the passenger actually died? Mathematically, this is just
 \begin{equation}

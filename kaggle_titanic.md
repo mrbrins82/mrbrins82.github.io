@@ -463,7 +463,7 @@ Cabin_X       -0.249732
 NumTitle       0.307794
 Name: Age, dtype: float64
 ```
-The features that are most strongly correlated with _Age_ are: _Pclass_, _SibSp_, _Parch_, and _NumTitle_. For each passenger that is missing an _Age_ value, we will find the other passengers that have the same strongly correlated features and compute the mean age and replace the missing value with this mean age.
+The features that are most strongly correlated with _Age_ (ignoring the individual cabin letters) are: _Pclass_, _SibSp_, _Parch_, and _NumTitle_. For each passenger that is missing an _Age_ value, we will find the other passengers that have the same strongly correlated features and compute the mean age and replace the missing value with this mean age.
 ```python
 train_without_ages = train_df[train_df.Age.isnull()]
 test_without_ages = test_df[test_df.Age.isnull()]
@@ -522,11 +522,14 @@ There is one passenger in the testing data set that is missing a value for _Fare
 print test_df[test_df.Fare.isnull()]
 ```
 ```ipython
-     PassengerId  Pclass  Sex   Age  SibSp  Parch  Fare  Embarked  \
-152         1044       3    1  60.5      0      0   NaN         2   
+     PassengerId  Pclass  Sex   Age  SibSp  Parch  Fare  Embarked  Cabin_A  \
+152         1044       3    1  60.5      0      0   NaN         2        0   
 
-     CabinLetter Title  NumTitle  
-152            9   Mr.        11
+     Cabin_B  Cabin_C  Cabin_D  Cabin_E  Cabin_F  Cabin_G  Cabin_X  Cabin_T  \
+152        0        0        0        0        0        0        1        0   
+
+    Title  NumTitle  
+152   Mr.        11 
 ```
 This is a 3rd-class male, and looking at the features that correlate the strongest with _Fare_, we can see that class plays the biggest role in determining the _Fare_ value. We will just set this passenger's fare to the mean fare value for 3rd-class passengers.
 ```python
@@ -539,10 +542,10 @@ There were a few interesting features in the data that we can use to engineer so
 
 <br/>
 # [](#header-3)_Age_
-In the age distribution plot, we saw that there was a definite spike in survival probability for passengers that were younger than about 10 years old. The new feature that we will create will be a binary feature called _Child_.
+In the age distribution plot, we saw that there was a definite spike in survival probability for passengers that were younger than about 5 years old. The new feature that we will create will be a binary feature called _Child_.
 ```python
 def is_child(x):
-    if int(x) <= 10:
+    if int(x) <= 5:
         return 1
     else:
         return 0
@@ -550,12 +553,12 @@ def is_child(x):
 train_df['Child'] = train_df.Age.apply(is_child)
 test_df['Child'] = test_df.Age.apply(is_child)
 ```
-Below we plot the survival probabilities for passengers over, and under the age of 10. The plot reflects the feature that we saw in the age distribution above by showing that there is a statistical importance to being either older or younger than 10 years old. The new _Child_ feature seems to be useful.
+Below we plot the survival probabilities for passengers over, and under the age of 5. The plot reflects the feature that we saw in the age distribution above by showing that there is a statistical importance to being either older or younger than 5 years old. The new _Child_ feature seems to be useful.
 ```python
 g = sns.factorplot(x="Child", y="Survived", data=train_df, size=6, 
                    kind="bar", palette="muted")
 g.despine(left=True)
-g.set_xticklabels(['Over 10yrs', 'Under 10yrs'])
+g.set_xticklabels(['Over 5yrs', 'Under 5yrs'])
 g.set_ylabels("survival probability")
 plt.show()
 ```

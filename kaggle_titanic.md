@@ -889,7 +889,6 @@ We'll need a way to evaluate how our model is performing. We don't know the corr
 X = train_df.drop(['Survived'], axis=1)
 Y = train_df.Survived
 
-np.random.seed(random_state) # needs to be set so that the split is reproducible
 x_train, x_test, y_train, y_test = train_test_split(X, Y) # default split is 75% train and 25% test
 ```
 The _XGBClassifier_ has a lot of parameters, and we can use _GridSearchCV_ to test the classifier with different sets of these parameters and determine which set obtains the highest score determined by some scoring metric that we will provide. We'll use accuracy as our metric since that is how submissions are evaluated in this particular Kaggle competition.
@@ -904,9 +903,9 @@ xgb = XGBClassifier(**fixed_params)
 ```
 Now for the variable parameters. We could use as many of these as we like, but as the number of possibilities increases the computation time quickly becomes quite long.
 ```python
-test_params = {'n_estimators':np.array([10, 25, 50]),
-               'learning_rate':np.logspace(-3, -1, 3),
-               'max_depth':np.array([3, 4, 5]),
+test_params = {'n_estimators':np.array([25, 50, 100, 150, 200]),
+               'learning_rate':np.logspace(-4, -1, 4),
+               'max_depth':np.array([3, 4, 5, 6, 7]),
                'gamma':np.array([0.0, 0.1]),
                'max_delta_step':np.array([0.0, 0.001, 0.01]),
                'reg_lambda':np.array([0.01, 0.1])
@@ -978,4 +977,4 @@ The classifier is getting scores around the mid 70s to lower 80s and nothing see
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS
-I have run this classifier using different numbers of k-fold cross validation, more grid search parameters, and using different scoring metrics in the grid search. The highest score that I've obtained as far as the Kaggle leaderboard goes is a little over 80% accuracy putting me in around the to 10% of submissions. On average, my submissions tend to score in the upper 70s for accuracy.
+I have run this classifier using different numbers of k-fold cross validation, more grid search parameters, and using different scoring metrics in the grid search. Scoring on the remainder of the training set that is put aside with the <i>train_test_split</i> function usually results in scores in the lower to upper 80%s.  The highest score that I've obtained as far as the Kaggle leaderboard goes is a little over 80% accuracy putting me in around the top 10% of submissions. On average, my submissions tend to score in the upper 70%s for accuracy.

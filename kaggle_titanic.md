@@ -43,7 +43,6 @@ test_df = pd.read_csv('test.csv')
 
 # check to see if the data files have any missing values
 print train_df.shape # gives dimension of training set
-print ''
 print train_df.count() # this will tell us how many non-NA values for each feature
 ```
 ```ipython
@@ -65,7 +64,6 @@ dtype: int64
 ```
 ```python
 print test_df.shape
-print ''
 print test_df.count()
 ```
 ```ipython
@@ -357,7 +355,6 @@ This leaves us with _Cabin_ and _Name_. We'll start with encoding the _Cabin_ va
 There are 147 unique cabin numbers in the training set.
 ```python
 print train_df.Cabin.nunique()
-print ''
 print train_df.Cabin.unique()
 ```
 ```ipython
@@ -380,6 +377,7 @@ print train_df.Cabin.unique()
 We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features by using sklearn's OneHotEncoder. Since there are a lot of missing values, we will fill them with a generic 'X' value..
 ```python
 train_df.Cabin.fillna(value='X', inplace=True)
+test_df.Cabin.fillna)value='X', inplace=True)
 
 def get_cabin_letter(x):
 
@@ -388,7 +386,16 @@ def get_cabin_letter(x):
 train_df['CabinLetter'] = train_df.Cabin.apply(get_cabin_letter)
 test_df['CabinLetter'] = test_df.Cabin.apply(get_cabin_letter)
 ```
-We can just drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
+Let's take a look at the survival probabilities for each cabin letter.
+```python
+g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
+g.despine(left=True)
+g.set_ylabels("survival probability")
+plt.show()
+```
+<center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
+</center>
+It looks like cabins 'A', 'B', 'C', and 'D' have significantly higher chances of survival and we will engineer a new feature using this information later. We can drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
 ```python
 train_df = train_df.drop(['Cabin'], axis=1)
 test_df = test_df.drop(['Cabin'], axis=1)

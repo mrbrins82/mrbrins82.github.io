@@ -395,8 +395,12 @@ plt.show()
 ```
 <center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
 </center>
-It looks like cabins 'A', 'B', 'C', and 'D' have significantly higher chances of survival and we will engineer a new feature using this information later. We can drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
+It looks like cabins 'B', 'C', 'D', and 'E' have significantly higher chances of survival and we will engineer a new feature using this information later. Let's use one-hot-encoding on the cabin letters and then drop the original _Cabin_ feature.
 ```python
+train_df = pd.get_dummies(train_df, columns=['CabinLetter'], prefix=['Cabin'])
+test_df = pd.get_dummies(test_df, column=['CabinLetter'], prefix=['Cabin'])
+test_df['Cabin_T'] = 0 # there is no T cabin in the test set
+
 train_df = train_df.drop(['Cabin'], axis=1)
 test_df = test_df.drop(['Cabin'], axis=1)
 ```
@@ -446,18 +450,27 @@ Age            1.000000
 SibSp         -0.308247
 Parch         -0.189119
 Fare           0.096067
-Embarked      -0.030394
-CabinLetter   -0.267270
+Embarked      -0.040248
+Cabin_A        0.136309
+Cabin_B        0.093914
+Cabin_C        0.122041
+Cabin_D        0.136975
+Cabin_E        0.121440
+Cabin_F       -0.083970
+Cabin_G       -0.077296
+Cabin_T        0.039474
+Cabin_X       -0.249732
 NumTitle       0.307794
+Name: Age, dtype: float64
 ```
-The features that are most strongly correlated with _Age_ are: _Pclass_, _SibSp_, _Parch_, _CabinLetter_, and _NumTitle_. For each passenger that is missing an _Age_ value, we will find the other passengers that have the same strongly correlated features and compute the mean age and replace the missing value with this mean age.
+The features that are most strongly correlated with _Age_ are: _Pclass_, _SibSp_, _Parch_, and _NumTitle_. For each passenger that is missing an _Age_ value, we will find the other passengers that have the same strongly correlated features and compute the mean age and replace the missing value with this mean age.
 ```python
 train_without_ages = train_df[train_df.Age.isnull()]
 test_without_ages = test_df[test_df.Age.isnull()]
 
 train_with_ages = train_df[train_df.Age.notnull()] # only use training data to fill ages
 
-def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
+def get_mean_age(pclass, sibsp, parch, numtitle):
 
     # we need to make sure that the passenger with missing age
     # info is not a completely unique passenger, otherwise there
@@ -465,10 +478,6 @@ def get_mean_age(pclass, sibsp, parch, cabinletter, numtitle):
     # a mean age, so we will update the mean age as we reduce
     # the temp_df
     temp_df = train_with_ages[train_with_ages.Pclass == pclass]
-    if temp_df.shape[0] != 0:
-        mean_age = temp_df.Age.mean()
-
-    temp_df = temp_df[temp_df.CabinLetter == cabinletter]
     if temp_df.shape[0] != 0:
         mean_age = temp_df.Age.mean()
 
@@ -492,10 +501,9 @@ for Id in train_without_ages.PassengerId:
     pclass = train_df.Pclass.iloc[Id - 1]
     sibsp = train_df.SibSp.iloc[Id - 1]
     parch = train_df.Parch.iloc[Id - 1]
-    cabinletter = train_df.CabinLetter.iloc[Id - 1]
     numtitle = train_df.NumTitle.iloc[Id - 1]
 
-    train_df.Age.iloc[Id - 1] = get_mean_age(pclass, sibsp, parch, cabinletter, numtitle)
+    train_df.Age.iloc[Id - 1] = get_mean_age(pclass, sibsp, parch, numtitle)
 
 # fill in the test_df missing ages
 for Id in test_without_ages.PassengerId:
@@ -503,10 +511,9 @@ for Id in test_without_ages.PassengerId:
     pclass = test_df.Pclass.iloc[Id - 892]
     sibsp = test_df.SibSp.iloc[Id - 892]
     parch = test_df.Parch.iloc[Id - 892]
-    cabinletter = test_df.CabinLetter.iloc[Id - 892]
     numtitle = test_df.NumTitle.iloc[Id - 892]
 
-    test_df.Age.iloc[Id - 892] = get_mean_age(pclass, sibsp, parch, cabinletter, numtitle)
+    test_df.Age.iloc[Id - 892] = get_mean_age(pclass, sibsp, parch, numtitle)
 ```
 <br/>
 # [](#header-3)_Fare_

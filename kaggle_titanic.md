@@ -377,30 +377,16 @@ print train_df.Cabin.unique()
  'E8' 'B101' 'D45' 'C46' 'D30' 'E121' 'D11' 'E77' 'F38' 'B3' 'D6' 'B82 B84'
  'D17' 'A36' 'B102' 'B69' 'E49' 'C47' 'D28' 'E17' 'A24' 'C50' 'B42' 'C148']
 ```
-We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features. Note that this function also handles the filling of missing values in the _Cabin_ feature.
+We can see that all of the cabin numbers start with an identifying letter, so rather than encode every single cabin number, we can strip the first letter from each cabin and then encode that into a numerical feature. We will write our own function in order to do this, and then transform the training and testing _Cabin_ features by using sklearn's OneHotEncoder. Since there are a lot of missing values, we will fill them with a generic 'X' value..
 ```python
-def cabin_letter(x):
-    if str(x)[0] == 'A':
-        return 1
-    elif str(x)[0] == 'B':
-        return 2
-    elif str(x)[0] == 'C':
-        return 3
-    elif str(x)[0] == 'D':
-        return 4
-    elif str(x)[0] == 'E':
-        return 5
-    elif str(x)[0] == 'F':
-        return 6
-    elif str(x)[0] == 'G':
-        return 7
-    elif str(x)[0] == 'T':
-        return 8
-    else:
-        return 9
+train_df.Cabin.fillna(value='X', inplace=True)
 
-train_df['CabinLetter'] = train_df.Cabin.apply(cabin_letter)
-test_df['CabinLetter'] = test_df.Cabin.apply(cabin_letter)
+def get_cabin_letter(x):
+
+    return str(x)[0]
+
+train_df['CabinLetter'] = train_df.Cabin.apply(get_cabin_letter)
+test_df['CabinLetter'] = test_df.Cabin.apply(get_cabin_letter)
 ```
 We can just drop the original _Cabin_ feature now that we have extracted the more useful _CabinLetter_.
 ```python
@@ -719,18 +705,16 @@ plt.show()
 ```
 <center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
 </center>
-We can see that cabins beginning with _B_, _C_, _D_, _E_, or _F_ have significant chances of survival. The other cabin letters either have low survival probability or a lower probability with higher variance. For these reasons, we will create a new feature called _GoodCabin_ separating these two cases.
+We can see that cabins beginning with _B_, _C_, _D_, or _E_ have significantly higher chances of survival. The other cabin letters either have low survival probability or a lower probability with higher variance. For these reasons, we will create a new feature called _GoodCabin_ separating these two cases.
 ```python
 def is_good_cabin(x):
-    if int(x) == 2: # B
+    if x == 'B':
         return 1
-    elif int(x) == 3: # C
+    elif x == 'C':
         return 1
-    elif int(x) == 4: # D
+    elif x == 'D':
         return 1
-    elif int(x) == 5: # E
-        return 1
-    elif int(x) == 6: # F
+    elif x == 'E':
         return 1
     else:
         return 0
@@ -748,7 +732,7 @@ plt.show()
 ```
 <center><img src="./assets/images/goodcabin_survival_prob.png" alt="goodcabin_survival" width="500" height="500" />
 </center>
-Survival probability is more than twice as high for passengers in either a _B_, _C_, _D_, _E_, or _F_ cabin.
+Survival probability is more than twice as high for passengers in either a _B_, _C_, _D_, or _E_ cabin.
 
 <br/>
 # [](#header-3)Data Summary

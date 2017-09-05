@@ -385,6 +385,10 @@ def get_cabin_letter(x):
 
 train_df['CabinLetter'] = train_df.Cabin.apply(get_cabin_letter)
 test_df['CabinLetter'] = test_df.Cabin.apply(get_cabin_letter)
+
+# we'll use AlphaCabinLetter later for plots
+train_df['AlphaCabinLetter'] = train_df.CabinLetter
+test_df['AlphaCabinLetter'] = test_df.CabinLetter
 ```
 Let's use one-hot-encoding on the cabin letters and then drop the original _Cabin_ feature.
 ```python
@@ -513,14 +517,14 @@ There is one passenger in the testing data set that is missing a value for _Fare
 print test_df[test_df.Fare.isnull()]
 ```
 ```ipython
-     PassengerId  Pclass  Sex   Age  SibSp  Parch  Fare  Embarked  Cabin_A  \
-152         1044       3    1  60.5      0      0   NaN         2        0   
+     PassengerId  Pclass  Sex   Age  SibSp  Parch  Fare  Embarked  \
+152         1044       3    1  60.5      0      0   NaN         2   
 
-     Cabin_B  Cabin_C  Cabin_D  Cabin_E  Cabin_F  Cabin_G  Cabin_X  Cabin_T  \
-152        0        0        0        0        0        0        1        0   
+    AlphaCabinLetter  Cabin_A  Cabin_B  Cabin_C  Cabin_D  Cabin_E  Cabin_F  \
+152                X        0        0        0        0        0        0   
 
-    Title  NumTitle  
-152   Mr.        11 
+     Cabin_G  Cabin_X  Cabin_T Title  NumTitle  
+152        0        1        0   Mr.        11 
 ```
 This is a 3rd-class male, and looking at the features that correlate the strongest with _Fare_, we can see that class plays the biggest role in determining the _Fare_ value. We will just set this passenger's fare to the mean fare value for 3rd-class passengers.
 ```python
@@ -727,8 +731,11 @@ def is_good_cabin(x):
     else:
         return 0
 
-train_df['GoodCabin'] = train_df.CabinLetter.apply(is_good_cabin)
-test_df['GoodCabin'] = test_df.CabinLetter.apply(is_good_cabin)
+train_df['GoodCabin'] = train_df.AlphaCabinLetter.apply(is_good_cabin)
+test_df['GoodCabin'] = test_df.AlphaCabinLetter.apply(is_good_cabin)
+
+train_df = train_df.drop(['AlphaCabinLetter'], axis=1)
+test_df = test_df.drop(['AlphaCabinLetter'], axis=1)
 ```
 ```python
 g = sns.factorplot(x="GoodCabin", y="Survived", data=train_df, size=6, 
@@ -747,33 +754,39 @@ Survival probability is more than twice as high for passengers in either a _B_, 
 Now that we have cleaned our data sets and engineered some new features, let's take one last look at our data to make sure that we haven't missed anything and see if our new features have good correlations with survival probability.
 ```python
 print train_df.shape
-print ''
 print train_df.corr()['Survived']
-print ''
 print train_df.count()
 ```
 ```ipython
-(891, 19)
+(891, 27)
 
 PassengerId   -0.005007
 Survived       1.000000
 Pclass        -0.338481
 Sex           -0.543351
-Age           -0.064621
+Age           -0.063524
 SibSp         -0.035322
 Parch          0.081629
 Fare           0.257307
 Embarked      -0.174199
-CabinLetter   -0.301116
+Cabin_A        0.022287
+Cabin_B        0.175095
+Cabin_C        0.114652
+Cabin_D        0.150716
+Cabin_E        0.145321
+Cabin_F        0.057935
+Cabin_G        0.016040
+Cabin_T       -0.026456
+Cabin_X       -0.316912
 NumTitle      -0.193635
-Child          0.089465
+Child          0.138221
 FamSize        0.016639
 Alone         -0.203367
 SmallFam       0.279855
 LargeFam      -0.125147
 LowFare       -0.295081
 GoodTitle      0.548092
-GoodCabin      0.321393
+GoodCabin      0.312723
 Name: Survived, dtype: float64
 
 PassengerId    891
@@ -785,7 +798,15 @@ SibSp          891
 Parch          891
 Fare           891
 Embarked       891
-CabinLetter    891
+Cabin_A        891
+Cabin_B        891
+Cabin_C        891
+Cabin_D        891
+Cabin_E        891
+Cabin_F        891
+Cabin_G        891
+Cabin_T        891
+Cabin_X        891
 NumTitle       891
 Child          891
 FamSize        891
@@ -799,9 +820,12 @@ dtype: int64
 ```
 We also need to make sure that there are no missing values in the testing data set.
 ```python
+print test_df.shape
 print test_df.count()
 ```
 ```ipython
+(418, 26)
+
 PassengerId    418
 Pclass         418
 Sex            418
@@ -810,7 +834,15 @@ SibSp          418
 Parch          418
 Fare           418
 Embarked       418
-CabinLetter    418
+Cabin_A        418
+Cabin_B        418
+Cabin_C        418
+Cabin_D        418
+Cabin_E        418
+Cabin_F        418
+Cabin_G        418
+Cabin_X        418
+Cabin_T        418
 NumTitle       418
 Child          418
 FamSize        418

@@ -248,7 +248,7 @@ plt.show()
 ```
 <center><img src="./assets/images/age_dist_plot.png" alt="age_dist" width="500" height="500" />
 </center>
-After looking at the above age distribution plot for the survivors and deceased, we can see why _Age_ didn't have such a high correlation to survival. The distribution is roughly the same for the survivors and for the deceased, except for a distinct difference for passengers under the age of about 10 years old. It looks like there's a sharp increase in survival probability for that age range. We will use this information to engineer a new feature later on.
+After looking at the above age distribution plot for the survivors and deceased, we can see why _Age_ didn't have such a high correlation to survival. The distribution is roughly the same for the survivors and for the deceased, except for a distinct difference for passengers under the age of about 5 years old. It looks like there's a sharp increase in survival probability for that age range. We will use this information to engineer a new feature later on.
 
 <br/>
 # [](#header-3)_SibSp_
@@ -386,16 +386,7 @@ def get_cabin_letter(x):
 train_df['CabinLetter'] = train_df.Cabin.apply(get_cabin_letter)
 test_df['CabinLetter'] = test_df.Cabin.apply(get_cabin_letter)
 ```
-Let's take a look at the survival probabilities for each cabin letter.
-```python
-g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
-g.despine(left=True)
-g.set_ylabels("survival probability")
-plt.show()
-```
-<center><img src="./assets/images/cabinletter_survival_prob.png" alt="cabinletter_survival" width="500" height="500" />
-</center>
-It looks like cabins 'B', 'C', 'D', and 'E' have significantly higher chances of survival and we will engineer a new feature using this information later. Let's use one-hot-encoding on the cabin letters and then drop the original _Cabin_ feature.
+Let's use one-hot-encoding on the cabin letters and then drop the original _Cabin_ feature.
 ```python
 train_df = pd.get_dummies(train_df, columns=['CabinLetter'], prefix=['Cabin'])
 test_df = pd.get_dummies(test_df, column=['CabinLetter'], prefix=['Cabin'])
@@ -712,11 +703,11 @@ plt.show()
 <br/>
 # [](#header-3)_Cabin_
 The Titanic sank in the middle of the night, so many passengers were probably sleeping in their cabins. Different parts of the ship may have had poor access to lifeboats and so _CabinLetter_ might be a good predictor of survival. The survival probabilities for each of the cabin letters is shown below.
+
+Let's take a look at the survival probabilities for each cabin letter.
 ```python
-g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, 
-                   kind="bar", palette="muted")
+g = sns.factorplot(x="CabinLetter", y="Survived", data=train_df, size=6, kind="bar", palette="muted")
 g.despine(left=True)
-g.set_xticklabels(['A' ,'B', 'C', 'D', 'E', 'F', 'G', 'T', 'NA'])
 g.set_ylabels("survival probability")
 plt.show()
 ```

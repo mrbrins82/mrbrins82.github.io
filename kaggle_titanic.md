@@ -973,7 +973,6 @@ Next, we have the F1 score. The F1 score is the harmonic mean of precision and r
 \begin{equation}
 F_1 = 2\frac{Precision \cdot Recall}{Precision + Recall}
 \end{equation}
-The classifier is getting scores around the mid 70s to lower 80s and nothing seems glaringly detrimental. We are ready to make our final predictions and submit them to Kaggle for scoring.
 <br/>
 <br/>
 # [](#header-2)VI. RESULTS

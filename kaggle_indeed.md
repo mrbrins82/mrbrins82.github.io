@@ -42,7 +42,7 @@ def get_job_info(job):
     """
         We'll want: job title, company, location, 
                     salary (if given), company size, 
-                    company rating... Maybe more.
+                    company rating.
     """
 
     try:
@@ -101,7 +101,7 @@ def get_next_page(soup):
     return new_url
 ```
 ```python 
-sleep_time = 1
+sleep_time = 5 # wait 5 seconds before going to the next page
 number_of_pages = 60
 job_type = ['artificial', 'intelligence']
 
@@ -114,13 +114,12 @@ soup = BeautifulSoup(html, 'html5lib')
 jobs = soup.find_all('div', {'class':' row result'})
 
 next_page_number = 2
-time.sleep(sleep_time) # wait a little while in case there is a limit on how quickly we can
+time.sleep(sleep_time) # it's polite to wait a little bit
 while next_page_number <= number_of_pages:
 
 
     try:
         new_url = get_next_page(soup)
-#        print'After %d pages, we have %d jobs'%(next_page_number - 1, len(jobs))
         new_html = requests.get(new_url).text
         new_soup = BeautifulSoup(new_html, 'html5lib')
 
@@ -140,7 +139,7 @@ while next_page_number <= number_of_pages:
 # write all of the lines to a .csv file
 filename = 'new_' + job_type[0] + '_' + job_type[1] + '_jobs.csv'
 if os.path.exists(filename):
-    os.system('rm ' + filename)
+    os.system('rm ' + filename) 
 
 f = open(filename, 'a')
 header =  '"jobtitle","company","location","salary","companysize","companyrating","summary"\n'
@@ -156,8 +155,8 @@ f.close()
 ```
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>
-<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="400" height="600" />
+<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="500" height="600" />
 </center>
-<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="400" height="600" />
+<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="600" />
 </center>
 

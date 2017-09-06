@@ -23,8 +23,8 @@ layout: default
 # [](#header-2)I. INTRODUCTION
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="450" />
 </center>
-<center><img src="./assets/images/heat_scatter_westcoast_zoom.png" alt="west coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="500" height="500" />
 </center>
-<center><img src="./assets/images/heat_scatter_eastcoast_zoom.png" alt="east coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="500" />
 </center>
 

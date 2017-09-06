@@ -155,8 +155,8 @@ f.close()
 ```
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>
-<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="500" height="600" />
+<center><img src="./assets/images/heat_scatter_nyc_zoom.png" alt="nyc zoom heat map" width="500" height="600" />
 </center>
-<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_sanfran_zoom.png" alt="san fran zoom heat map" width="500" height="500" />
 </center>
 

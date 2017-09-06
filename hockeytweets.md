@@ -17,7 +17,9 @@ layout: default
 
 # [](#header-1)Twitter Streaming & Sentiment Analysis for<br/>Game7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators
 
-Game 7 of the Eastern Conference Finals was one of the most stressful games I've ever watched as a Penguins fan. It took the Penguins two heart-palpitation-inducing overtime periods to score a goal by Chris Kunitz earning them a trip to the Stanley Cup Finals for the second year in a row. No team has won back to back Stanley Cups in the salary cap era, and the Penguins stand a chance to be the first when they faceoff against the Nashville Predators. The last team to do it was the Detroit Red Wings in 97-98. Before that, the Pittsburgh Penguins in 91-92. 
+I wanted to do this project because I thought it sounded like a fun idea. I'm a really big hockey fan, especially for the Pittsburgh Penguins, and I thought it might be interesting to see what kinds of things people were tweeting during such an important playoff game. 
+
+It turned out that game 7 of the Eastern Conference Finals was a nail biter. It took two overtime periods to decide on a winner. Chris Kunitz scored the game winner for the Penguins, earning them a trip to the Stanley Cup Finals (which they won) for the second year in a row. No team had won back to back Stanley Cups in the salary cap era, and the last team to do it was the Detroit Red Wings in 97-98. Before that, the Pittsburgh Penguins in 91-92. 
 
 I live streamed tweets before and during the game, amassing a total of 15,208 tweets (64MB) with keywords: 'sidney crosby', 'pittsburgh penguins', 'ottawa senators', 'nhl playoffs', and 'stanley cup.'
 

@@ -21,10 +21,10 @@ layout: default
 <br/>
 <br/>
 # [](#header-2)I. INTRODUCTION
-<center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="450" />
+<center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>
-<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="400" height="600" />
 </center>
-<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="400" height="600" />
 </center>
 

@@ -157,6 +157,37 @@ f.close()
 <br/>
 <br/>
 # [](#header-2)III. ANALYZING THE DATA
+I scraped Indeed.com's website for jobs that appear under searches for Macine Learning, Data Scientist, and Artificial Intelligence. This amounted to about 50 pages of jobs for each job search, for a total of 2807 jobs.
+```python 
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+import seaborn as sns
+import os, sys
+import get_locations # my script to get location coordinates
+ 
+from mpl_toolkits.basemap import Basemap
+from matplotlib.colors import LinearSegmentedColormap
+
+# load the job csv files and the csv with coordinates
+ai_df = pd.read_csv('new_artificial_intelligence_jobs.csv')
+ds_df = pd.read_csv('new_data_scientist_jobs.csv')
+ml_df = pd.read_csv('new_machine_learning_jobs.csv')
+locations_df = pd.read_csv('locations.csv')
+```
+```python
+print ai_df.shape
+print ds_df.shape
+print ml_df.shape
+print 'Total jobs: ',ai_df.shape[0] + ds_df.shape[0] + ml_df.shape[0]
+```
+```ipython
+(924, 7)
+(951, 7)
+(932, 7)
+
+Total jobs:  2807
+```
 <br/>
 # [](#header-3)<center>Part 1. Job Location<center/>
 

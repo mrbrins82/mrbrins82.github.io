@@ -10,8 +10,8 @@ layout: default
 
 *   [Twitter Streaming During Game 7 Eastern <br/>Conference Finals: Penguins vs. Senators](hockeytweets)
 *   [(Kaggle) Titanic: Machine Learning from Disaster](kaggle_titanic)<br/>
-*   [(Kaggle) House Prices: Advanced Regression Techniques](kaggle_houseprices)<br/>
-*   [(Kaggle) Personalized Medicine: Redefining Cancer Treatment](kaggle_cancer)<br/>
+<!-- *   [(Kaggle) House Prices: Advanced Regression Techniques](kaggle_houseprices)<br/> -->
+<!-- *   [(Kaggle) Personalized Medicine: Redefining Cancer Treatment](kaggle_cancer)<br/> -->
 
 
 * * * 

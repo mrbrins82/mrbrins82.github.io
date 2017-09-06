@@ -157,6 +157,6 @@ f.close()
 </center>
 <center><img src="./assets/images/heat_scatter_west_zoom.png" alt="west coast heat map" width="500" height="600" />
 </center>
-<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="600" />
+<center><img src="./assets/images/heat_scatter_east_zoom.png" alt="east coast heat map" width="500" height="500" />
 </center>
 

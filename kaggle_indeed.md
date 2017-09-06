@@ -8,7 +8,7 @@ layout: default
 
 ## [](#header-2)Projects
 
-*   <font color="MediumSlateBlue">Indeed.com: Data Science, Machine Learning, & AI jobs across the US</font>
+*   <font color="MediumSlateBlue">Indeed.com: Data Science, Machine Learning,<br/>& AI jobs across the US</font><br/>
 *   [Twitter Streaming & Sentiment Analysis for<br/>Game 7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators](hockeytweets)<br/>
 *   [(Kaggle) Titanic: Machine Learning from Disaster](kaggle_titanic)<br/>
 <!-- *   [(Kaggle) House Prices: Advanced Regression Techniques](kaggle_houseprices)<br/> -->

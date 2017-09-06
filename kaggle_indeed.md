@@ -21,7 +21,7 @@ layout: default
 <br/>
 <br/>
 # [](#header-2)I. INTRODUCTION
-I got the idea for this project since I myself am looking for a career in these fields. I wanted to look at such things as geographical locations of jobs, company sizes (start ups vs. older corporations), company ratings, salary information, and possibly some common keywords given in job summaries that could give information on job requirements.
+I got the idea for this project since I'm interested in data science, machine learning, and artificial intelligence, and I myself am looking for a career in these fields. I wanted to examine such things as geographical locations of jobs, company sizes (start ups vs. older corporations), company ratings, salary information, and possibly some common keywords given in job summaries that could give information on job requirements.
 
 <br/>
 <br/>
@@ -42,7 +42,7 @@ def get_job_info(job):
     """
         We'll want: job title, company, location, 
                     salary (if given), company size, 
-                    company rating.
+                    company rating, and a job summary.
     """
 
     try:

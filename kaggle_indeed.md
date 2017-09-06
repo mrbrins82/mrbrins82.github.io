@@ -153,10 +153,18 @@ for ii in xrange(len(jobs)):
 
 f.close()
 ```
+
+<br/>
+<br/>
+# [](#header-2)II. ANALYZING THE DATA
+<br/>
+# [](#header-3)<center>Part 1. Job Location<center/>
+
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>
 <center><img src="./assets/images/heat_scatter_nyc_zoom.png" alt="nyc zoom heat map" width="500" height="500" />
 </center>
 <center><img src="./assets/images/heat_scatter_sanfran_zoom.png" alt="san fran zoom heat map" width="500" height="500" />
 </center>
+
 

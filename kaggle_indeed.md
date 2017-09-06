@@ -15,11 +15,15 @@ layout: default
 
 
 * * * 
-
+<br/>
+# [](#header-1)<center><i>INDEED.COM: DATA SCIENCE, MACHINE LEARNING, AND AI JOBS ACROSS THE US<i/><center/>
+<br/>
+<br/>
+# [](#header-2)I. INTRODUCTION
 <center><img src="./assets/images/heat_scatter.png" alt="us heat map" width="500" height="500" />
 </center>
-<center><img src="./assets/images/heat_scatter_westcoast.png" alt="west coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_westcoast_zoom.png" alt="west coast heat map" width="500" height="500" />
 </center>
-<center><img src="./assets/images/heat_scatter_eastcoast.png" alt="east coast heat map" width="500" height="500" />
+<center><img src="./assets/images/heat_scatter_eastcoast_zoom.png" alt="east coast heat map" width="500" height="500" />
 </center>
 

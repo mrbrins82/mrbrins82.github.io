@@ -157,39 +157,57 @@ f.close()
 <br/>
 <br/>
 # [](#header-2)III. ANALYZING THE DATA
-I scraped Indeed.com's website for jobs that appear under searches for Macine Learning, Data Scientist, and Artificial Intelligence. This amounted to about 50 pages of jobs for each job search, for a total of 2807 jobs.
+The code used in my analysis is aptly called _analysis.py_ and currently resides in my github repository <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
 
-The code used in my analysis is aptly called _analysis.py_ and currently resides <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
-```python 
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-import seaborn as sns
-import os, sys
-import get_locations # my script to get location coordinates
- 
-from mpl_toolkits.basemap import Basemap
-from matplotlib.colors import LinearSegmentedColormap
-
-# load the job csv files and the csv with coordinates
-ai_df = pd.read_csv('new_artificial_intelligence_jobs.csv')
-ds_df = pd.read_csv('new_data_scientist_jobs.csv')
-ml_df = pd.read_csv('new_machine_learning_jobs.csv')
-locations_df = pd.read_csv('locations.csv')
-```
+Now that we have some data, let's take a look at it. We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Learning). There are 163 duplicate job listings which we will drop, leaving us with a grand total of 2644 job listings. Now we'll check for missing values.
 ```python
-print ai_df.shape
-print ds_df.shape
-print ml_df.shape
-print 'Total jobs: ',ai_df.shape[0] + ds_df.shape[0] + ml_df.shape[0]
+df.count()
 ```
 ```ipython
-(924, 7)
-(951, 7)
-(932, 7)
-
-Total jobs:  2807
+jobtitle         2603
+company          2641
+location         2644
+salary            131
+companysize      1180
+companyrating    1819
+summary          1605
+dtype: int64
 ```
+<br/>
+# [](#header-3)Part 1. Who's hiring, and for what?
+Let's take a look at companies that have the most frequent job listings.
+```python
+df.company.nunique()
+df.company.value_counts()[:20]
+```
+```ipython 
+1302
+
+Apple                        73
+Google                       51
+IBM                          36
+Microsoft                    35
+NVIDIA                       33
+Amazon Corporate LLC         31
+Intel                        31
+Facebook                     24
+Booz Allen Hamilton          19
+Udacity, Inc.                17
+Uber                         17
+McKinsey & Company           16
+Toyota Research Institute    15
+Intellipro Group Inc.        15
+Accenture                    13
+Twitter                      12
+Nauto                        12
+Lockheed Martin              12
+Ford Motor Company           12
+Adobe                        11
+Name: company, dtype: int64
+```
+Nothing too surprising here, although there are a few companies in this list that don't have the same kind of brand recognition that Apple or Google have for example.
+
+
 <br/>
 # [](#header-3)<center>Part 1. Job Location<center/>
 

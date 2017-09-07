@@ -197,8 +197,7 @@ all_df = pd.concat((temp_df, ml_df))
 
 df = all_df.drop_duplicates()
 locations_df = locations_df.drop_duplicates()
-```
-```python
+
 df.count()
 ```
 ```ipython
@@ -212,7 +211,7 @@ summary          1639
 keyword          2775
 dtype: int64
 ```
-
+It looks like not a lot of companies list salary in job listings, so the information that we can get about salary might not be very reliable.
 <br/>
 # [](#header-3)Part 1. Who's hiring, and for what?
 Let's take a look at the top 25 companies in terms of total job listings broken down into artificial intelligence, machine learning, and data science jobs.

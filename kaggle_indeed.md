@@ -176,11 +176,10 @@ dtype: int64
 
 <br/>
 # [](#header-3)Part 1. Who's hiring, and for what?
-Let's take a look at the top 25 companies in terms of total job listings..
+Let's take a look at the top 25 companies in terms of total job listings broken down into artificial intelligence, machine learning, and data science jobs.
 <center><img src="./assets/images/top_companies.png" alt="top companies" width="700" height="350" />
 </center>
-
-Nothing too surprising here, although there are a few companies in this list that don't have the same kind of notoriety for data science that Apple, Google, or Twitter have for example. 
+This is a pretty interesting plot. Here we have the top 25 companies in terms of number of total job listings. It's not surprising to see companies like Apple, Google, or Twitter in the list, but it is interesting to see what types of jobs these companies are hiring for. For example, Udacity Inc. is purely looking to fill artificial intelligence positions. Twitter, and McKinsey & Co. are only looking for data science and machine learning positions.
 
 What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />

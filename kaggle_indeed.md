@@ -178,7 +178,7 @@ dtype: int64
 # [](#header-3)Part 1. Who's hiring, and for what?
 Let's take a look at companies that have the most frequent job listings.
 ```python
-df.company.value_counts()[:20]
+df.company.value_counts()[:20] # only look at top  20
 ```
 ```ipython 
 Apple                        73
@@ -207,7 +207,7 @@ Nothing too surprising here, although there are a few companies in this list tha
 
 What are some of the most common job titles that people are hiring for?
 ```python
-print df.jobtitle.value_counts()[:20]
+print df.jobtitle.value_counts()[:20] # top 20 again
 ```
 ```ipython
 Data Scientist                508

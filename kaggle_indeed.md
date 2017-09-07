@@ -173,16 +173,14 @@ companyrating    1819
 summary          1605
 dtype: int64
 ```
+
 <br/>
 # [](#header-3)Part 1. Who's hiring, and for what?
 Let's take a look at companies that have the most frequent job listings.
 ```python
-df.company.nunique()
 df.company.value_counts()[:20]
 ```
 ```ipython 
-1302
-
 Apple                        73
 Google                       51
 IBM                          36
@@ -205,7 +203,35 @@ Ford Motor Company           12
 Adobe                        11
 Name: company, dtype: int64
 ```
-Nothing too surprising here, although there are a few companies in this list that don't have the same kind of brand recognition that Apple or Google have for example.
+Nothing too surprising here, although there are a few companies in this list that don't have the same kind of brand recognition that Apple or Google have for example. 
+
+What are some of the most common job titles that people are hiring for?
+```python
+print df.jobtitle.value_counts()[:20]
+```
+```ipython
+Data Scientist                508
+Machine Learning Engineer      57
+Data Analyst                   48
+Data Engineer                  22
+Software Engineer              21
+Research Scientist             19
+Junior Data Scientist          14
+Machine Learning Scientist     13
+Data Science Analyst           11
+Associate Data Scientist       10
+Quantitative Analyst            9
+DATA SCIENTIST                  8
+Statistician                    8
+Big Data Engineer               7
+Research Engineer               7
+Python Developer                7
+Machine Learning Developer      7
+Research Associate              6
+Machine Learning                6
+Senior Data Scientist           6
+Name: jobtitle, dtype: int64
+```
 
 
 <br/>

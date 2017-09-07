@@ -158,6 +158,8 @@ f.close()
 <br/>
 # [](#header-2)III. ANALYZING THE DATA
 I scraped Indeed.com's website for jobs that appear under searches for Macine Learning, Data Scientist, and Artificial Intelligence. This amounted to about 50 pages of jobs for each job search, for a total of 2807 jobs.
+
+The code used in my analysis is aptly called _analysis.py_ and currently resides <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
 ```python 
 import pandas as pd
 import matplotlib.pyplot as plt

@@ -203,7 +203,7 @@ Ford Motor Company           12
 Adobe                        11
 Name: company, dtype: int64
 ```
-Nothing too surprising here, although there are a few companies in this list that don't have the same kind of brand recognition that Apple or Google have for example. 
+Nothing too surprising here, although there are a few companies in this list that don't have the same kind of notoriety for data science that Apple, Google, or Twitter have for example. 
 
 What are some of the most common job titles that people are hiring for?
 ```python

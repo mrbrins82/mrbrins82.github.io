@@ -159,18 +159,19 @@ f.close()
 # [](#header-2)III. ANALYZING THE DATA
 The code used in my analysis is aptly called _analysis.py_ and currently resides in my github repository <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
 
-Now that we have some data, let's take a look at it. We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Learning). There are 163 duplicate job listings which we will drop, leaving us with a grand total of 2644 job listings. Now we'll check for missing values.
+Now that we have some data, let's take a look at it. We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Learning). There are 32 duplicate job listings which we will drop, leaving us with a grand total of 2775 job listings. Now we'll check for missing values.
 ```python
 df.count()
 ```
 ```ipython
-jobtitle         2603
-company          2641
-location         2644
-salary            131
-companysize      1180
-companyrating    1819
-summary          1605
+jobtitle         2732
+company          2772
+location         2775
+salary            138
+companysize      1228
+companyrating    1904
+summary          1639
+keyword          2775
 dtype: int64
 ```
 
@@ -186,7 +187,7 @@ What are some of the most common job titles that people are hiring for?
 </center>
 
 <br/>
-# [](#header-3)<center>Part 1. Job Location<center/>
+# [](#header-3)<center>Part 2. Job Location<center/>
 
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>

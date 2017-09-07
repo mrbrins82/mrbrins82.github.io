@@ -197,9 +197,6 @@ all_df = pd.concat((temp_df, ml_df))
 
 df = all_df.drop_duplicates()
 locations_df = locations_df.drop_duplicates()
-
-df.location = df.location.replace(to_replace='Santa Clara Valley, CA', value='Santa Clara, CA')
-locations_df.city = locations_df.city.replace(to_replace='Santa Clara Valley, CA', value='Santa Clara, CA')
 ```
 ```python
 df.count()

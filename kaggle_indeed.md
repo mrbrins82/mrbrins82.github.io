@@ -177,7 +177,6 @@ been added.
 #import get_locations
  
 from mpl_toolkits.basemap import Basemap
-from geopy.geocoders import Nominatim
 from matplotlib.colors import LinearSegmentedColormap
  
 # load the job csv files and the csv with coordinates

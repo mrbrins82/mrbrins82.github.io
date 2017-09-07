@@ -159,7 +159,7 @@ f.close()
 # [](#header-2)III. ANALYZING THE DATA
 The code used in my analysis is aptly called _analysis.py_ and currently resides in my github repository <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
 
-Now that we have some data, let's take a look at it. We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Learning). There are 32 duplicate job listings which we will drop, leaving us with a grand total of 2775 job listings. 
+Now that we have some data, let's take a look at it.
 ```python
 import numpy as np
 import pandas as pd

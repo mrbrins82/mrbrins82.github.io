@@ -177,7 +177,7 @@ dtype: int64
 <br/>
 # [](#header-3)Part 1. Who's hiring, and for what?
 Let's take a look at the top 25 companies in terms of total job listings..
-<center><img src="./assets/images/top_companies.png" alt="top companies" width="600" height="300" />
+<center><img src="./assets/images/top_companies.png" alt="top companies" width="600" height="350" />
 </center>
 
 Nothing too surprising here, although there are a few companies in this list that don't have the same kind of notoriety for data science that Apple, Google, or Twitter have for example. 

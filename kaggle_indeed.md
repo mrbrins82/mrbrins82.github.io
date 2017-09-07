@@ -167,6 +167,13 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 import seaborn as sns
 import os, sys
+
+"""
+get_locations is my own script that get coordinates from 
+the city locations in the job csv files. Uncomment the 
+'import get_locations' line if new jobs/locations have
+been added.
+"""
 #import get_locations
  
 from mpl_toolkits.basemap import Basemap
@@ -175,12 +182,24 @@ from matplotlib.colors import LinearSegmentedColormap
  
 # load the job csv files and the csv with coordinates
 ai_df = pd.read_csv('new_artificial_intelligence_jobs.csv')
-ai_df['keyword'] = 'AI'
 ds_df = pd.read_csv('new_data_scientist_jobs.csv')
-ds_df['keyword'] = 'DS'
 ml_df = pd.read_csv('new_machine_learning_jobs.csv')
-ml_df['keyword'] = 'ML'
 locations_df = pd.read_csv('locations.csv')
+
+# tag each data frame by it job keyword search
+ai_df['keyword'] = 'AI'
+ds_df['keyword'] = 'DS'
+ml_df['keyword'] = 'ML'
+
+# let's put all of the data frames together and drop duplicates
+temp_df = pd.concat((ai_df, ds_df))
+all_df = pd.concat((temp_df, ml_df))
+
+df = all_df.drop_duplicates()
+locations_df = locations_df.drop_duplicates()
+
+df.location = df.location.replace(to_replace='Santa Clara Valley, CA', value='Santa Clara, CA')
+locations_df.city = locations_df.city.replace(to_replace='Santa Clara Valley, CA', value='Santa Clara, CA')
 ```
 ```python
 df.count()

@@ -176,33 +176,10 @@ dtype: int64
 
 <br/>
 # [](#header-3)Part 1. Who's hiring, and for what?
-Let's take a look at companies that have the most frequent job listings.
-```python
-df.company.value_counts()[:20] # only look at top  20
-```
-```ipython 
-Apple                        73
-Google                       51
-IBM                          36
-Microsoft                    35
-NVIDIA                       33
-Amazon Corporate LLC         31
-Intel                        31
-Facebook                     24
-Booz Allen Hamilton          19
-Udacity, Inc.                17
-Uber                         17
-McKinsey & Company           16
-Toyota Research Institute    15
-Intellipro Group Inc.        15
-Accenture                    13
-Twitter                      12
-Nauto                        12
-Lockheed Martin              12
-Ford Motor Company           12
-Adobe                        11
-Name: company, dtype: int64
-```
+Let's take a look at the top 25 companies in terms of total job listings..
+<center><img src="./assets/images/top_companies.png" alt="top companies" width="600" height="400" />
+</center>
+
 Nothing too surprising here, although there are a few companies in this list that don't have the same kind of notoriety for data science that Apple, Google, or Twitter have for example. 
 
 What are some of the most common job titles that people are hiring for?

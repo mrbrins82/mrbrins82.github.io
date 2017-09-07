@@ -183,33 +183,8 @@ Let's take a look at the top 25 companies in terms of total job listings..
 Nothing too surprising here, although there are a few companies in this list that don't have the same kind of notoriety for data science that Apple, Google, or Twitter have for example. 
 
 What are some of the most common job titles that people are hiring for?
-```python
-print df.jobtitle.value_counts()[:20] # top 20 again
-```
-```ipython
-Data Scientist                508
-Machine Learning Engineer      57
-Data Analyst                   48
-Data Engineer                  22
-Software Engineer              21
-Research Scientist             19
-Junior Data Scientist          14
-Machine Learning Scientist     13
-Data Science Analyst           11
-Associate Data Scientist       10
-Quantitative Analyst            9
-DATA SCIENTIST                  8
-Statistician                    8
-Big Data Engineer               7
-Research Engineer               7
-Python Developer                7
-Machine Learning Developer      7
-Research Associate              6
-Machine Learning                6
-Senior Data Scientist           6
-Name: jobtitle, dtype: int64
-```
-
+<center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
+</center>
 
 <br/>
 # [](#header-3)<center>Part 1. Job Location<center/>

@@ -161,6 +161,28 @@ The code used in my analysis is aptly called _analysis.py_ and currently resides
 
 Now that we have some data, let's take a look at it. We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Learning). There are 32 duplicate job listings which we will drop, leaving us with a grand total of 2775 job listings. Now we'll check for missing values.
 ```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+import seaborn as sns
+import os, sys
+#import get_locations
+ 
+from mpl_toolkits.basemap import Basemap
+from geopy.geocoders import Nominatim
+from matplotlib.colors import LinearSegmentedColormap
+ 
+# load the job csv files and the csv with coordinates
+ai_df = pd.read_csv('new_artificial_intelligence_jobs.csv')
+ai_df['keyword'] = 'AI'
+ds_df = pd.read_csv('new_data_scientist_jobs.csv')
+ds_df['keyword'] = 'DS'
+ml_df = pd.read_csv('new_machine_learning_jobs.csv')
+ml_df['keyword'] = 'ML'
+locations_df = pd.read_csv('locations.csv')
+```
+```python
 df.count()
 ```
 ```ipython

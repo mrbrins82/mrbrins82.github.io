@@ -23,12 +23,15 @@ layout: default
 # [](#header-2)I. INTRODUCTION
 I got the idea for this project since I'm interested in data science, machine learning, and artificial intelligence, and I'm currently looking for a career in these fields. I wanted to examine such things as geographical locations of jobs, company sizes (start ups vs. older corporations), company ratings, salary information, and possibly some common keywords given in job summaries that could give information on job requirements.
 
+I scraped these job listings from Indeed.com on Sept. 5, 2017. It would be interesting to track some of the features over time to see if there are any seasonal or yearly changes in data science, machine learning, and artificial intelligence job opportunities.
+
+The code that I wrote for this project can be found in my [Projects/Indeed](https://github.com/mrbrins82/Projects/tree/master/Indeed) repository.
+
 <br/>
 <br/>
 # [](#header-2)II. GETTING THE DATA
 <br/>
 # [](#header-3)<center>Part 1. Web Scraping<center/>
-
 ```python
 import numpy as np
 import requests

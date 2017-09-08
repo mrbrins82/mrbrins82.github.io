@@ -69,12 +69,12 @@ def get_job_info(job):
         salary = 'NA'
 
     try:
-        company_size =  int(job.find('span', 'slNoUnderline').text.split()[0]) # assume the number of company ratings scales linearly with size
+        company_size =  int(job.find('span', 'slNoUnderline').text.split()[0]) # use number of company ratings as metric for company size
     except:
         company_size = 'nan'
 
     try:
-        company_rating = float(job.find('span', 'rating').get('style')[6:10])
+        company_rating = float(job.find('span', 'rating').get('style')[6:10]) # Each company's star rating is given by pixel width
     except:
         company_rating = 'nan'
     
@@ -140,7 +140,7 @@ while next_page_number <= number_of_pages:
 ```
 ```python
 # write all of the lines to a .csv file
-filename = 'new_' + job_type[0] + '_' + job_type[1] + '_jobs.csv'
+filename = 'jobs_' + job_type[0] + '_' + job_type[1] + '.csv'
 if os.path.exists(filename):
     os.system('rm ' + filename) 
 

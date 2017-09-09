@@ -167,3 +167,12 @@ What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/heat_scatter_sanfran_zoom.png" alt="san fran zoom heat map" width="500" height="500" />
 </center>
 
+<br/>
+# [](#header-3)<center>Part 2. Salary<center/>
+<br/>
+# [](#header-3)<center>Part 2. Company Information<center/>
+
+<br/>
+<br/>
+# [](#header-2)III. Summary
+

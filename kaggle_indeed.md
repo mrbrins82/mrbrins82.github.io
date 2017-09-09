@@ -168,11 +168,11 @@ What are some of the most common job titles that people are hiring for?
 </center>
 
 <br/>
-# [](#header-3)<center>Part 2. Salary<center/>
+# [](#header-3)<center>Part 3. Salary<center/>
 <br/>
-# [](#header-3)<center>Part 2. Company Information<center/>
+# [](#header-3)<center>Part 4. Company Information<center/>
 
 <br/>
 <br/>
-# [](#header-2)III. Summary
+# [](#header-2)IV. Summary
 

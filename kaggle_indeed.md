@@ -32,7 +32,8 @@ The code that I wrote for this project can be found in my [Projects/Indeed](http
 # [](#header-2)II. GETTING THE DATA
 <br/>
 # [](#header-3)<center>Part 1. Web Scraping<center/>
-```python
+Before scraping data from Indeed.com, I checked their <a href="https://www.indeed.com/robots.txt">robots.txt</a> page to see their rules about web crawling. There was nothing disallowed about scraping from general job search results, but they disallow scraping from their _/viewjobs?_ pages, which unfortunately means that I couldn't get any information from specific job pages. This means that I was limited to only getting summary information shown on the general search results pages. The information that I was able to get was for _jobtitle_, _company_, _location_, _salary_, _company size_, _company rating_, and the short _summary_. For company size, I used the number of ratings that a company has, assuming that a larger company is more likely to have more employees give a rating, and vice versa for smaller companies. To measure a company's rating, I use the number of stars given out of a maximum five star rating. Indeed doesn't give the number of stars, but rather the stars are filled in with yellow coloring that is given by a pixel width that I use as the metric for company rating. 
+<!--```python
 import numpy as np
 import requests
 import time
@@ -100,7 +101,8 @@ def get_next_page(soup):
 
     new_url = home + next_middle + '&pp=' + next_end
 
-    print 'Next url --> ',new_url
+
+    print 'Next url -> ',new_url
     return new_url
 ```
 ```python 
@@ -110,7 +112,7 @@ job_type = ['artificial', 'intelligence']
 
 home = 'https://www.indeed.com'
 url = home + '/jobs?q=%s+%s'%(job_type[0], job_type[1])
-print 'First page --> ', url
+print 'First page -> ', url
 html = requests.get(url).text
 soup = BeautifulSoup(html, 'html5lib')
 
@@ -155,7 +157,7 @@ for ii in xrange(len(jobs)):
     f.write(line)
 
 f.close()
-```
+```-->
 <br/>
 # [](#header-3)<center>Part 2. Converting City Location to Coordinates<center/>
 When scraping job listings from Indeed.com, we take in the city, state, and zip code. Sometimes we only get a city, sometimes we only get a state. We need to turn these locations into coordinates in order to plot job locations on a map of the US. Python has a method for doing this, but we're limited to 2500 requests per day (click <a href="https://developers.google.com/maps/documentation/geocoding/usage-limits">here</a> for usage limits page), for free at least. Rather than make these requests every time I ran the scraper, or wanted to make a plot, I decided to make this a separate program that could take locations that I already had and store the coordinates in another csv file, that could be used anytime in the future. Also, I won't have to make requests for coordinates to any new jobs in the future if I've already gotten them and have them stored in the _locations.csv_ file.
@@ -288,5 +290,4 @@ What are some of the most common job titles that people are hiring for?
 </center>
 <center><img src="./assets/images/heat_scatter_sanfran_zoom.png" alt="san fran zoom heat map" width="500" height="500" />
 </center>
-
 

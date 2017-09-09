@@ -33,7 +33,7 @@ The code that I wrote for this project can be found in my [Projects/Indeed](http
 <br/>
 # [](#header-3)<center>Part 1. Web Scraping<center/>
 Before scraping data from Indeed.com, I checked their <a href="https://www.indeed.com/robots.txt">robots.txt</a> page to see their rules about web crawling. There was nothing disallowed about scraping from general job search results, but they disallow scraping from their _/viewjobs?_ pages, which unfortunately means that I couldn't get any information from specific job pages. This means that I was limited to only getting summary information shown on the general search results pages. The information that I was able to get was for _jobtitle_, _company_, _location_, _salary_, _company size_, _company rating_, and the short _summary_. For company size, I used the number of ratings that a company has, assuming that a larger company is more likely to have more employees give a rating, and vice versa for smaller companies. To measure a company's rating, I use the number of stars given out of a maximum five star rating. Indeed doesn't give the number of stars, but rather the stars are filled in with yellow coloring that is given by a pixel width that I use as the metric for company rating. 
-<!--```python
+<!-- ```python
 import numpy as np
 import requests
 import time

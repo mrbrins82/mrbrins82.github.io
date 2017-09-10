@@ -169,6 +169,11 @@ What are some of the most common job titles that people are hiring for?
 
 <br/>
 # [](#header-3)<center>Part 3. Salary<center/>
+
+<center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
+</center>
+
+
 <br/>
 # [](#header-3)<center>Part 4. Company Information<center/>
 <br/>

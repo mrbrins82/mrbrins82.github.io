@@ -182,6 +182,11 @@ What are some of the most common job titles that people are hiring for?
 
 <br/>
 # [](#header-3)<center>Part 4. Company Information<center/>
+<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
+</center>
+
+
+
 <br/>
 # [](#header-3)<center>Part 5. Putting It All Together<center/>
 

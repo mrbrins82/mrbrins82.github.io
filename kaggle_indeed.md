@@ -169,7 +169,20 @@ What are some of the most common job titles that people are hiring for?
 
 <br/>
 # [](#header-3)<center>Part 3. Salary<center/>
-
+```python
+print df.describe()
+```
+```ipython
+       companysize  companyrating      LowSalary     HighSalary     MeanSalary
+count  1228.000000    1904.000000     138.000000     138.000000     138.000000
+mean    174.692182      48.139601   90251.966667  121843.647826  106047.807246
+std     232.583919       5.516641   38139.298629   47140.288128   40528.081740
+min       2.000000      27.000000   12000.000000   24000.000000   18000.000000
+25%      10.000000      43.800000   60000.000000   88213.000000   72500.000000
+50%      65.000000      51.000000   90000.000000  120000.000000  103529.250000
+75%     256.000000      52.200000  120000.000000  150000.000000  139202.500000
+max     990.000000      60.000000  180000.000000  312000.000000  208000.000000
+```
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
 

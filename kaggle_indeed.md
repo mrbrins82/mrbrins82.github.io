@@ -173,10 +173,10 @@ What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
 
-<center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="600" height="400" />
+<center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="500" height="500" />
 </center>
 
-<center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="600" height="400" />
+<center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />
 </center>
 
 

@@ -179,12 +179,6 @@ What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />
 </center>
 
-
-<br/>
-# [](#header-3)<center>Part 4. Company Information<center/>
-<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
-</center>
-
 ```python
 east_jobs_df = df[df.longitude >= -100]
 west_jobs_df = df[df.longitude < -100]
@@ -195,6 +189,12 @@ print west_jobs_df.describe()
 ```ipython
 
 ```
+
+<br/>
+# [](#header-3)<center>Part 4. Company Information<center/>
+<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
+</center>
+
 <br/>
 <br/>
 # [](#header-2)IV. Summary

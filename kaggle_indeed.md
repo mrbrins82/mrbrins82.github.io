@@ -51,8 +51,7 @@ ds_df = pd.read_csv('jobs_data_scientist.csv')
 ml_df = pd.read_csv('jobs_machine_learning.csv')
  
 # make one data frame out of all job files and drop duplicates
-temp_df = pd.concat((ai_df, ds_df))
-all_df = pd.concat((temp_df, ml_df))
+all_df = pd.concat((ai_df, ds_df, ml_df))
 
 df = all_df.drop_duplicates()
 df.location = df.location.replace(to_replace='Santa Clara Valley, CA', value='Santa Clara, CA')

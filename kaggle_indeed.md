@@ -156,6 +156,10 @@ What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
 </center>
 
+<center><img src="./assets/images/summary_word_count.png" alt="summary word count plot" width="600" height="1200" />
+</center>
+
+
 <br/>
 # [](#header-3)<center>Part 2. Job Location<center/>
 

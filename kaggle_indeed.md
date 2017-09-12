@@ -124,8 +124,7 @@ ds_df['keyword'] = 'DS'
 ml_df['keyword'] = 'ML'
 
 # let's put all of the data frames together and drop duplicates
-temp_df = pd.concat((ai_df, ds_df))
-all_df = pd.concat((temp_df, ml_df))
+all_df = pd.concat((ai_df, ds_df, ml_df))
 
 df = all_df.drop_duplicates()
 locations_df = locations_df.drop_duplicates()

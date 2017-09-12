@@ -216,6 +216,7 @@ How does a company's rating relate to salary? The next plot is again a 2D hexbin
 </center>
 Most job listings that give salary information have somewhere between a 4 and 5 star rating, with the rest being in the 3 to 4 star range. There doesn't appear to be a very strong correlation between salary and company rating.
 
+Can a job seeker expect a bump in salary if they decide to work in the east or the west? Let's split the country down the middle at a longitude of -100 and see if there are any salary differences.
 ```python
 east_jobs_df = df[df.longitude >= -100]
 west_jobs_df = df[df.longitude < -100]
@@ -267,7 +268,7 @@ min     29120.000000   29120.000000
 75%    160000.000000  140000.000000  
 max    200000.000000  190000.000000
 ```
-
+Salaries in the west look to be slightly higher than in the east, but with the small number of data it's hard to say if there's any statistical significance to the difference.
 <br/>
 <br/>
 # [](#header-2)IV. Summary

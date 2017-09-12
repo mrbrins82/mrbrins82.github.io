@@ -151,10 +151,6 @@ Let's take a look at the top 25 companies in terms of total job listings broken 
 </center>
 This is a pretty interesting plot. Here we have the top 25 companies in terms of number of total job listings. It's not surprising to see companies like Apple, Google, or Twitter in the list, but it is interesting to see what types of jobs these companies are hiring for. For example, Udacity Inc. is purely looking to fill artificial intelligence positions. Twitter, and McKinsey & Co. are only looking for data science and machine learning positions.
 
-<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
-</center>
-
-
 What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
 </center>
@@ -162,6 +158,9 @@ What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/summary_word_count.png" alt="summary word count plot" width="600" height="1200" />
 </center>
 
+The metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
+<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
+</center>
 
 <br/>
 # [](#header-3)<center>Part 2. Job Location<center/>
@@ -211,7 +210,7 @@ There are other factors that determine salary. Smaller start-up companies might 
 </center>
 From this plot, it's not very apparent that there is a distinct relationship between company size and salary. As company size increases, job listings are less likely to have salary information.
 
-How does a company's rating relate to salary? The next plot is again a 2D hexbin plot as above. The metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
+How does a company's rating relate to salary? The next plot is again a 2D hexbin plot as above. 
 <center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />
 </center>
 Most job listings that give salary information have somewhere between a 4 and 5 star rating, with the rest being in the 3 to 4 star range. There doesn't appear to be a very strong correlation between salary and company rating.
@@ -271,7 +270,7 @@ max    200000.000000  190000.000000
 Salaries in the west look to be slightly higher than in the east, but with the small number of data it's hard to say if there's any statistical significance to the difference. The next plot shows the distributions of salaries for the east and west.
 <center><img src="./assets/images/eastwest_salary_dist_plot.png" alt="east vs west salary distribution plot" width="600" height="400" />
 </center>
-
+We can see here that there is not much of a difference between east and west salary distributions.
 
 <br/>
 <br/>

@@ -183,6 +183,11 @@ There are two highly dense areas in the San Francisco area. The highest density 
 
 <br/>
 # [](#header-3)<center>Part 3. Salary<center/>
+A quick Google for _Data Scientist Salary_ will show that the national average salary is just shy of $125k per annum (based on 337 salaries provided anonymously to Glassdoor by Data Scientists). 
+
+When scraping for jobs, I was able to get 138 values for salary. Some values were given in yearly salary, while others were given in monthly, and hourly rates. I've converted all values to yearly salary. For monthly rates, I simply multiplied by 12, and for hourly rates I multiplied by 2080 (the number of hours in a year assuming 52 40hr-work-weeks). Some listings give a range of salary, and others just give one value for salary. I've created new features to take into account the lower and upper values of the salary range, as well as the mean between the two. For jobs that only list one value for salary, the lower, upper, and mean values are all the same.
+
+Let's see how our data compares to what Google shows.
 ```python
 print df[['LowSalary', 'HighSalary', 'MeanSalary']].describe()
 ```

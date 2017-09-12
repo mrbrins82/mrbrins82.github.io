@@ -165,13 +165,21 @@ What are some of the most common job titles that people are hiring for?
 
 <br/>
 # [](#header-3)<center>Part 2. Job Location<center/>
-
+There are many data science bootcamps across the company such as the Insight bootcamps, Data Incubator bootcamps to name a couple. The locations of these bootcamps suggest that most of the jobs are located on the east and west coasts, but let's see exactly where the jobs that are on Indeed.com are located. The first plot we have is a map of the US, with individual jobs shown as blue dots along with bins whose color is determined by the number of jobs in said bins.
 <center><img src="./assets/images/heat_scatter_us.png" alt="us heat map" width="600" height="400" />
 </center>
+We can see that the notion that most jobs of these types are in fact located along the coasts with the majority of jobs being located in the New York City and San Francisco areas. Jobs look to be a bit more spread out geographically in the eastern half of the country, whereas jobs in the west tend to be clustered in higher density regions. In the west, places like Seattle and Los Angeles have higher numbers of jobs, while states like Wyoming, and the Dakotas have no jobs at all.
+
+Let's zoom in on the New York City location for a higher resolution look at job location.
 <center><img src="./assets/images/heat_scatter_nyc_zoom.png" alt="nyc zoom heat map" width="500" height="500" />
 </center>
+It appears that the majority of east coast jobs are located in New York City, with the D.C. and Boston areas also having higher numbers of jobs as well.
+
+Now let's zoom in on the San Francisco area.
 <center><img src="./assets/images/heat_scatter_sanfran_zoom.png" alt="san fran zoom heat map" width="500" height="500" />
 </center>
+There are two highly dense areas in the San Francisco area. The highest density for jobs is in the Silicon Valley area, which shouldn't come as much surprise since this is a well known location for tech jobs. The other high density region to the north corresponds to the Financial District of San Francisco, indicating that there is also opportunity within the financial sector for people looking for data science, machine learning, and artificial intelligence jobs. 
+
 
 <br/>
 # [](#header-3)<center>Part 3. Salary<center/>

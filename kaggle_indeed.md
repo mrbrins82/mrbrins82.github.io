@@ -208,12 +208,12 @@ It looks like the mean value for HighSalary is more in line with Google's result
 There are other factors that determine salary. Smaller start-up companies might not be able to offer the same higher salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size. A histogram of these variables is also shown on the margins. Remember that the metric used for company size is the number of employee ratings, assuming that larger companies are likely to have more reviews than a smaller company.
 <center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="500" height="500" />
 </center>
-From this plot, it's not very apparent that there is a distinct relationship between company size and salary. As company size increases, job listings are less likely to have salary information.
+From this plot, it's not very apparent that there is a distinct relationship between company size and salary. All we can really tell from this plot is that the majority of job listings that give salary information tend to be for smaller companies.
 
 How does a company's rating relate to salary? The next plot is again a 2D hexbin plot as above. 
 <center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />
 </center>
-Most job listings that give salary information have somewhere between a 4 and 5 star rating, with the rest being in the 3 to 4 star range. There doesn't appear to be a very strong correlation between salary and company rating.
+Most job listings that give salary information have somewhere between a 4 and 5 star rating, with the rest being in the 3 to 4 star range. There doesn't appear to be a very strong correlation between salary and company rating. More data for salary could show that there is correlation between company size and rating, but it is difficult to see with the amount of information we have here.
 
 Can a job seeker expect a bump in salary if they decide to work in the east or the west? Let's split the country down the middle at a longitude of -100 and see if there are any salary differences.
 ```python

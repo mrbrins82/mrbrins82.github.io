@@ -269,7 +269,7 @@ min     29120.000000   29120.000000
 max    200000.000000  190000.000000
 ```
 Salaries in the west look to be slightly higher than in the east, but with the small number of data it's hard to say if there's any statistical significance to the difference. The next plot shows the distributions of salaries for the east and west.
-<center><img src="./assets/images/eastwest_salary_dist_plot.png" alt="east vs west salary distributions plot" width="600" height="400" />
+<center><img src="./assets/images/eastwest_salary_dist_plot.png" alt="east vs west salary distribution plot" width="600" height="400" />
 </center>
 
 

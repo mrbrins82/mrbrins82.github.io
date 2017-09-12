@@ -152,6 +152,10 @@ Let's take a look at the top 25 companies in terms of total job listings broken 
 </center>
 This is a pretty interesting plot. Here we have the top 25 companies in terms of number of total job listings. It's not surprising to see companies like Apple, Google, or Twitter in the list, but it is interesting to see what types of jobs these companies are hiring for. For example, Udacity Inc. is purely looking to fill artificial intelligence positions. Twitter, and McKinsey & Co. are only looking for data science and machine learning positions.
 
+<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
+</center>
+
+
 What are some of the most common job titles that people are hiring for?
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
 </center>
@@ -246,11 +250,6 @@ min     29120.000000   29120.000000
 75%    160000.000000  140000.000000  
 max    200000.000000  190000.000000
 ```
-
-<br/>
-# [](#header-3)<center>Part 4. Company Information<center/>
-<center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
-</center>
 
 <br/>
 <br/>

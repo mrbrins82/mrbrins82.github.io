@@ -206,11 +206,15 @@ It looks like the mean value for HighSalary is more in line with Google's result
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
 
+There are other factors that determine salary. Smaller start-up companies might not be able to offer the same higher salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size. A histogram of these variables is also shown on the margins. Remember that the metric used for company size is the number of employee ratings, assuming that larger companies are likely to have more reviews than a smaller company.
 <center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="500" height="500" />
 </center>
+From this plot, it's not very apparent that there is a distinct relationship between company size and salary. As company size increases, job listings are less likely to have salary information.
 
+How does a company's rating relate to salary? The next plot is again a 2D hexbin plot as above. The metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, etc. correspond to a star rating of 1, 2, 3, etc.
 <center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />
 </center>
+Most job listings that give salary information have somewhere between a 4 and 5 star rating, with the rest being in the 3 to 4 star range. There doesn't appear to be a very strong correlation between salary and company rating.
 
 ```python
 east_jobs_df = df[df.longitude >= -100]

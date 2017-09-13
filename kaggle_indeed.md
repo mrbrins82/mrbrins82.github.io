@@ -45,8 +45,6 @@ When scraping job listings from Indeed.com, we take in the city, state, and zip 
 <br/>
 <br/>
 # [](#header-2)III. ANALYZING THE DATA
-The code used in my analysis is aptly called _analysis.py_ and currently resides in my github repository <a href="https://github.com/mrbrins82/Projects/blob/master/Indeed/analysis.py" >here</a>.
-
 Now that we have some data, let's take a look at it.
 ```python
 import numpy as np

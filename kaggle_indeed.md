@@ -102,11 +102,13 @@ We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Lear
 Let's take a look at the top 25 companies in terms of total job listings broken down into artificial intelligence, machine learning, and data science jobs.
 <center><img src="./assets/images/top_companies.png" alt="top companies" width="700" height="350" />
 </center>
-It's not surprising to see companies like Apple, Google, or Twitter in the list, but this plot sheds light on what types of jobs are more in demand. At least for these top 25 companies, data science jobs don't look to be as prevalent as artifiacial intelligence jobs. So, to a job seeker looking to work for a larger well known company, they could have a better chance if they are looking for AI as a career. We can also gain some insight about what types of companies these are. For example, Udacity Inc. is purely looking to fill artificial intelligence positions. Twitter, and McKinsey & Co. are only looking for data science and machine learning positions.
+It's not surprising to see companies like Apple, Google, or Twitter in the list, but this plot sheds light on what types of jobs are more in demand. At least for these top 25 companies, data science jobs don't look to be as prevalent as artificial intelligence jobs. So, to a job seeker looking to work for a larger well known company, they could have a better chance if they are looking for AI as a career.
 
-What are some of the most common job titles that people are hiring for?
+What are some of the most common job titles that people are hiring for? Below, we have a bar plot showing the top 25 most frequently used job titles.
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
 </center>
+The top job title is overwhelmingly for _Data Scientist_. It's likely that this is due to data science being more of a buzz word than machine learning, and may just be a sort of "catch all" title that employers use in their listings. We also see that _Junior Data Scientist_ is among the top job titles, which is good news for people like me looking to get into the field.
+
 
 <center><img src="./assets/images/summary_word_count.png" alt="summary word count plot" width="600" height="1200" />
 </center>

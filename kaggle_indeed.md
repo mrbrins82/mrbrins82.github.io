@@ -114,7 +114,11 @@ Next, we have a plot of the most common words appearing at least 50 times in job
 </center>
 The top five words are just those that were used in the original job searches. Moving down the list, we see words like _deep_, suggesting that deep learning is a common technique employed in these positions, and _mining_ suggesting that data mining is a very common skill needed. The word _team_ also appears quite frequently, indicating that often people in these positions work on teams. As far as programming languages, both Python and SQL seem to be popular tools used.
 
-Are larger companies more generally better places to work, or are employees at smaller start-ups more satisfied with their jobs? Let's look at a hexbin plot to see if there is any correlation between company size and company rating. As mentioned earlier, the metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
+<center><img src="./assets/images/companysize_dist_plot.png" alt="companysize distribution plot" width="500" height="500" />
+</center>
+
+
+Are larger companies more generally better places to work, or are employees at smaller start-ups more satisfied with their jobs? Let's look at a hexbin plot to see if there is any correlation between company size and company rating. The plot also shows histograms for each of these variables along the margins. As mentioned earlier, the metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
 <center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
 </center>
 Most of the companies in this plot tend to be smaller, and their ratings have a wider range, anywhere between 2-5 stars. As company size increases, there are no lower or higher star ratings, and values fall a little below and above a 4 star rating. Sample size likely contributes to the larger range of values in the smaller companies.
@@ -161,12 +165,11 @@ max    180000.000000  312000.000000  208000.000000
 It looks like the mean value for HighSalary is more in line with Google's result. The mean value for MeanSalary comes in a bit lower than the national average at approximately $106k with a median value of about $103k. This may not take into account other forms of payment such as company stock, and bonuses, so the numbers here could be lower than the total compensation that a prospective employee can expect. Below we have the distribution of MeanSalary values (all salary plots will be of MeanSalary).
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
-
-
-There are other factors that determine salary. Smaller start-up companies might not be able to offer the same base salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size. A histogram of these variables is also shown on the margins. Remember that the metric used for company size is the number of employee ratings, assuming that larger companies are likely to have more reviews than a smaller company.
+<br/>
+There are other factors that determine salary. Smaller start-up companies might not be able to offer the same base salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size.
 <center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="500" height="500" />
 </center>
-From this plot, it's not very apparent that there is a distinct relationship between company size and salary. All we can really tell from this plot is that the majority of job listings that give salary information tend to be for smaller companies.
+From this plot, it's not very apparent that there is a distinct relationship between company size and salary.
 
 How does a company's rating relate to salary? The next plot is again a 2D hexbin plot as above. 
 <center><img src="./assets/images/salary_companyrating_hex.png" alt="salary companyrating plot" width="500" height="500" />

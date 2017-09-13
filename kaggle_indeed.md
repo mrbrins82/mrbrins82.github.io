@@ -158,9 +158,7 @@ min     12000.000000   24000.000000   18000.000000
 75%    120000.000000  150000.000000  139202.500000
 max    180000.000000  312000.000000  208000.000000
 ```
-It looks like the mean value for HighSalary is more in line with Google's result. The mean value for MeanSalary comes in a bit lower than the national average at approximately $106k with a median value of about $103k. This may not take into account other forms of payment such as company stock, and bonuses, so the numbers here could be lower than the total compensation that a prospective employee can expect.
-
-Below we plot the distribution of MeanSalary values (all salary plots will be of MeanSalary).
+It looks like the mean value for HighSalary is more in line with Google's result. The mean value for MeanSalary comes in a bit lower than the national average at approximately $106k with a median value of about $103k. This may not take into account other forms of payment such as company stock, and bonuses, so the numbers here could be lower than the total compensation that a prospective employee can expect. Below we have the distribution of MeanSalary values (all salary plots will be of MeanSalary).
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
 

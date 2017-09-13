@@ -40,7 +40,7 @@ All of features for each job are straight forward in their meaning, except for t
 
 <br/>
 # [](#header-3)<center>Part 2. Converting City Location to Coordinates<center/>
-When scraping job listings from Indeed.com, we take in the city, state, and zip code. Sometimes we only get a city, sometimes we only get a state. We need to turn these locations into coordinates in order to plot job locations on a map of the US. Python has a method for doing this, but we're limited to 2500 requests per day (click <a href="https://developers.google.com/maps/documentation/geocoding/usage-limits">here</a> for usage limits page), for free at least. Rather than make these requests every time I ran the scraper, or wanted to make a plot, I decided to make this a separate program that could take locations that I already had and store the coordinates in another csv file, that could be used anytime in the future. Also, so that I wouldn't have to make requests for coordinates to any new jobs in the future if I've already gotten them and have them stored in the _locations.csv_ file. The program that handles the conversion from location to coordinates is in my <i>get_locations.py</i> program.
+When scraping job listings from Indeed.com, we take in the city, state, and zip code. We need to turn these locations into coordinates in order to plot job locations on a map of the US. Python has a method for doing this, but we're limited to 2500 requests per day (click <a href="https://developers.google.com/maps/documentation/geocoding/usage-limits">here</a> for usage limits page), for free at least. Rather than make these requests every time I ran the scraper, or wanted to make a plot, I decided to make this a separate program that could take locations that I already had and store the coordinates in another csv file, that could be used anytime in the future. Also, so that I wouldn't have to make requests for coordinates to any new jobs in the future if I've already gotten them and have them stored in the _locations.csv_ file. The program that handles the conversion from location to coordinates is in my <i>get_locations.py</i> program.
 
 <br/>
 <br/>
@@ -55,7 +55,7 @@ import seaborn as sns
 import os, sys
 
 """
-get_locations is my own script that get coordinates from 
+get_locations is my own script that gets coordinates from 
 the city locations in the job csv files. Uncomment the 
 'import get_locations' line if new jobs/locations have
 been added.
@@ -126,7 +126,7 @@ There are many data science bootcamps across the country such as the Insight boo
 </center>
 We can see that most jobs of these types are in fact located along the coasts, with the majority of jobs being located in the New York City and San Francisco areas. Jobs look to be a bit more spread out geographically in the eastern half of the country, whereas jobs in the west tend to be clustered in higher density regions. In the west, states like California and Washington have higher numbers of jobs, while most states in the west have few to no jobs at all.
 
-Let's zoom in on the New York City location for a higher resolution look at job location.
+Let's zoom in on New York City for a higher resolution look at job location.
 <center><img src="./assets/images/heat_scatter_nyc_zoom.png" alt="nyc zoom heat map" width="500" height="500" />
 </center>
 It appears that the majority of east coast jobs are located in New York City, with the D.C. and Boston areas also having higher numbers of jobs as well.
@@ -139,7 +139,7 @@ There are two highly dense areas in the San Francisco area. The highest density 
 
 <br/>
 # [](#header-3)<center>Part 3. Salary<center/>
-A quick Google for _Data Scientist Salary_ will show that the national average salary is just shy of $125k per annum (based on 337 salaries provided anonymously to Glassdoor by Data Scientists). 
+A quick Google for _Data Scientist Salary_ will show that the national average salary is just shy of $125k per annum at the time of this writing (based on 337 salaries provided anonymously to Glassdoor by Data Scientists). 
 
 When scraping for jobs, I was able to get 138 values for salary. Some values were given in yearly salary, while others were given in monthly, and hourly rates. I've converted all values to yearly salary. For monthly rates, I simply multiplied by 12, and for hourly rates I multiplied by 2080 (the number of hours in a year assuming 52 40hr-work-weeks). Some listings give a range of salary, and others just give one value for salary. I've created new features to take into account the lower and upper values of the salary range, as well as the mean between the two. For jobs that only list one value for salary, the lower, upper, and mean values are all the same.
 
@@ -158,11 +158,14 @@ min     12000.000000   24000.000000   18000.000000
 75%    120000.000000  150000.000000  139202.500000
 max    180000.000000  312000.000000  208000.000000
 ```
-It looks like the mean value for HighSalary is more in line with Google's result. The mean value for MeanSalary comes in a bit lower than the national average at approximately $106k with a median value of about $103k. Below we plot the distribution of MeanSalary values (all salary plots will be of MeanSalary).
+It looks like the mean value for HighSalary is more in line with Google's result. The mean value for MeanSalary comes in a bit lower than the national average at approximately $106k with a median value of about $103k. This may not take into account other forms of payment such as company stock, and bonuses, so the numbers here could be lower than the total compensation that a prospective employee can expect.
+
+Below we plot the distribution of MeanSalary values (all salary plots will be of MeanSalary).
 <center><img src="./assets/images/salary_dist_plot.png" alt="salary distributions plot" width="600" height="400" />
 </center>
 
-There are other factors that determine salary. Smaller start-up companies might not be able to offer the same higher salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size. A histogram of these variables is also shown on the margins. Remember that the metric used for company size is the number of employee ratings, assuming that larger companies are likely to have more reviews than a smaller company.
+
+There are other factors that determine salary. Smaller start-up companies might not be able to offer the same base salaries that larger, more established companies can. What is the relationship between salary and company size in our data? The next plot is a 2D hexbin plot showing MeanSalary in terms of company size. A histogram of these variables is also shown on the margins. Remember that the metric used for company size is the number of employee ratings, assuming that larger companies are likely to have more reviews than a smaller company.
 <center><img src="./assets/images/salary_companysize_hex.png" alt="salary companysize plot" width="500" height="500" />
 </center>
 From this plot, it's not very apparent that there is a distinct relationship between company size and salary. All we can really tell from this plot is that the majority of job listings that give salary information tend to be for smaller companies.

@@ -109,13 +109,15 @@ What are some of the most common job titles that people are hiring for? Below, w
 </center>
 The top job title is overwhelmingly for _Data Scientist_. It's likely that this is due to data science being more of a buzz word than machine learning, and may just be a sort of "catch all" title that employers use in their listings. We also see that _Junior Data Scientist_ is among the top job titles, which is good news for people like me looking to get into the field.
 
-
+Next, we have a plot of the most common words appearing at least 50 times in job summaries.
 <center><img src="./assets/images/summary_word_count.png" alt="summary word count plot" width="600" height="1200" />
 </center>
+The top five words are just those that were used in the original job searches. Moving down the list, we see words like _deep_, suggesting that deep learning is a common technique employed in these positions, and _mining_ suggesting that data mining is a very common skill needed. The word _team_ also appears quite frequently, indicating that often people in these positions work on teams. As far as programming languages, both Python and SQL seem to be popular tools used.
 
-The metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
+Are larger companies more generally better places to work, or are employees at smaller start-ups more satisfied with their jobs? Let's look at a hexbin plot to see if there is any correlation between company size and company rating. As mentioned earlier, the metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
 <center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
 </center>
+Most of the companies in this plot tend to be smaller, and their ratings have a wider range, anywhere between 2-5 stars. As company size increases, there are no lower or higher star ratings, and values fall a little below and above a 4 star rating. Sample size likely contributes to the larger range of values in the smaller companies.
 
 <br/>
 # [](#header-3)<center>Part 2. Job Location<center/>

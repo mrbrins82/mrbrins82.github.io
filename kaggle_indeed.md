@@ -21,7 +21,7 @@ layout: default
 <br/>
 <br/>
 # [](#header-2)I. INTRODUCTION
-I got the idea for this project since I'm interested in data science, machine learning, and artificial intelligence, and I'm currently looking for a career in these fields. Data science has been a popular field in recent years and I wanted to take a look at the current job market by examining such things as which companies are hiring, what specific positions they're hiring for, geographical locations of jobs, company sizes (start ups vs. older corporations), company ratings, salary information, and possibly some common keywords given in job summaries that could give information on job requirements.
+I got the idea for this project since I'm interested in data science, machine learning, and artificial intelligence, and I'm currently looking for a career in these fields. Data science has been a popular field in recent years and I wanted to take a look at the current job market by examining such things as which companies are hiring, what specific positions they're hiring for, geographical locations of jobs, company sizes (start ups vs. older corporations), company ratings, salary information, and possibly some common keywords given in job summaries that could give information on job specifics and requirements.
 
 The job listings contained in this analysis were scraped from Indeed.com on Sept. 5, 2017, but it would be interesting to track some of the features over time to see if there are any seasonal or yearly changes in data science, machine learning, and artificial intelligence job opportunities.
 
@@ -102,7 +102,7 @@ We have a total of 2807 job listings (924 AI, 951 Data Science, 932 Machine Lear
 Let's take a look at the top 25 companies in terms of total job listings broken down into artificial intelligence, machine learning, and data science jobs.
 <center><img src="./assets/images/top_companies.png" alt="top companies" width="700" height="350" />
 </center>
-It's not surprising to see companies like Apple, Google, or Twitter in the list, but this plot sheds light on what types of jobs are more in demand. At least for these top 25 companies, data science jobs don't look to be as prevalent as artificial intelligence jobs. So, to a job seeker looking to work for a larger well known company, they could have a better chance if they are looking for AI as a career.
+It's not surprising to see companies like Apple, Google, or Twitter in the list, but this plot sheds light on what types of jobs are more in demand. At least for these top 25 companies, data science jobs don't look to be as prevalent as artificial intelligence jobs. So, to a job seeker looking to work for a larger well known company, they could have more opportunities if they are looking for AI as a career.
 
 What are some of the most common job titles that people are hiring for? Below, we have a bar plot showing the top 25 most frequently used job titles.
 <center><img src="./assets/images/top_titles.png" alt="top titles" width="700" height="350" />
@@ -112,16 +112,17 @@ The top job title is overwhelmingly for _Data Scientist_. It's likely that this 
 Next, we have a plot of the most common words appearing at least 50 times in job summaries.
 <center><img src="./assets/images/summary_word_count.png" alt="summary word count plot" width="600" height="1200" />
 </center>
-The top five words are just those that were used in the original job searches. Moving down the list, we see words like _deep_, suggesting that deep learning is a common technique employed in these positions, and _mining_ suggesting that data mining is a very common skill needed. The word _team_ also appears quite frequently, indicating that often people in these positions work on teams. As far as programming languages, both Python and SQL seem to be popular tools used.
+The top five words are just those that were used in the original job searches. Moving down the list, we see words like _deep_, suggesting that deep learning is a common technique employed in these positions, and _mining_ suggesting that data mining is a very common skill needed. The words _natural_, _language_, and _processing_ occur with roughly the same frequency, indicating that natural language processing is another common skill required in the current market. As far as programming languages, both Python and SQL seem to be popular tools used.
 
+In the next plot, we have the distribution of company sizes, and the distribution is sharply peaked at the lower end of company sizes.
 <center><img src="./assets/images/companysize_dist_plot.png" alt="companysize distribution plot" width="500" height="500" />
 </center>
 
 
-Are larger companies more generally better places to work, or are employees at smaller start-ups more satisfied with their jobs? Let's look at a hexbin plot to see if there is any correlation between company size and company rating. The plot also shows histograms for each of these variables along the margins. As mentioned earlier, the metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
+Are larger companies generally better places to work, or are employees at smaller start-ups more satisfied with their jobs? Let's look at a hexbin plot to see if there is any correlation between company size and company rating. The plot also shows histograms for each of these variables along the margins. As mentioned earlier, the metric used for copany rating is pixel width. Indeed uses a five star rating system and the stars are filled in with a certain width of yellow coloring. The maximum value for this feature is 60, so it seems reasonable to assume that company ratings of 12, 24, 36, 48, and 60 correspond to a star rating of 1, 2, 3, 4, and 5.
 <center><img src="./assets/images/size_rating_hex.png" alt="size rating hex plot" width="500" height="500" />
 </center>
-Most of the companies in this plot tend to be smaller, and their ratings have a wider range, anywhere between 2-5 stars. As company size increases, there are no lower or higher star ratings, and values fall a little below and above a 4 star rating. Sample size likely contributes to the larger range of values in the smaller companies.
+Most of the companies in this plot are smaller as we saw from the distribution above, and their ratings have a wider range, anywhere between 2-5 stars. As company size increases, there are no lower or higher star ratings, and values fall a little below and above a 4 star rating. Remember that company size is detrmined by the number of ratings, so the smaller sample size of ratings likely contributes to the larger range of values in the smaller companies.
 
 <br/>
 # [](#header-3)<center>Part 2. Job Location<center/>
@@ -231,6 +232,7 @@ max    200000.000000  190000.000000
 Salaries in the west look to be slightly higher than in the east, but with the small number of data it's hard to say if there's any statistical significance to the difference. The next plot shows the distributions of salaries for the east and west and it doesn't indicate a significant difference between east and west salaries.
 <center><img src="./assets/images/eastwest_salary_dist_plot.png" alt="east vs west salary distribution plot" width="600" height="400" />
 </center>
+East vs. West salary distributions look quite similar other than a slight bump near the $150k mark.
 
 <br/>
 <br/>

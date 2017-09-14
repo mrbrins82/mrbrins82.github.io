@@ -16,7 +16,10 @@ layout: default
 
 * * * 
 
-# [](#header-1)Twitter Streaming & Sentiment Analysis for<br/>Game7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators
+<br/>
+# [](#header-1)<center><i>Twitter Streaming & Sentiment Analysis for<br/>Game7 of the NHL Eastern Conference Finals:<br/>Penguins vs. Senators<i/><center/>
+<br/>
+<br/>
 
 I wanted to do this project because I thought it sounded like a fun idea. I'm a really big hockey fan, especially for the Pittsburgh Penguins, and I thought it might be interesting to see what kinds of things people were tweeting during such an important playoff game. 
 

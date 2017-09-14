@@ -17,5 +17,3 @@ layout: default
 
 * * * 
 
-The links above will take you to my individual projects. 
-

@@ -23,8 +23,8 @@ layout: default
 }
 
 #container {
-  width: 700px;
-  height: 350px;
+  width: 650px;
+  height: 400px;
   overflow: hidden;
 }
 </center>

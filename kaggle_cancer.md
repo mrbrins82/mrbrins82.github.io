@@ -39,8 +39,8 @@ var canvas = d3.select("#map").call(drag),
 
 var w = 960,
 	h = 500,
-	lon = -122.41948,
-	lat = 37.76487;
+	lon = -79.9959,
+	lat = 40.4406;
 
 var project = d3.geo.mercator()
 	.scale(1 / (2 * Math.PI))

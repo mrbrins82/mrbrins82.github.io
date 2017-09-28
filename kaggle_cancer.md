@@ -39,8 +39,8 @@ label {
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-var n = 4, // The number of series.
-    m = 58; // The number of values per series.
+var n = 2, // The number of series.
+    m = 25; // The number of values per series.
 
 // The xz array has m elements, representing the x-values shared by all series.
 // The yz array has n elements, representing the y-values of each of the n series.

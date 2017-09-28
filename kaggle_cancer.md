@@ -18,7 +18,7 @@ layout: default
 
 <meta charset="utf-8">
 <style>
-
+<center>
 form {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
@@ -29,14 +29,13 @@ form {
 label {
   display: block;
 }
-
+</center>
 </style>
 <form>
   <label><input type="radio" name="mode" value="grouped"> Grouped</label>
   <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
 </form>
-<svg width="960" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<svg width="650" height="400"></svg>
 <script>
 
 var n = 4, // The number of series.
@@ -172,8 +171,8 @@ function bumps(m) {
 
 
 <style>
-
-<center>body {
+<center>
+body {
   font: 10px sans-serif;
 }
 

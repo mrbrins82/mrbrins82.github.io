@@ -93,7 +93,7 @@ g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x)
-    .tickSize(0)
+    .tickSize(5)
     .tickPadding(6));
 
 d3.selectAll("input")

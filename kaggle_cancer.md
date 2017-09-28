@@ -18,16 +18,16 @@ layout: default
 
 <style>
 
-body {
+<center>body {
   font: 10px sans-serif;
 }
 
 #container {
-  width: 500px;
-  height: 600px;
+  width: 700px;
+  height: 350px;
   overflow: hidden;
 }
-
+</center>
 </style>
 <div id="container">
   <canvas id="map"></canvas>

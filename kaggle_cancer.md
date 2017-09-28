@@ -36,6 +36,7 @@ label {
   <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
 </form>
 <svg width="650" height="400"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
 var n = 4, // The number of series.

@@ -23,8 +23,8 @@ body {
 }
 
 #container {
-  width: 960px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   overflow: hidden;
 }
 

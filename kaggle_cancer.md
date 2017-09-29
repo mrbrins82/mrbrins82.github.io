@@ -62,7 +62,7 @@ svg {
   fill: darkOrange;
 }
 
-.label.inactive {
+.label.active {
   fill: #ccc;
 }
 

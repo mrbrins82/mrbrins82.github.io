@@ -57,7 +57,7 @@ svg {
   -webkit-transition: fill 125ms linear;
 }
 
-.active .label:not(.inactive) {
+.inactive .label:not(.active) {
   font-weight: bold;
   fill: darkOrange;
 }

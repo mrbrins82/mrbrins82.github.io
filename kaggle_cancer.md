@@ -72,10 +72,10 @@ svg {
 
 </style>
 <body>
-<!-- <script src="//d3js.org/d3.v3.min.js"></script> -->
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 200},
+var margin = {top: 30, right: 40, bottom: 20, left: 20},
     width = 650 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 

@@ -96,17 +96,12 @@ var dimensions = [
     type: Number
   },
   {
-    name: "Face Off Pct.",
-    scale: d3.scale.linear().range([height, 0]),
-    type: Number
-  },
-  {
-    name: "PP Pct.",
+    name: "PP%",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }
   {
-    name: "PK Pct.",
+    name: "PK%",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }

@@ -180,7 +180,7 @@ svg {
 
 .background path {
   fill: none;
-  stroke: none;
+  stroke: magenta;
   stroke-width: 20px;
   pointer-events: stroke;
 }
@@ -216,7 +216,7 @@ svg {
 }
 
 .label.inactive {
-  fill: yellow;
+  fill: gray;
 }
 
 .foreground path.inactive {
@@ -231,7 +231,7 @@ svg {
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 200},
-    width = 900 - margin.left - margin.right,
+    width = 700 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var dimensions = [
@@ -242,7 +242,7 @@ var dimensions = [
   },
   {
     name: "GF",
-    scale: d3.scale.linear().range([0, height]),
+    scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {

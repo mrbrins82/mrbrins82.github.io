@@ -62,13 +62,18 @@ svg {
 }
 
 .label.inactive {
-  fill: yellow;
+  fill: gray;
 }
 
 .foreground path.inactive {
   stroke: purple;
   stroke-opacity: .5;
   stroke-width: 1px;
+}
+
+.foreground path.active {
+  stroke: darkOrange;
+  stroke-width: 2px;
 }
 
 </style>

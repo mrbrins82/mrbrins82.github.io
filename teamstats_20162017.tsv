@@ -1,31 +1,31 @@
-team	GF	GA	SF	SA
-Edmonton Oilers	2.963	2.524	31.061	29.463
-Vancouver Canucks	2.171	2.939	27.720	31.768
-Los Angeles Kings	2.427	2.451	31.134	25.854
-Anaheim Ducks	2.683	2.402	29.573	29.622
-Washington Capitals	3.183	2.159	30.427	27.829
-Florida Panthers	2.500	2.817	32.244	31.646
-Carolina Hurricanes	2.585	2.805	30.402	28.293
-Philadelphia Flyers	2.585	2.817	31.524	28.463
-Pittsburgh Penguins	3.390	2.793	33.476	32.573
-New York Rangers	3.085	2.634	29.732	30.061
-St. Louis Blues	2.841	2.634	28.415	28.378
-Colorado Avalanche	2.012	3.366	28.085	31.744
-Columbus Blue Jackets	3.012	2.354	30.976	30.354
-Toronto Maple Leafs	3.049	2.854	31.915	32.598
-New York Islanders	2.915	2.902	30.244	31.902
-Ottawa Senators	2.512	2.561	30.037	30.085
-Buffalo Sabres	2.427	2.817	30.378	34.305
-Tampa Bay Lightning	2.805	2.732	29.902	30.390
-Detroit Red Wings	2.415	2.976	28.476	30.573
-New Jersey Devils	2.195	2.939	27.793	31.366
-Chicago Blackhawks	2.927	2.585	30.585	31.390
-San Jose Sharks	2.671	2.439	29.915	27.671
-Calgary Flames	2.707	2.671	29.122	28.707
-Minnesota Wild	3.207	2.512	30.817	30.061
-Arizona Coyotes	2.329	3.146	27.817	34.110
-Dallas Stars	2.707	3.171	30.549	29.744
-Nashville Predators	2.902	2.683	31.183	30.146
-Winnipeg Jets	3.000	3.110	29.854	31.049
-Montreal Canadiens	2.720	2.415	29.988	29.622
-Boston Bruins	2.829	2.549	33.183	26.756
+team	Goal Diff	Shot Diff	Face Off Pct.	PP Pct.	PK Pct.
+Edmonton Oilers	0.439	1.598	0.471	0.203	0.790
+Vancouver Canucks	-0.768	-4.049	0.512	0.133	0.766
+Los Angeles Kings	-0.024	5.280	0.507	0.194	0.842
+Anaheim Ducks	0.280	-0.049	0.547	0.199	0.847
+Washington Capitals	1.024	2.598	0.497	0.253	0.792
+Florida Panthers	-0.317	0.598	0.480	0.184	0.834
+Carolina Hurricanes	-0.220	2.110	0.531	0.194	0.806
+Philadelphia Flyers	-0.232	3.061	0.522	0.180	0.794
+Pittsburgh Penguins	0.598	0.902	0.476	0.239	0.786
+New York Rangers	0.451	-0.329	0.482	0.187	0.751
+St. Louis Blues	0.207	0.037	0.503	0.205	0.840
+Colorado Avalanche	-1.354	-3.659	0.536	0.151	0.779
+Columbus Blue Jackets	0.659	0.622	0.488	0.174	0.801
+Toronto Maple Leafs	0.195	-0.683	0.500	0.246	0.800
+New York Islanders	0.012	-1.659	0.478	0.159	0.760
+Ottawa Senators	-0.049	-0.049	0.509	0.170	0.754
+Buffalo Sabres	-0.390	-3.927	0.494	0.214	0.727
+Tampa Bay Lightning	0.073	-0.488	0.476	0.229	0.805
+Detroit Red Wings	-0.561	-2.098	0.519	0.154	0.758
+New Jersey Devils	-0.744	-3.573	0.494	0.183	0.784
+Chicago Blackhawks	0.341	-0.805	0.475	0.167	0.719
+San Jose Sharks	0.232	2.244	0.481	0.178	0.780
+Calgary Flames	0.037	0.415	0.489	0.193	0.800
+Minnesota Wild	0.695	0.756	0.520	0.219	0.809
+Arizona Coyotes	-0.817	-6.293	0.478	0.160	0.731
+Dallas Stars	-0.463	0.805	0.500	0.186	0.695
+Nashville Predators	0.220	1.037	0.514	0.165	0.815
+Winnipeg Jets	-0.110	-1.195	0.485	0.174	0.763
+Montreal Canadiens	0.305	0.366	0.504	0.188	0.788
+Boston Bruins	0.280	6.427	0.532	0.247	0.860

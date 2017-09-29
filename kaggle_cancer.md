@@ -200,13 +200,10 @@ svg {
   
 }
 
-.axis line {
-  fill: green;
-}
-
+.axis line,
 .axis path {
   fill: none;
-  stroke: #000;
+  stroke: red;
   shape-rendering: crispEdges;
 }
 
@@ -220,7 +217,7 @@ svg {
 }
 
 .label.inactive {
-  fill: #ccc;
+  fill: gray;
 }
 
 .foreground path.inactive {

@@ -17,7 +17,7 @@ layout: default
 * * * 
 
 <meta charset="utf-8">
-<title>2016-2017 Team Stats</title>
+<title>2016-2017 NHL Team Stats</title>
 <style>
 
 svg {
@@ -34,7 +34,8 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: steelblue;
+  stroke: #F39C12;
+  stroke-opacity: 1.0;
   stroke-width: 1.5px;
 }
 
@@ -48,7 +49,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: #000;
+  stroke: purple;
   shape-rendering: crispEdges;
 }
 
@@ -66,8 +67,8 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: #ccc;
-  stroke-opacity: .5;
+  stroke: teal;
+  stroke-opacity: 0.35;
   stroke-width: 1px;
 }
 
@@ -248,7 +249,7 @@ svg {
 
 .foreground path.inactive {
   stroke: teal;
-  stroke-opacity: 0.35
+  stroke-opacity: 0.35;
   stroke-width: 1px;
 }
 

@@ -97,7 +97,7 @@ var dimensions = [
   },
   {
     name: "Face Off Pct.",
-    scale: d3.scale.sqrt().range([height, 0]),
+    scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {

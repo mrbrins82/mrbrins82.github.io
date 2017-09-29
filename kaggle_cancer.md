@@ -57,18 +57,19 @@ svg {
   -webkit-transition: fill 125ms linear;
 }
 
-.inactive .label:not(.active) {
+.active .label:not(.inactive) {
   font-weight: bold;
   fill: darkOrange;
 }
 
-.label.active {
+.label.inactive {
   fill: #ccc;
 }
 
-.foreground path.active {
-  stroke: darkOrange;
-  stroke-width: 2.5px;
+.foreground path.inactive {
+  stroke: #ccc;
+  stroke-opacity: 0.35
+  stroke-width: 1px;
 }
 
 </style>

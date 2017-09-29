@@ -203,7 +203,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: #000;
+  stroke: darkOrange;
   shape-rendering: crispEdges;
 }
 

@@ -173,10 +173,10 @@ function bumps(m) {
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
 <style>
-
+<center>
 svg {
   font: 10px sans-serif;
-  font-color: white;
+  color: white;
 }
 
 .background path {
@@ -194,7 +194,7 @@ svg {
 
 .axis .title {
   font-size: 12px;
-  font-color: "white";
+  font-color: white;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -224,7 +224,7 @@ svg {
   stroke-opacity: .5;
   stroke-width: 1px;
 }
-
+</center>
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>

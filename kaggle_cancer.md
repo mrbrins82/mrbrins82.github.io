@@ -38,7 +38,7 @@ svg {
 }
 
 .axis .title {
-  font-size: 11px;
+  font-size: 31px;
   font-weight: bold;
   text-transform: uppercase;
 }

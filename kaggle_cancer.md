@@ -175,7 +175,7 @@ d3.tsv("teamstats_20162017.tsv", function(error, data) {
   }
 
   function mouseout(d) {
-    svg.classed("active", false);
+    svg.classed("active", true);
     projection.classed("inactive", false);
   }
 

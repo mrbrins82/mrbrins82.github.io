@@ -173,7 +173,7 @@ function bumps(m) {
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
 <style>
-<center>
+
 svg {
   font: 10px sans-serif;
 }
@@ -224,14 +224,14 @@ svg {
   stroke-opacity: .5;
   stroke-width: 1px;
 }
-</center>
+
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 400},
-    width = 900 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var dimensions = [

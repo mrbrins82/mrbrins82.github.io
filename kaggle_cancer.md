@@ -176,7 +176,6 @@ function bumps(m) {
 <center>
 svg {
   font: 10px sans-serif;
-  fill: gray;
 }
 
 .background path {
@@ -194,7 +193,7 @@ svg {
 
 .axis .title {
   font-size: 12px;
-  fill: gray;
+  fill: darkOrange;
   font-weight: bold;
   text-transform: uppercase;
   
@@ -203,7 +202,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: red;
+  stroke: gray;
   shape-rendering: crispEdges;
 }
 
@@ -213,7 +212,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: steelblue;
+  fill: darkOrange;
 }
 
 .label.inactive {

@@ -180,7 +180,7 @@ svg {
 
 .background path {
   fill: none;
-  stroke: none;
+  stroke: yellow;
   stroke-width: 20px;
   pointer-events: stroke;
 }
@@ -202,7 +202,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: steelblue;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 
@@ -230,7 +230,7 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 400},
+var margin = {top: 30, right: 40, bottom: 20, left: 300},
     width = 1100 - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom;
 

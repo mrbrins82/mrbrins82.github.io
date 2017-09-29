@@ -33,7 +33,7 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: steelblue;
+  stroke: purple;
   stroke-width: 1.5px;
 }
 
@@ -175,7 +175,7 @@ d3.tsv("teamstats_20162017.tsv", function(error, data) {
   }
 
   function mouseout(d) {
-    svg.classed("active", true);
+    svg.classed("active", false);
     projection.classed("inactive", true);
   }
 

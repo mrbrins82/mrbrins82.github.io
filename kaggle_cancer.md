@@ -34,7 +34,7 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: steelblue;
+  stroke: #F39C12;
   stroke-opacity: 1.0;
   stroke-width: 1.5px;
 }

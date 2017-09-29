@@ -181,21 +181,23 @@ svg {
 
 .background path {
   fill: none;
-  stroke: steelblue;
+  stroke: none;
   stroke-width: 20px;
   pointer-events: stroke;
 }
 
 .foreground path {
   fill: none;
-  stroke: darkOrange;
-  stroke-width: 2.5px;
+  stroke: steelblue;
+  stroke-width: 1.5px;
 }
 
 .axis .title {
   font-size: 12px;
+  fill: gray;
   font-weight: bold;
   text-transform: uppercase;
+  
 }
 
 .axis line,
@@ -211,7 +213,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  color: red;
+  fill: darkOrange;
 }
 
 .label.inactive {

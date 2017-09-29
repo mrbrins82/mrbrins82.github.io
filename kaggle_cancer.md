@@ -193,6 +193,7 @@ function draw(d) {
 }
 
 </script>
+</body>
 
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
@@ -373,4 +374,4 @@ function draw(d) {
 }
 
 </script>
-
+</body>

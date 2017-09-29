@@ -41,8 +41,7 @@ svg {
   font-size: 16px;
   fill: gray;
   font-weight: bold;
-  text-transform: uppercase;
-  
+  text-transform: uppercase; 
 }
 
 .axis line,
@@ -66,14 +65,14 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: purple;
+  stroke: maroon;
   stroke-opacity: .5;
   stroke-width: 1px;
 }
 
 .foreground path.active {
   stroke: darkOrange;
-  stroke-width: 2px;
+  stroke-width: 2.5px;
 }
 
 </style>

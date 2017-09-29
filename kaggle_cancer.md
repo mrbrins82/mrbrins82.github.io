@@ -180,7 +180,7 @@ svg {
 }
 
 .background path {
-  fill: none;
+  fill: steelblue;
   stroke: none;
   stroke-width: 20px;
   pointer-events: stroke;
@@ -188,13 +188,12 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: steelblue;
+  stroke: darkOrange;
   stroke-width: 2.5px;
 }
 
 .axis .title {
   font-size: 12px;
-  font-color: steelblue;
   font-weight: bold;
   text-transform: uppercase;
 }

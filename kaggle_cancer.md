@@ -46,8 +46,8 @@ svg {
 
 .axis line,
 .axis path {
-  fill: none;
-  stroke: #E8DAEF;
+  fill: green;
+  stroke: #61E5DB;
   shape-rendering: crispEdges;
 }
 
@@ -65,7 +65,7 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: #ccc;
+  stroke: #B9770E;
   stroke-opacity: 0.35;
   stroke-width: 1px;
 }
@@ -86,22 +86,27 @@ var dimensions = [
     type: String
   },
   {
-    name: "GF",
+    name: "Goal Diff",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "GA",
+    name: "Shot Diff",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "SF",
+    name: "Face Off Pct.",
     scale: d3.scale.sqrt().range([height, 0]),
     type: Number
   },
   {
-    name: "SA",
+    name: "PP Pct.",
+    scale: d3.scale.linear().range([height, 0]),
+    type: Number
+  }
+  {
+    name: "PK Pct.",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }

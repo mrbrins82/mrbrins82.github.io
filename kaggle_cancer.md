@@ -65,6 +65,11 @@ svg {
   fill: #ccc;
 }
 
+.foreground path.active {
+  stroke: darkOrange;
+  stroke-width: 2.5px;
+}
+
 .foreground path.inactive {
   stroke: steelblue;
   stroke-opacity: .35;

@@ -33,7 +33,7 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: purple;
+  stroke: steelblue;
   stroke-width: 1.5px;
 }
 
@@ -46,8 +46,8 @@ svg {
 
 .axis line,
 .axis path {
-  fill: green;
-  stroke: #61E5DB;
+  fill: none;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 

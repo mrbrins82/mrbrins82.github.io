@@ -33,11 +33,12 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: steelblue;
+  stroke: purple;
   stroke-width: 1.5px;
 }
 
 .axis .title {
+  fill: gray;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase; 
@@ -46,7 +47,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: #000;
+  stroke: #E8DAEF;
   shape-rendering: crispEdges;
 }
 
@@ -56,6 +57,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
+  fill: darkOrange;
 }
 
 .label.inactive {
@@ -64,7 +66,7 @@ svg {
 
 .foreground path.inactive {
   stroke: #ccc;
-  stroke-opacity: 0.5;
+  stroke-opacity: 0.35;
   stroke-width: 1px;
 }
 
@@ -164,7 +166,7 @@ d3.tsv("teamstats_20162017.tsv", function(error, data) {
       .attr("class", "label")
       .data(data, function(d) { return d.name || d; });
 
-  var projection = svg.selectAll(".axis path,.background path,.foreground path")
+  var projection = svg.selectAll(".axis text,.background path,.foreground path")
       .on("mouseover", mouseover)
       .on("mouseout", mouseout);
 

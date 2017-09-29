@@ -38,7 +38,7 @@ svg {
 }
 
 .axis .title {
-  font-size: 12px;
+  font-size: 16px;
   fill: gray;
   font-weight: bold;
   text-transform: uppercase;
@@ -48,7 +48,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: green;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 
@@ -62,11 +62,11 @@ svg {
 }
 
 .label.inactive {
-  fill: #ccc;
+  fill: yellow;
 }
 
 .foreground path.inactive {
-  stroke: #ccc;
+  stroke: purple;
   stroke-opacity: .5;
   stroke-width: 1px;
 }

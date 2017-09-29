@@ -180,8 +180,8 @@ svg {
 }
 
 .background path {
-  fill: steelblue;
-  stroke: none;
+  fill: none;
+  stroke: steelblue;
   stroke-width: 20px;
   pointer-events: stroke;
 }

@@ -21,7 +21,8 @@ layout: default
 <style>
 
 svg {
-  font: 10px sans-serif;
+  font: 14px sans-serif;
+  fill: gray;
 }
 
 .background path {
@@ -38,7 +39,8 @@ svg {
 }
 
 .axis .title {
-  font-size: 11px;
+  font-size: 16px;
+  fill: gray;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -73,8 +75,8 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 200},
-    width = 960 - margin.left - margin.right,
+var margin = {top: 30, right: 40, bottom: 20, left: 400},
+    width = 1100 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var dimensions = [

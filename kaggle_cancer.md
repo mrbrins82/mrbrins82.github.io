@@ -212,7 +212,6 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: darkOrange;
 }
 
 .label.inactive {
@@ -231,7 +230,7 @@ svg {
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 400},
-    width = 1200 - margin.left - margin.right,
+    width = 1000 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var dimensions = [

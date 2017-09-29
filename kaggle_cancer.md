@@ -33,7 +33,7 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: purple;
+  stroke: steelblue;
   stroke-width: 1.5px;
 }
 
@@ -164,7 +164,7 @@ d3.tsv("teamstats_20162017.tsv", function(error, data) {
       .attr("class", "label")
       .data(data, function(d) { return d.name || d; });
 
-  var projection = svg.selectAll(".axis text,.background path,.foreground path")
+  var projection = svg.selectAll(".axis path,.background path,.foreground path")
       .on("mouseover", mouseover)
       .on("mouseout", mouseout);
 
@@ -176,7 +176,7 @@ d3.tsv("teamstats_20162017.tsv", function(error, data) {
 
   function mouseout(d) {
     svg.classed("active", false);
-    projection.classed("inactive", true);
+    projection.classed("inactive", false);
   }
 
   function moveToFront() {

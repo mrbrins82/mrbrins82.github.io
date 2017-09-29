@@ -67,7 +67,7 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: #ccc;
+  stroke: teal;
   stroke-opacity: 0.35
   stroke-width: 1px;
 }

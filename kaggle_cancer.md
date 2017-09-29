@@ -127,7 +127,7 @@ var dimension = svg.selectAll(".dimension")
     .attr("class", "dimension")
     .attr("transform", function(d) { return "translate(" + x(d.name) + ")"; });
 
-d3.tsv("teamstats_20162017.tsv", function(error, data) {
+d3.tsv("./teamstats_20162017.tsv", function(error, data) {
   if (error) throw error;
 
   dimensions.forEach(function(dimension) {

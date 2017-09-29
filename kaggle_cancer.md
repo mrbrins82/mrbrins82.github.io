@@ -189,12 +189,12 @@ svg {
 .foreground path {
   fill: none;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 2.5px;
 }
 
 .axis .title {
   font-size: 12px;
-  font-color: white;
+  font-color: steelblue;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -212,7 +212,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  font-color: red;
+  color: red;
 }
 
 .label.inactive {

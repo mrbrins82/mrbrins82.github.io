@@ -21,7 +21,8 @@ layout: default
 <style>
 
 svg {
-  font: 10px sans-serif;
+  font: 14px sans-serif;
+  fill: gray;
 }
 
 .background path {
@@ -44,10 +45,7 @@ svg {
   text-transform: uppercase; 
 }
 
-.axis line {
-  fill: aqua;
-}
-
+.axis line,
 .axis path {
   fill: none;
   stroke: #000;
@@ -68,9 +66,9 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: maroon;
-  stroke-opacity: .25;
-  stroke-width: 0.7px;
+  stroke: #E59866;
+  stroke-opacity: .35;
+  stroke-width: 1px;
 }
 
 </style>

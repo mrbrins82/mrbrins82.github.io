@@ -200,10 +200,13 @@ svg {
   
 }
 
-.axis line,
+.axis line {
+  fill: green;
+}
+
 .axis path {
   fill: none;
-  stroke: darkOrange;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 

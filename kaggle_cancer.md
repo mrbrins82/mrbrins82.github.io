@@ -35,8 +35,8 @@ svg {
 .foreground path {
   fill: none;
   stroke: steelblue;
-  stroke-opacity: 0.35;
-  stroke-width: 1px;
+  stroke-opacity: 1.0;
+  stroke-width: 1.5px;
 }
 
 .axis .title {

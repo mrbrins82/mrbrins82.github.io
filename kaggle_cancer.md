@@ -193,7 +193,7 @@ svg {
 
 .axis .title {
   font-size: 12px;
-  fill: darkOrange;
+  fill: gray;
   font-weight: bold;
   text-transform: uppercase;
   
@@ -202,7 +202,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: gray;
+  stroke: green;
   shape-rendering: crispEdges;
 }
 
@@ -212,15 +212,15 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: darkOrange;
+  fill: purple;
 }
 
 .label.inactive {
-  fill: gray;
+  fill: yellow;
 }
 
 .foreground path.inactive {
-  stroke: #ccc;
+  stroke: cyan;
   stroke-opacity: .5;
   stroke-width: 1px;
 }
@@ -236,7 +236,7 @@ var margin = {top: 30, right: 40, bottom: 20, left: 200},
 
 var dimensions = [
   {
-    name: "teamname",
+    name: "team",
     scale: d3.scale.ordinal().rangePoints([0, height]),
     type: String
   },

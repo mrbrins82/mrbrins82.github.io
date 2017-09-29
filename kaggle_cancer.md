@@ -22,7 +22,6 @@ layout: default
 
 svg {
   font: 14px sans-serif;
-  fill: gray;
 }
 
 .background path {
@@ -34,14 +33,12 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: #F39C12;
-  stroke-opacity: 1.0;
+  stroke: steelblue;
   stroke-width: 1.5px;
 }
 
 .axis .title {
   font-size: 16px;
-  fill: gray;
   font-weight: bold;
   text-transform: uppercase; 
 }
@@ -49,7 +46,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: purple;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 
@@ -59,7 +56,6 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: darkOrange;
 }
 
 .label.inactive {
@@ -67,8 +63,8 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: teal;
-  stroke-opacity: 0.35;
+  stroke: #ccc;
+  stroke-opacity: 0.5;
   stroke-width: 1px;
 }
 

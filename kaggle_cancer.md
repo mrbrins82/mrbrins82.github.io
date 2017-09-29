@@ -202,7 +202,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: #000;
+  stroke: steelblue;
   shape-rendering: crispEdges;
 }
 
@@ -212,6 +212,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
+  fill: darkOrange;
 }
 
 .label.inactive {
@@ -230,8 +231,8 @@ svg {
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 400},
-    width = 1000 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    width = 1100 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
 
 var dimensions = [
   {

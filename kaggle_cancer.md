@@ -176,7 +176,7 @@ function bumps(m) {
 <center>
 svg {
   font: 10px sans-serif;
-  color: white;
+  fill: gray;
 }
 
 .background path {
@@ -213,7 +213,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: darkOrange;
+  fill: steelblue;
 }
 
 .label.inactive {

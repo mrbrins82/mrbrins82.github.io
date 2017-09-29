@@ -176,10 +176,11 @@ function bumps(m) {
 
 svg {
   font: 10px sans-serif;
+  font-color: white;
 }
 
 .background path {
-  fill: white;
+  fill: none;
   stroke: none;
   stroke-width: 20px;
   pointer-events: stroke;
@@ -193,7 +194,7 @@ svg {
 
 .axis .title {
   font-size: 12px;
-  font-color: white;
+  font-color: "white";
   font-weight: bold;
   text-transform: uppercase;
 }

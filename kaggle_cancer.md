@@ -74,8 +74,8 @@ svg {
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 200},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 650 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
 var dimensions = [
   {
@@ -127,7 +127,7 @@ var dimension = svg.selectAll(".dimension")
     .attr("class", "dimension")
     .attr("transform", function(d) { return "translate(" + x(d.name) + ")"; });
 
-d3.tsv("teamstats20162017.tsv", function(error, data) {
+d3.tsv("teamstats_20162017.tsv", function(error, data) {
   if (error) throw error;
 
   dimensions.forEach(function(dimension) {

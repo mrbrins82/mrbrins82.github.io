@@ -58,6 +58,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
+  fill: darkOrange;
 }
 
 .label.inactive {
@@ -75,9 +76,9 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 400},
+var margin = {top: 30, right: 40, bottom: 20, left: 300},
     width = 1100 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 550 - margin.top - margin.bottom;
 
 var dimensions = [
   {

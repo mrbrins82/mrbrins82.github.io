@@ -19,7 +19,7 @@ layout: default
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
 <style>
-<center>
+
 svg {
   font: 10px sans-serif;
 }
@@ -67,10 +67,10 @@ svg {
   stroke-opacity: .5;
   stroke-width: 1px;
 }
-</center>
+
 </style>
 <body>
-<script src="//d3js.org/d3.v3.min.js"></script>
+<!-- <script src="//d3js.org/d3.v3.min.js"></script> -->
 <script>
 
 var margin = {top: 30, right: 40, bottom: 20, left: 200},
@@ -127,7 +127,7 @@ var dimension = svg.selectAll(".dimension")
     .attr("class", "dimension")
     .attr("transform", function(d) { return "translate(" + x(d.name) + ")"; });
 
-d3.tsv("./teamstats_20162017.tsv", function(error, data) {
+d3.tsv("teamstats_20162017.tsv", function(error, data) {
   if (error) throw error;
 
   dimensions.forEach(function(dimension) {

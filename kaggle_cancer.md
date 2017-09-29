@@ -236,27 +236,27 @@ var margin = {top: 30, right: 40, bottom: 20, left: 200},
 
 var dimensions = [
   {
-    name: "name",
+    name: "teamname",
     scale: d3.scale.ordinal().rangePoints([0, height]),
     type: String
   },
   {
-    name: "Acc. 40º 150%",
+    name: "GF",
     scale: d3.scale.linear().range([0, height]),
     type: Number
   },
   {
-    name: "Scale",
+    name: "GA",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "Areal",
+    name: "SF",
     scale: d3.scale.sqrt().range([height, 0]),
     type: Number
   },
   {
-    name: "Angular",
+    name: "SA",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }

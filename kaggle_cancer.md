@@ -19,7 +19,7 @@ layout: default
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
 <style>
-
+<center>
 svg {
   font: 10px sans-serif;
 }
@@ -67,7 +67,7 @@ svg {
   stroke-opacity: .5;
   stroke-width: 1px;
 }
-
+</center>
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -191,7 +191,6 @@ function draw(d) {
 }
 
 </script>
-</body>
 
 <meta charset="utf-8">
 <style>

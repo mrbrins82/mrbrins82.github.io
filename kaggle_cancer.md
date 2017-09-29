@@ -202,7 +202,7 @@ svg {
 .axis line,
 .axis path {
   fill: none;
-  stroke: green;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 
@@ -212,15 +212,15 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: purple;
+  fill: darkOrange;
 }
 
 .label.inactive {
-  fill: gray;
+  fill: #ccc;
 }
 
 .foreground path.inactive {
-  stroke: cyan;
+  stroke: #ccc;
   stroke-opacity: .5;
   stroke-width: 1px;
 }
@@ -230,8 +230,8 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 200},
-    width = 700 - margin.left - margin.right,
+var margin = {top: 30, right: 40, bottom: 20, left: 400},
+    width = 900 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var dimensions = [

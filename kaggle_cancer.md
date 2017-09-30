@@ -20,7 +20,7 @@ Some text.
 <meta charset="utf-8">
 <title>2016-2017 NHL Team Stats</title>
 <style>
-
+<body>
 svg {
   font: 14px sans-serif;
 }

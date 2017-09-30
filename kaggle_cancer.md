@@ -73,9 +73,9 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 200},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 30, right: 40, bottom: 20, left: 300},
+    width = 1100 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
 
 var dimensions = [
   {

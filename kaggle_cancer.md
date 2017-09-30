@@ -38,7 +38,8 @@ svg {
 }
 
 .axis .title {
-  font-size: 11px;
+  fill; gray;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -56,6 +57,7 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
+  fill: darkOrange;
 }
 
 .label.inactive {

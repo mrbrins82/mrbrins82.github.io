@@ -33,7 +33,7 @@ svg {
 
 .foreground path {
   fill: none;
-  stroke: purple;
+  stroke: steelblue;
   stroke-width: 1.5px;
 }
 
@@ -46,7 +46,7 @@ svg {
 
 .axis line,
 .axis path {
-  fill: none;
+  fill: gray;
   stroke: #000;
   shape-rendering: crispEdges;
 }
@@ -81,7 +81,7 @@ var margin = {top: 30, right: 40, bottom: 20, left: 300},
 
 var dimensions = [
   {
-    name: "name",
+    name: "team",
     scale: d3.scale.ordinal().rangePoints([0, height]),
     type: String
   },

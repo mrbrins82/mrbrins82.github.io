@@ -34,11 +34,12 @@ svg {
 .foreground path {
   fill: none;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 2.0px;
 }
 
 .axis .title {
   fill; gray;
+  stroke: gray;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -67,7 +68,7 @@ svg {
 .foreground path.inactive {
   stroke: #ccc;
   stroke-opacity: .5;
-  stroke-width: 1px;
+  stroke-width: 0.75px;
 }
 
 </style>

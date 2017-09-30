@@ -46,8 +46,8 @@ svg {
 
 .axis line,
 .axis path {
-  fill: gray;
-  stroke: #000;
+  fill: none;
+  stroke: purple;
   shape-rendering: crispEdges;
 }
 
@@ -87,7 +87,7 @@ var dimensions = [
   },
   {
     name: "GF",
-    scale: d3.scale.linear().range([0, height]),
+    scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
@@ -97,7 +97,7 @@ var dimensions = [
   },
   {
     name: "SF",
-    scale: d3.scale.sqrt().range([height, 0]),
+    scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {

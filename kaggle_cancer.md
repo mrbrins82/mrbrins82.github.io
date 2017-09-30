@@ -21,7 +21,7 @@ layout: default
 <style>
 
 svg {
-  font: 14px sans-serif;
+  font: 10px sans-serif;
 }
 
 .background path {
@@ -38,10 +38,9 @@ svg {
 }
 
 .axis .title {
-  fill: gray;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: bold;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 .axis line,
@@ -57,7 +56,6 @@ svg {
 
 .active .label:not(.inactive) {
   font-weight: bold;
-  fill: darkOrange;
 }
 
 .label.inactive {
@@ -66,7 +64,7 @@ svg {
 
 .foreground path.inactive {
   stroke: #ccc;
-  stroke-opacity: 0.35;
+  stroke-opacity: .5;
   stroke-width: 1px;
 }
 
@@ -75,19 +73,19 @@ svg {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var margin = {top: 30, right: 40, bottom: 20, left: 300},
-    width = 1100 - margin.left - margin.right,
-    height = 550 - margin.top - margin.bottom;
+var margin = {top: 30, right: 40, bottom: 20, left: 200},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 var dimensions = [
   {
-    name: "team",
+    name: "name",
     scale: d3.scale.ordinal().rangePoints([0, height]),
     type: String
   },
   {
     name: "GF",
-    scale: d3.scale.linear().range([height, 0]),
+    scale: d3.scale.linear().range([0, height]),
     type: Number
   },
   {
@@ -97,9 +95,9 @@ var dimensions = [
   },
   {
     name: "SF",
-    scale: d3.scale.linear().range([height, 0]),
+    scale: d3.scale.sqrt().range([height, 0]),
     type: Number
-  }
+  },
   {
     name: "SA",
     scale: d3.scale.linear().range([height, 0]),

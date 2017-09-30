@@ -86,22 +86,22 @@ var dimensions = [
     type: String
   },
   {
-    name: "Goal Diff",
+    name: "GF",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "Shot Diff",
+    name: "GA",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "PP%",
+    name: "SF",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }
   {
-    name: "PK%",
+    name: "SA",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   }

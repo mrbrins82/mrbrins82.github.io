@@ -65,7 +65,7 @@ svg {
 }
 
 .foreground path.inactive {
-  stroke: #B9770E;
+  stroke: #ccc;
   stroke-opacity: 0.35;
   stroke-width: 1px;
 }
@@ -97,7 +97,7 @@ var dimensions = [
   },
   {
     name: "SF",
-    scale: d3.scale.linear().range([height, 0]),
+    scale: d3.scale.sqrt().range([height, 0]),
     type: Number
   }
   {

@@ -18,7 +18,7 @@ layout: default
 
 * * * 
 
-<center><img src="./assets/images/shot_probability_plot.png" alt="shot probability plot" width="600" height="900" />
+<center><img src="./assets/images/shot_probability_plot.png" alt="shot probability plot" width="450" height="600" />
 </center>
 
 <center><img src="./assets/images/correlation_plots.png" alt="goals correlation plot" width="600" height="600" />

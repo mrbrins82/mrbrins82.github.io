@@ -11,10 +11,9 @@ layout: default
 *   [Indeed.com: Data Science, Machine Learning,<br/>& AI jobs across the US](indeed)
 *   [Twitter Streaming During Game 7 Eastern <br/>Conference Finals: Penguins vs. Senators](hockeytweets)
 *   [(Kaggle) Titanic: Machine Learning from Disaster](kaggle_titanic)<br/>
-*   [Data Incubator Project Proposal](dataincubator)<br/> -->
+*   [Data Incubator Project Proposal](dataincubator)<br/>
 <!-- *   [(Kaggle) Personalized Medicine: Redefining Cancer Treatment](kaggle_cancer)<br/> -->
 
 
 * * * 
 
-The links above will take you to my individual projects. I'm currently in the process of adding more to this page.
